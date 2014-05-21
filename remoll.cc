@@ -16,6 +16,7 @@
 #include "remollSteppingAction.hh"
 #include "remollOpticalPhysics.hh"
 #include "remollPhysicsList.hh"
+#include "remollTrackingAction.hh"
 
 #include "G4StepLimiterBuilder.hh"
 
@@ -130,6 +131,9 @@ int main(int argc, char** argv){
     G4UserSteppingAction* stepping_action = new remollSteppingAction;
     runManager->SetUserAction(stepping_action);
     rmmess->SetStepAct((remollSteppingAction *) stepping_action);
+
+    remollTrackingAction* trackingAction = new remollTrackingAction;
+    runManager->SetUserAction (trackingAction);
 
     // New units
 

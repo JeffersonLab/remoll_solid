@@ -7,6 +7,8 @@
 #include "remolltypes.hh"
 
 #include "G4String.hh"
+#include <vector>
+#include <string>
 
 class TFile;
 class TTree;
@@ -15,6 +17,7 @@ class remollGenericDetectorHit;
 class remollGenericDetectorSum;
 class remollCalDetectorSum;
 class remollEvent;
+class remollTrajectory;
 
 #include <xercesc/dom/DOMElement.hpp>
 
@@ -158,6 +161,25 @@ class remollIO {
         Double_t fCalDetPos_Z[__IO_MAXHIT];
         Double_t fCalDetSum_starttime[__IO_MAXHIT];
         Double_t fCalDetSum_endtime[__IO_MAXHIT];
+
+  // Trajectory
+public:
+  void AddTrajectory (remollTrajectory *);
+private:
+  Int_t fNTraj;
+  Int_t fTraj_tid[__IO_MAXHIT];
+  Int_t fTraj_mtid[__IO_MAXHIT];
+  Int_t fTraj_pid[__IO_MAXHIT];
+  Double_t fTraj_Px[__IO_MAXHIT];
+  Double_t fTraj_Py[__IO_MAXHIT];
+  Double_t fTraj_Pz[__IO_MAXHIT];
+  Double_t fTraj_P[__IO_MAXHIT];
+  Double_t fTraj_Vx[__IO_MAXHIT];
+  Double_t fTraj_Vy[__IO_MAXHIT];
+  Double_t fTraj_Vz[__IO_MAXHIT];
+  Double_t fTraj_t[__IO_MAXHIT];
+  std::vector<std::string> fTraj_proc;
+
 };
 
 #endif//remollIO_HH

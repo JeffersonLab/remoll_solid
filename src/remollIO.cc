@@ -13,6 +13,7 @@
 #include "remollRun.hh"
 #include "remollRunData.hh"
 #include "remollBeamTarget.hh"
+#include "remollTrajectory.hh"
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -145,6 +146,22 @@ void remollIO::InitializeTree(){
     fTree->Branch("cal.det_y",    &fCalDetPos_Y,    "cal.det_y[cal.n]/D");
     fTree->Branch("cal.det_z",    &fCalDetPos_Z,    "cal.det_z[cal.n]/D");
 
+    // Trajectory
+
+    fTree->Branch ("traj.n",    &fNTraj,     "traj.n/I");
+    fTree->Branch ("traj.tid",  &fTraj_tid,  "traj.tid[traj.n]/I");
+    fTree->Branch ("traj.mtid", &fTraj_mtid, "traj.mtid[traj.n]/I");
+    fTree->Branch ("traj.pid",  &fTraj_pid,  "traj.pid[traj.n]/I");
+    fTree->Branch ("traj.px",   &fTraj_Px,   "traj.px[traj.n]/D");
+    fTree->Branch ("traj.py",   &fTraj_Py,   "traj.py[traj.n]/D");
+    fTree->Branch ("traj.pz",   &fTraj_Pz,   "traj.pz[traj.n]/D");
+    fTree->Branch ("traj.p",    &fTraj_P,    "traj.p[traj.n]/D");
+    fTree->Branch ("traj.vx",   &fTraj_Vx,   "traj.vx[traj.n]/D");
+    fTree->Branch ("traj.vy",   &fTraj_Vy,   "traj.vy[traj.n]/D");
+    fTree->Branch ("traj.vz",   &fTraj_Vz,   "traj.vz[traj.n]/D");
+    fTree->Branch ("traj.t",    &fTraj_t,    "traj.t[traj.n]/D");
+    fTree->Branch ("traj.proc", "vector<string>", &fTraj_proc);
+    
     fEv_num=0;//set event number zero at the beginning Rakitha Wed Nov 20 17:20:02 EST 2013
     
 
@@ -165,6 +182,8 @@ void remollIO::Flush(){
     fNGenDetHit = 0;
     fNGenDetSum = 0;
     fNCalDetSum = 0;
+    fNTraj = 0;
+    fTraj_proc.resize (0);
 }
 
 void remollIO::WriteTree(){
@@ -344,6 +363,35 @@ void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
 
     fNCalDetSum++;
 }
+
+
+// Trajectory
+
+void remollIO::AddTrajectory (remollTrajectory *traj)
+{
+    int n = fNTraj;
+    if (n >= __IO_MAXHIT)
+      {
+//	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
+	return;
+      }
+    fTraj_tid[n] = traj->GetTrackID();
+    fTraj_mtid[n] = traj->GetParentID();
+    fTraj_pid[n] = traj->GetPDGEncoding();
+    fTraj_Px[n] = traj->GetInitialMomentum().x()/__E_UNIT;
+    fTraj_Py[n] = traj->GetInitialMomentum().y()/__E_UNIT;
+    fTraj_Pz[n] = traj->GetInitialMomentum().z()/__E_UNIT;
+    fTraj_P[n] = sqrt (fTraj_Px[n]*fTraj_Px[n]+fTraj_Py[n]*fTraj_Py[n]+fTraj_Pz[n]*fTraj_Pz[n]);
+    fTraj_Vx[n] = traj->GetVertexPosition().x()/__L_UNIT;
+    fTraj_Vy[n] = traj->GetVertexPosition().y()/__L_UNIT;
+    fTraj_Vz[n] = traj->GetVertexPosition().z()/__L_UNIT;
+    fTraj_t[n] = traj->GetGlobalTime()/__T_UNIT;
+    fTraj_proc.push_back (traj->GetCreator().data());
+
+    fNTraj++;
+}
+
+
 /*---------------------------------------------------------------------------------*/
 
 void remollIO::GrabGDMLFiles(G4String fn){
@@ -423,12 +471,3 @@ void remollIO::TraverseChildren( xercesc::DOMElement *thisel ){
    }
 
 }
-
-
-
-
-
-
-
-
-

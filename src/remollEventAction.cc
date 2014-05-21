@@ -2,20 +2,20 @@
 #include "remollGenericDetectorHit.hh"
 #include "remollGenericDetectorSum.hh"
 #include "remollCalDetectorSum.hh"
+#include "remollIO.hh"
+#include "remollTrajectory.hh"
+#include "remollTrackingAction.hh"
 
 #include "G4Event.hh"
 #include "G4EventManager.hh"
 #include "G4HCofThisEvent.hh"
 #include "G4VHitsCollection.hh"
 #include "G4TrajectoryContainer.hh"
-#include "G4Trajectory.hh"
 #include "G4VVisManager.hh"
 #include "G4SDManager.hh"
 #include "G4UImanager.hh"
 #include "G4ios.hh"
-
-#include "remollIO.hh"
-
+#include "G4RunManager.hh"
 
 remollEventAction::remollEventAction() {
 }
@@ -40,6 +40,8 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
 
   G4VHitsCollection *thiscol;
 
+  G4int storeTraj = ((remollTrackingAction*)(G4RunManager::GetRunManager()->GetUserTrackingAction()))->GetStoreTrajectory();
+
   // Traverse all hit collections, sort by output type
   for( int hcidx = 0; hcidx < HCE->GetCapacity(); hcidx++ ){
       thiscol = HCE->GetHC(hcidx);
@@ -52,6 +54,31 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
 	      for( unsigned int hidx = 0; hidx < thiscast->GetSize(); hidx++ ){
 		  fIO->AddGenericDetectorHit(
 			  (remollGenericDetectorHit *) thiscast->GetHit(hidx) );
+
+		  // Process the trajectory and its predecessors
+
+		  if (storeTraj)
+		    {
+		      remollGenericDetectorHit* h = (remollGenericDetectorHit *) thiscast->GetHit(hidx);
+		      if (h != NULL)
+			{
+			  G4int tid =  h->fTrID;
+			  while (tid != 0)
+			    {
+			      remollTrajectory* trajectory = GetTrajectory (tid, evt);
+			      if (trajectory == 0)
+				break;
+			      if (!trajectory->Seen())
+				{
+				  // trajectory->ShowTrajectory();
+				  // G4cout << G4endl;
+				  fIO->AddTrajectory (trajectory);
+				  trajectory->SetSeen();
+				}
+			      tid = trajectory->GetParentID();
+			    }
+			}
+		    }
 	      }
 	  }
 	  
@@ -85,4 +112,15 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
 }
 
 
-
+remollTrajectory* remollEventAction::GetTrajectory (G4int id, const G4Event* evt)
+{
+  G4TrajectoryContainer* container = evt->GetTrajectoryContainer();
+  if (container == 0) return 0;
+  size_t nTraj = container->size();
+  for(size_t i = 0; i < nTraj; i++)
+    {
+      remollTrajectory* tr1 = (remollTrajectory*)((*container)[i]);
+      if (tr1->GetTrackID() == id) return tr1;
+    }
+  return 0;
+}

@@ -7,6 +7,7 @@
 
 class G4Event;
 class remollIO;
+class remollTrajectory;
 
 class remollEventAction : public G4UserEventAction
 {
@@ -22,6 +23,7 @@ class remollEventAction : public G4UserEventAction
 
   private:
   //  G4int gemCollID, hcalCollID, bbcalCollID;
+  remollTrajectory* GetTrajectory (G4int id, const G4Event* evt);
 
     double fGEMres;
 
