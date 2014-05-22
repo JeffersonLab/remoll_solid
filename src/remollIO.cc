@@ -149,8 +149,8 @@ void remollIO::InitializeTree(){
     // Trajectory
 
     fTree->Branch ("traj.n",    &fNTraj,     "traj.n/I");
-    fTree->Branch ("traj.tid",  &fTraj_tid,  "traj.tid[traj.n]/I");
-    fTree->Branch ("traj.mtid", &fTraj_mtid, "traj.mtid[traj.n]/I");
+    fTree->Branch ("traj.trid", &fTraj_trid, "traj.trid[traj.n]/I");
+    fTree->Branch ("traj.mtrid",&fTraj_mtrid,"traj.mtrid[traj.n]/I");
     fTree->Branch ("traj.pid",  &fTraj_pid,  "traj.pid[traj.n]/I");
     fTree->Branch ("traj.px",   &fTraj_Px,   "traj.px[traj.n]/D");
     fTree->Branch ("traj.py",   &fTraj_Py,   "traj.py[traj.n]/D");
@@ -160,7 +160,7 @@ void remollIO::InitializeTree(){
     fTree->Branch ("traj.vy",   &fTraj_Vy,   "traj.vy[traj.n]/D");
     fTree->Branch ("traj.vz",   &fTraj_Vz,   "traj.vz[traj.n]/D");
     fTree->Branch ("traj.t",    &fTraj_t,    "traj.t[traj.n]/D");
-    fTree->Branch ("traj.proc", "vector<string>", &fTraj_proc);
+    fTree->Branch ("traj.proc", &fTraj_proc);
     
     fEv_num=0;//set event number zero at the beginning Rakitha Wed Nov 20 17:20:02 EST 2013
     
@@ -183,7 +183,8 @@ void remollIO::Flush(){
     fNGenDetSum = 0;
     fNCalDetSum = 0;
     fNTraj = 0;
-    fTraj_proc.resize (0);
+    fTraj_proc.clear();
+    fTraj_proc.reserve(__IO_MAXHIT);
 }
 
 void remollIO::WriteTree(){
@@ -375,8 +376,8 @@ void remollIO::AddTrajectory (remollTrajectory *traj)
 //	G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
 	return;
       }
-    fTraj_tid[n] = traj->GetTrackID();
-    fTraj_mtid[n] = traj->GetParentID();
+    fTraj_trid[n] = traj->GetTrackID();
+    fTraj_mtrid[n] = traj->GetParentID();
     fTraj_pid[n] = traj->GetPDGEncoding();
     fTraj_Px[n] = traj->GetInitialMomentum().x()/__E_UNIT;
     fTraj_Py[n] = traj->GetInitialMomentum().y()/__E_UNIT;

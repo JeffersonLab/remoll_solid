@@ -13,8 +13,6 @@ public:
   virtual void PreUserTrackingAction(const G4Track*);
   virtual void PostUserTrackingAction(const G4Track*);
   
-  G4int GetStoreTrajectory() const {return fpTrackingManager->GetStoreTrajectory();}
-
 private:
 };
 

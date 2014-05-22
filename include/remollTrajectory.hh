@@ -62,8 +62,8 @@ public:
   
   G4ParticleDefinition* GetParticleDefinition();
   
-  G4int Seen() const { return fSeen; }
-  void SetSeen (G4int s = 1) { fSeen = s; }
+  G4int Seen() const { return fSeen; }   // examine tag
+  void SetSeen (G4int s = 1) { fSeen = s; }  // tag trajectories already written out
   
 private:
   remollTrajectoryPointContainer* positionRecord;
@@ -78,7 +78,7 @@ private:
   G4double                     globalTime;
   G4String                     fCreator;
   G4int                        fVisible;
-  G4int                        fSeen;
+  G4int                        fSeen; 
 };
 
 extern G4Allocator<remollTrajectory> myTrajectoryAllocator;

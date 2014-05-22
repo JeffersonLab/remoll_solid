@@ -167,8 +167,8 @@ public:
   void AddTrajectory (remollTrajectory *);
 private:
   Int_t fNTraj;
-  Int_t fTraj_tid[__IO_MAXHIT];
-  Int_t fTraj_mtid[__IO_MAXHIT];
+  Int_t fTraj_trid[__IO_MAXHIT];
+  Int_t fTraj_mtrid[__IO_MAXHIT];
   Int_t fTraj_pid[__IO_MAXHIT];
   Double_t fTraj_Px[__IO_MAXHIT];
   Double_t fTraj_Py[__IO_MAXHIT];

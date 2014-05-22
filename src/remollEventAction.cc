@@ -15,7 +15,8 @@
 #include "G4SDManager.hh"
 #include "G4UImanager.hh"
 #include "G4ios.hh"
-#include "G4RunManager.hh"
+#include "G4RunManagerKernel.hh"
+#include "G4TrackingManager.hh"
 
 remollEventAction::remollEventAction() {
 }
@@ -40,7 +41,7 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
 
   G4VHitsCollection *thiscol;
 
-  G4int storeTraj = ((remollTrackingAction*)(G4RunManager::GetRunManager()->GetUserTrackingAction()))->GetStoreTrajectory();
+  G4int storeTraj = G4RunManagerKernel::GetRunManagerKernel()->GetTrackingManager()->GetStoreTrajectory();
 
   // Traverse all hit collections, sort by output type
   for( int hcidx = 0; hcidx < HCE->GetCapacity(); hcidx++ ){
@@ -52,31 +53,26 @@ void remollEventAction::EndOfEventAction(const G4Event* evt ) {
 	  if( remollGenericDetectorHitsCollection *thiscast = 
 		  dynamic_cast<remollGenericDetectorHitsCollection *>(thiscol)){
 	      for( unsigned int hidx = 0; hidx < thiscast->GetSize(); hidx++ ){
-		  fIO->AddGenericDetectorHit(
-			  (remollGenericDetectorHit *) thiscast->GetHit(hidx) );
+  		  remollGenericDetectorHit* h = (remollGenericDetectorHit *) thiscast->GetHit(hidx);
+		  fIO->AddGenericDetectorHit(h);
 
 		  // Process the trajectory and its predecessors
 
 		  if (storeTraj)
 		    {
-		      remollGenericDetectorHit* h = (remollGenericDetectorHit *) thiscast->GetHit(hidx);
-		      if (h != NULL)
+		      G4int tid =  h->fTrID;
+		      while (tid != 0)
 			{
-			  G4int tid =  h->fTrID;
-			  while (tid != 0)
-			    {
-			      remollTrajectory* trajectory = GetTrajectory (tid, evt);
-			      if (trajectory == 0)
-				break;
-			      if (!trajectory->Seen())
-				{
-				  // trajectory->ShowTrajectory();
-				  // G4cout << G4endl;
-				  fIO->AddTrajectory (trajectory);
-				  trajectory->SetSeen();
-				}
-			      tid = trajectory->GetParentID();
-			    }
+			  // Loop over trajectories in hit's history
+			  
+			  remollTrajectory* trajectory = GetTrajectory (tid, evt);
+			  if (trajectory == 0 || trajectory->Seen())
+			    break; // already written or history broken, call it done
+			  fIO->AddTrajectory (trajectory);
+			  
+			  // Mark this one seen, and go on to its parent
+			  trajectory->SetSeen();
+			  tid = trajectory->GetParentID();
 			}
 		    }
 	      }

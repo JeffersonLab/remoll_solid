@@ -84,6 +84,9 @@ remollTrajectory::~remollTrajectory()
 
 void remollTrajectory::ShowTrajectory (std::ostream& os) const
 {
+  // One line description of trajectory sent to output stream;
+  // no line terminator
+
    os << "TrackID =" << fTrackID 
 	  << " : ParentID=" << fParentID;
    os << " Particle name : " << ParticleName;
