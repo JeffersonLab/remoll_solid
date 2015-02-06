@@ -4,12 +4,18 @@
 
     <define>
 	<constant name="targetz" value="10.0"/>
-	<constant name="targetHalfLength" value="20.0"/>
 	<!-- <constant name="targetz" value="0.0"/> -->
+	<!--Proposal spec for the target lenght is 40 cm (20 cm half length) -->	
+	<constant name="targetHalfLength" value="20.0"/>
 	<constant name="entwinthick" value="0.0125"/>
 	<constant name="extwinthick" value="0.0125"/>
 
+	<!-- <constant name="height_cylwall" value="1777.0"/> -->
+	<constant name="height_cylwall" value="900.0"/>
+	<constant name="cDet_1_radius" value="800.0"/>
+
 	<position name="target_z0" x="0.0" y="0.0" z="targetz" unit="cm"/>
+	<position name="target_z1" x="0.0" y="0.0" z="targetz + 24" unit="cm"/>
 	<position name="target_upstr" x="0.0" y="0.0" z="targetz+50" unit="cm"/>
 	<position name="target_v0" x="0.0" y="0.0" z="0.0" unit="cm"/>
 	<position name="target_v1" x="0.0" y="0.0" z="-24.975" unit="cm"/>
@@ -22,6 +28,9 @@
 	<position name="beampipe_z4" x="0.0" y="0.0" z="45+232.5*2+extwinthick" unit="cm"/>
 	<position name="beampipe_z5" x="0.0" y="0.0" z="40" unit="cm"/>
 
+	<position unit="cm" name="cDet_1_pos"       x="0" y="0"     z="targetz"/>
+
+	<rotation name="scRot_1" unit="deg" x="90" y="0" z="0"/>
 	<rotation name="identity"/>
     </define>
 
@@ -99,6 +108,17 @@
 
 	<cone aunit="deg" deltaphi="360" lunit="cm" name="beampipe2"   rmin1="1.4" rmax1="1.5" rmin2="28.9" rmax2="29.0" startphi="0" z="232.5*2"/>
 	<tube aunit="deg" deltaphi="360" lunit="cm" name="beampipe2win" rmax="29.0" rmin="0.0" startphi="0" z="entwinthick*2"/>
+
+	<!--Cylindrical detector volume for radiation studies -->
+	<tube aunit="deg"  startphi="0" deltaphi="360" lunit="cm" name="cDet_solid_1" rmax="cDet_1_radius+1." rmin="cDet_1_radius" z="height_cylwall"/>
+	<!--subtract the target chamber from the cDet_solid_2 and set rmin to go inside the target chamber -->
+	<tube aunit="deg"  startphi="0" deltaphi="360" lunit="cm" name="cDet_solid_2_1" rmax="70" rmin="3" z="0.1"/>
+
+	<subtraction name ="cDet_solid_2">
+	    <first ref="cDet_solid_2_1"/>
+	    <second ref="targetCham0"/>
+	    <positionref ref="target_v0"/>
+	</subtraction>
 
 	<!-- Encompassing logical volume -->
 
@@ -195,6 +215,24 @@
 	    <auxiliary auxtype="Color" auxvalue="gray"/> 
 	</volume>
 
+	<volume name="cDet_1">
+	  <materialref ref="Vacuum"/>
+	  <solidref ref="cDet_solid_1"/>
+	  <!-- <auxiliary auxtype="Color" auxvalue="green"/> -->
+	  <!-- <auxiliary auxtype="Visibility" auxvalue="false"/> -->
+	  <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	  <auxiliary auxtype="DetNo" auxvalue="8001"/>
+	</volume>
+
+	<volume name="cDet_2">
+	  <materialref ref="Vacuum"/>
+	  <solidref ref="cDet_solid_2"/>
+	  <!-- <auxiliary auxtype="Color" auxvalue="green"/> -->
+	  <!-- <auxiliary auxtype="Visibility" auxvalue="false"/> -->
+	  <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	  <auxiliary auxtype="DetNo" auxvalue="8002"/>
+	</volume>
+
 	<!---  Place volumes -->
 
 	<volume name="logicTarget">
@@ -241,6 +279,17 @@
 	    <physvol>
 		<volumeref ref="logicExtPipeWindow"/>
 		<positionref ref="beampipe_z4"/>
+	    </physvol>
+
+	     <physvol>
+		<volumeref ref="cDet_1"/>
+		<positionref ref="target_z0"/>
+		<rotationref ref="scRot_1"/>
+	    </physvol>
+
+	     <physvol>
+		<volumeref ref="cDet_2"/>
+		<positionref ref="target_z1"/>
 	    </physvol>
 
 	</volume>
