@@ -18,6 +18,7 @@ remollGenFlat::remollGenFlat(){
     fE_min =      0.0*GeV;
     fE_max =     11.0*GeV;
 
+    fParticleType = "e-";
 
     fApplyMultScatt = false;
 }
@@ -55,7 +56,7 @@ void remollGenFlat::SamplePhysics(remollVertex *vert, remollEvent *evt){
 
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
 	                     G4ThreeVector( ene*sin(th)*cos(ph), ene*sin(th)*sin(ph), ene*cos(th) ),
-			     "e-" );
+			     fParticleType );
 
     return;
 

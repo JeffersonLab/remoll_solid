@@ -12,8 +12,13 @@ zfront = 335.0
 dz     = 25
 zback  = zfront + 2.0*dz
 
-rmin = 118.0
-rmax = 261.0
+#ECAL radius I used upto Wed Jan  7 13:21:40 EST 2015
+#rmin = 118.0
+#rmax = 261.0
+
+#ECAL radius used in gemc
+rmin = 110.0
+rmax = 265.0
 
 #6.25 cm a side gives 101.49 cm area per block
 blockside = 6.25
@@ -35,8 +40,9 @@ numsides = 6
 nscintlayer  = 194
 
 deltaz_plane = 0.1
+deltaz_blocker_space = 11
 blockdepth = (absorbthick+scintthick+gapthick)*nscintlayer - gapthick + leadingscint
-motherdepth = blockdepth + leadinglead + deltaz_plane*2
+motherdepth = blockdepth + leadinglead + deltaz_plane*2 
 
 # lab coordinate z of center of mother volume
 # This needs to agree with main gdml coordinate
@@ -124,10 +130,16 @@ print """        <materials>
 	
 	<solids>"""
 
-print """	      <tube name="ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (rmin, rmax, motherdepth)
+print """	      <tube name="ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (rmin, rmax, motherdepth+deltaz_blocker_space)
 print """	      <tube name="ecalcycdet_solid_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%3.4f" z="%3.4f"/>"""% (rmax-0.1, motherdepth-0.05)
 print """	      <tube name="ecalcycdet_solid_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%3.4f" z="%3.4f"/>"""% (rmax-0.2, motherdepth-0.1)
 print """	      <tube name="ecalcycdet_solid_3" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%3.4f" z="%3.4f"/>"""% (rmin, motherdepth)
+
+#create 30 photon blocker solids
+for i in range(30):
+    print """	      <tube name="ecalphotblock_solid_%d" aunit="deg" startphi="%f" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>"""% (i+1, (i*12+2.2))
+
+
 print """  <subtraction name ="ecalcycdet_solid_4">
       <first ref="ecalcycdet_solid_1"/>
       <second ref="ecalcycdet_solid_2"/>
@@ -167,6 +179,16 @@ print """        </solids>
 
 	<structure>
 """
+
+##create 30 photon blocker logic volumes
+for i in range(30):
+    print """	         <volume name="ecalphotblock_logic_%d">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="ecalphotblock_solid_%d"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>""" % (i+1,i+1 )  
+    
+
 print """	         <volume name="ecalcycdet_logic">
 		      <materialref ref="Vacuum"/> 
 		      <solidref ref="ecalcycdet_solid"/>
@@ -241,6 +263,12 @@ print """
 		      <materialref ref="Vacuum"/>
 		      <solidref ref="ecalmother"/>
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>"""
+
+for i in range(30):
+    print """	      <physvol>
+                      <volumeref ref="ecalphotblock_logic_%d"/>
+		      <position name="ecalphotblock_pos_%d" unit="cm" x="0.0" y ="0.0" z="-26.0"/>
+	        </physvol>""" % (i+1, i+1 ) 
 
 print """	      <physvol>
                       <volumeref ref="ecalcycdet_logic"/>

@@ -15,11 +15,15 @@ class remollGenFlat : public remollVEventGen {
 	 remollGenFlat();
 	~remollGenFlat();
 
+         void SetParticleType(G4String t) { fParticleType = t; }
+
     private:
 	void SamplePhysics(remollVertex *, remollEvent *);
 
 	virtual void SetEmin( double emin ){ fE_min = emin; }
 	virtual void SetEmax( double emax ){ fE_max = emax; }
+
+  G4String fParticleType;
 };
 
 #endif//__REMOLLGENFLAT_HH 

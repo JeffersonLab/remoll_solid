@@ -24,7 +24,8 @@
 # add field map
 /remoll/addfield CLEO_rm.dat
 # change field map paramters
-#/remoll/scalefield map_directory/blockyHybrid_rm_3.0.txt 1.0
+#/remoll/scalefield map_directory/blockyHybrid_rm_3.0.txt -1.0
+/remoll/scalefield CLEO_rm.dat -1.0
 #/remoll/magcurrent map_directory/blockyHybrid_rm_3.0.txt 1000.0 A
 
 # Raster and initial angle stuff
@@ -40,6 +41,9 @@
 #/remoll/beam_dth 0 mrad
 #/remoll/beam_dph 0 mrad
 
+#/remoll/gen flat  # flat generator
+#/remoll/flattype e- # flat generator pid currently e-, pi-,pi+, and pi0 supported default is e-
+
 
 #/remoll/gen beam
 #/remoll/gen elastic 
@@ -47,9 +51,10 @@
 #/remoll/thmax 2.0 deg
 #/remoll/emin 80.0 MeV
 #/remoll/gen inelastic # Christy/Bosted
-/remoll/gen pion  # defaults to pi-
-#/remoll/gen uniformpion  # defaults to pi-
-/remoll/piontype pi- 
+#/remoll/gen pion  
+/remoll/gen uniformpion  
+/remoll/piontype pi-
+#/remoll/piontype pi0 
 #/remoll/gen dis
 
 #/remoll/gen flat  # flat generator
@@ -59,8 +64,8 @@
 #/remoll/thmax 180.0 deg
 /remoll/phmin -180.0 deg
 /remoll/phmax 180.0 deg
-/remoll/emin  0 GeV
-/remoll/emax 11.0 GeV
+#/remoll/emin  0 GeV
+#/remoll/emax 11.0 GeV
 
 /remoll/beamene 11.0 GeV
 /remoll/beamcurr 50 microampere
@@ -88,6 +93,6 @@
 #  output filename
 #/remoll/filename remollout.root
 #/remoll/filename remoll_dis_out_test3.root
-/remoll/filename remoll_test_pion.root
-#/remoll/filename remoll_test_uniformpion.root
-/run/beamOn 10000
+#/remoll/filename remoll_test_pion.root
+/remoll/filename remoll_test_uniformpion.root
+/run/beamOn 100000
