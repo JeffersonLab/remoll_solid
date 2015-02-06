@@ -1,9 +1,9 @@
 #  Example file
 
 # This must be called before initialize
-/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
+#/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
 #/remoll/setgeofile geometry_pvdis/solid_pvdis_mycopy.gdml
-#/remoll/setgeofile geometry_pvdis/solid_pvdis_krypto.gdml
+/remoll/setgeofile geometry_pvdis/solid_pvdis_krypto.gdml
 #/remoll/setgeofile geometry_pvdis/solid_pvdis_tgt_only.gdml
 
 #Adding physics list must be called before initialze command
@@ -53,10 +53,10 @@
 #/remoll/gen dis
 
 #/remoll/gen flat  # flat generator
-/remoll/thmin 0.0 deg
-#/remoll/thmin 10.0 deg
-#/remoll/thmax 50.0 deg
-/remoll/thmax 180.0 deg
+#/remoll/thmin 0.0 deg
+/remoll/thmin 10.0 deg
+/remoll/thmax 50.0 deg
+#/remoll/thmax 180.0 deg
 /remoll/phmin -180.0 deg
 /remoll/phmax 180.0 deg
 /remoll/emin  0 GeV
