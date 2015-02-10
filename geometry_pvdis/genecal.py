@@ -40,9 +40,15 @@ numsides = 6
 nscintlayer  = 194
 
 deltaz_plane = 0.1
-deltaz_blocker_space = 11
+deltaz_blocker_space = 12
+deltaz_cyc_det_space = 1.5
+#blockdepth = 45.432
 blockdepth = (absorbthick+scintthick+gapthick)*nscintlayer - gapthick + leadingscint
+#motherdepth = 46.754
 motherdepth = blockdepth + leadinglead + deltaz_plane*2 
+motherrmin = 109.0
+motherrmax = 270.0
+
 
 # lab coordinate z of center of mother volume
 # This needs to agree with main gdml coordinate
@@ -130,29 +136,16 @@ print """        <materials>
 	
 	<solids>"""
 
-print """	      <tube name="ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (rmin, rmax, motherdepth+deltaz_blocker_space)
-print """	      <tube name="ecalcycdet_solid_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%3.4f" z="%3.4f"/>"""% (rmax-0.1, motherdepth-0.05)
-print """	      <tube name="ecalcycdet_solid_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%3.4f" z="%3.4f"/>"""% (rmax-0.2, motherdepth-0.1)
-print """	      <tube name="ecalcycdet_solid_3" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0" rmax="%3.4f" z="%3.4f"/>"""% (rmin, motherdepth)
+print """	      <tube name="ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (motherrmin, motherrmax, motherdepth+deltaz_blocker_space)
+print """	      <tube name="ecalcycdet_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (motherrmax-0.6,motherrmax-0.5, motherdepth-1)
+print """	      <tube name="ecalcycdet_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (motherrmin,motherrmax-1, 0.1)
+print """	      <tube name="ecalcycdet_3" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (motherrmin,motherrmax-1, 0.1)
 
+#print """	      <tube name="ecalfrontdet_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="0.1"/>"""% (rmin, rmax)
 #create 30 photon blocker solids
 for i in range(30):
     print """	      <tube name="ecalphotblock_solid_%d" aunit="deg" startphi="%f" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>"""% (i+1, (i*12+2.2))
 
-
-print """  <subtraction name ="ecalcycdet_solid_4">
-      <first ref="ecalcycdet_solid_1"/>
-      <second ref="ecalcycdet_solid_2"/>
-      <positionref ref="ecal_origin"/>
-      <rotationref ref="identity"/>
-  </subtraction> """ 
-
-print """  <subtraction name ="ecalcycdet_solid">
-      <first ref="ecalcycdet_solid_4"/>
-      <second ref="ecalcycdet_solid_3"/>
-      <positionref ref="ecal_origin"/>
-      <rotationref ref="identity"/>
-  </subtraction> """ 
 
 print """	      <polyhedra name="ecalblock" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
    	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
@@ -189,24 +182,41 @@ for i in range(30):
 	        </volume>""" % (i+1,i+1 )  
     
 
-print """	         <volume name="ecalcycdet_logic">
+print """	         <volume name="ecalcycdet_1_logic">
 		      <materialref ref="Vacuum"/> 
-		      <solidref ref="ecalcycdet_solid"/>
+		      <solidref ref="ecalcycdet_1"/>
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
-	        </volume>""" % (ecalcycplanedetno)  # assign 70000 to plane cyclindrical detector
+	        </volume>""" % (ecalcycplanedetno+1)  # assign 70001 to plane cyclindrical detector
+
+print """	         <volume name="ecalcycdet_2_logic">
+		      <materialref ref="Vacuum"/> 
+		      <solidref ref="ecalcycdet_2"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
+	        </volume>""" % (ecalcycplanedetno+2)  # assign 70002 to plane cyclindrical detector
+
+print """	         <volume name="ecalcycdet_3_logic">
+		      <materialref ref="Vacuum"/> 
+		      <solidref ref="ecalcycdet_3"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
+	        </volume>""" % (ecalcycplanedetno+3)  # assign 70002 to plane cyclindrical detector
 
 print """	         <volume name="logicecalleadinglead">
 		      <materialref ref="%s"/> 
 		      <solidref ref="ecalleadinglead"/>
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Gray"/>
-		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		       <auxiliary auxtype="SensDet" auxvalue="Cal"/>
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
-	        </volume>""" % (ecalmat, showerdetno+9999)  # assign 99999 to leading lead (useful for kryptonite runs)
+	        </volume>""" % (ecalmat, preshowerdetno+9999)  # assign 99999 to leading lead (useful for kryptonite runs)
 print """	         <volume name="logicecalleadscint">
-		      <materialref ref ="Scint"/> 
+		      <materialref ref ="Scint"/>
+		      <!--<materialref ref ="Vacuum"/>  -->
 		      <solidref ref ="ecalleadscint"/>
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
@@ -218,13 +228,14 @@ print """	         <volume name="logicecalgap">
 		      <materialref ref ="Air"/> 
 		      <solidref ref ="ecalgap"/>
 		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+                      <!-- <auxiliary auxtype="Color" auxvalue="Blue"/> -->
 	        </volume>"""
 
 print """	         <volume name="logicecalblockscint">
 		      <materialref ref ="Scint"/> 
 		      <solidref ref ="ecalblockscint"/>
-		      <auxiliary auxtype="Visibility" auxvalue="false"/>
-<!--		      <auxiliary auxtype="Color" auxvalue="Yellow"/> -->
+		      <auxiliary auxtype="Visibility" auxvalue="false"/> 
+		      <!-- <auxiliary auxtype="Color" auxvalue="Yellow"/> -->
 		      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
 	        </volume>""" % showerdetno
@@ -236,12 +247,17 @@ print """	         <volume name="logicecalblock">
 		      <materialref ref ="%s"/> 
 		      <solidref ref ="ecalblock"/>
 		      <auxiliary auxtype="Visibility" auxvalue="True"/>
-		      <auxiliary auxtype="Color" auxvalue="Gray"/> 
-		      """ % (ecalmat)
+		      <auxiliary auxtype="Color" auxvalue="Gray"/>
+                      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
+		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
+		      """ % (ecalmat, showerdetno+9999)
+#detector id for lead  showerdetno+9999
+
+#comment following print line to disable PS scint
 print """	              <physvol>
 			     <volumeref ref="logicecalleadscint" />
-			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="%3.4f"/>
-                        </physvol>""" % (-blockdepth/2 + leadingscint/2)
+  			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="%3.4f"/>
+                          </physvol>""" % (-blockdepth/2 + leadingscint/2)
 
 for i in range(nscintlayer):
     thiszoff = -blockdepth/2 + leadingscint + (i+1)*absorbthick + i*(scintthick + gapthick)
@@ -264,20 +280,34 @@ print """
 		      <solidref ref="ecalmother"/>
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>"""
 
-for i in range(30):
-    print """	      <physvol>
-                      <volumeref ref="ecalphotblock_logic_%d"/>
-		      <position name="ecalphotblock_pos_%d" unit="cm" x="0.0" y ="0.0" z="-26.0"/>
-	        </physvol>""" % (i+1, i+1 ) 
+#to remove the photon blocker comment following for loop
+#for i in range(30):
+#     print """	      <physvol>
+#                       <volumeref ref="ecalphotblock_logic_%d"/>
+# 		      <position name="ecalphotblock_pos_%d" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+# 	        </physvol>""" % (i+1, i+1 ) 
+
 
 print """	      <physvol>
-                      <volumeref ref="ecalcycdet_logic"/>
-		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="0"/>
+                      <volumeref ref="ecalcycdet_1_logic"/>
+		      <position name="ecalcycdetpos_1" unit="cm" x="0.0" y ="0.0" z="0.0"/>
 	        </physvol>""" 
 
 print """	      <physvol>
-                      <volumeref ref="logicecalleadinglead"/>
-		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="%3.4f"/>
+                      <volumeref ref="ecalcycdet_2_logic"/>
+		      <position name="ecalcycdetpos_2" unit="cm" x="0.0" y ="0.0" z="0.0 + %3.4f"/>
+	        </physvol>"""  % (-motherdepth/2-0.1)
+
+print """	      <physvol>
+                      <volumeref ref="ecalcycdet_3_logic"/>
+		      <position name="ecalcycdetpos_3" unit="cm" x="0.0" y ="0.0" z="0.0 + %3.4f"/>
+	        </physvol>"""  % (motherdepth/2+0.1)
+
+
+#comment following print line to disable PS lead absorber
+print """	      <physvol>
+                        <volumeref ref="logicecalleadinglead"/>
+ 		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="%3.4f"/>
 	        </physvol>""" % (-motherdepth/2 + deltaz_plane/2 + leadinglead/2)
 
 # number of x and y steps to consider

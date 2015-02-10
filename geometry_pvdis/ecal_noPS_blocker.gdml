@@ -321,10 +321,6 @@
 		      <auxiliary auxtype="DetNo" auxvalue="99999"/>
 		      
 	              <physvol>
-			     <volumeref ref="logicecalleadscint" />
-  			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="-21.7160"/>
-                          </physvol>
-	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
 			     <position name="ecalblockscintpos_0" unit="cm" x="0.0" y="0.0" z="-20.5910"/>
                         </physvol>
@@ -1884,6 +1880,126 @@
 		      <solidref ref="ecalmother"/>
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_1"/>
+ 		      <position name="ecalphotblock_pos_1" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_2"/>
+ 		      <position name="ecalphotblock_pos_2" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_3"/>
+ 		      <position name="ecalphotblock_pos_3" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_4"/>
+ 		      <position name="ecalphotblock_pos_4" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_5"/>
+ 		      <position name="ecalphotblock_pos_5" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_6"/>
+ 		      <position name="ecalphotblock_pos_6" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_7"/>
+ 		      <position name="ecalphotblock_pos_7" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_8"/>
+ 		      <position name="ecalphotblock_pos_8" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_9"/>
+ 		      <position name="ecalphotblock_pos_9" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_10"/>
+ 		      <position name="ecalphotblock_pos_10" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_11"/>
+ 		      <position name="ecalphotblock_pos_11" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_12"/>
+ 		      <position name="ecalphotblock_pos_12" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_13"/>
+ 		      <position name="ecalphotblock_pos_13" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_14"/>
+ 		      <position name="ecalphotblock_pos_14" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_15"/>
+ 		      <position name="ecalphotblock_pos_15" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_16"/>
+ 		      <position name="ecalphotblock_pos_16" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_17"/>
+ 		      <position name="ecalphotblock_pos_17" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_18"/>
+ 		      <position name="ecalphotblock_pos_18" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_19"/>
+ 		      <position name="ecalphotblock_pos_19" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_20"/>
+ 		      <position name="ecalphotblock_pos_20" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_21"/>
+ 		      <position name="ecalphotblock_pos_21" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_22"/>
+ 		      <position name="ecalphotblock_pos_22" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_23"/>
+ 		      <position name="ecalphotblock_pos_23" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_24"/>
+ 		      <position name="ecalphotblock_pos_24" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_25"/>
+ 		      <position name="ecalphotblock_pos_25" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_26"/>
+ 		      <position name="ecalphotblock_pos_26" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_27"/>
+ 		      <position name="ecalphotblock_pos_27" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_28"/>
+ 		      <position name="ecalphotblock_pos_28" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_29"/>
+ 		      <position name="ecalphotblock_pos_29" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
+                       <volumeref ref="ecalphotblock_logic_30"/>
+ 		      <position name="ecalphotblock_pos_30" unit="cm" x="0.0" y ="0.0" z="-26.5"/>
+ 	        </physvol>
+	      <physvol>
                       <volumeref ref="ecalcycdet_1_logic"/>
 		      <position name="ecalcycdetpos_1" unit="cm" x="0.0" y ="0.0" z="0.0"/>
 	        </physvol>
@@ -1894,10 +2010,6 @@
 	      <physvol>
                       <volumeref ref="ecalcycdet_3_logic"/>
 		      <position name="ecalcycdetpos_3" unit="cm" x="0.0" y ="0.0" z="0.0 + 23.4770"/>
-	        </physvol>
-	      <physvol>
-                        <volumeref ref="logicecalleadinglead"/>
- 		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="-22.7660"/>
 	        </physvol>
              <physvol>
 		  <volumeref ref="logicecalblock"/>
