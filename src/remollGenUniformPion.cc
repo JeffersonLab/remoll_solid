@@ -11,9 +11,8 @@
 
 #include "remolltypes.hh"
 
-remollGenUniformPion::remollGenUniformPion(){
+remollGenUniformPion::remollGenUniformPion() : remollGenPion(){
   fHaveTotalXs=kFALSE;
-  remollGenPion::remollGenPion();
 }
 
 remollGenUniformPion::~remollGenUniformPion(){

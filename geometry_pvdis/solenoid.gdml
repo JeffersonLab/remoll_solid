@@ -228,102 +228,103 @@
 
     <structure>
 	<volume name="logicCoil">
-	    <materialref ref="Iron"/>
+	    <materialref ref="Aluminum"/>
 	    <solidref ref="Coil"/>
+	    <auxiliary auxtype="Color" auxvalue="Red"/>
 	</volume>
 
 	<volume name="logicBarrelYokeInner">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="BarrelYokeInner"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicBarrelYokeOuter">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="BarrelYokeOuter"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicSlabSpacerUpstream">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="SlabSpacerUpstream"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicSlabSpacerDownstream">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="SlabSpacerDownstream"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicCoilCollarUpstream">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="CoilCollarUpstream"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicCoilCollarDownstream">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="CoilCollarDownstream"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicEndcapDonut">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="EndcapDonut"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicEndcapBottomInner">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="EndcapBottomInner"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicEndcapBottomOuter">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="EndcapBottomOuter"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicEndcapNose">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="EndcapNose"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicFrontPiece">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="FrontPiece"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicUpstreamShield1">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="UpstreamShield1"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicUpstreamShield2">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="UpstreamShield2"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicUpstreamShield3">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="UpstreamShield3"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicUpstreamShield4">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="UpstreamShield4"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
 
 	<volume name="logicUpstreamShield5">
-	    <materialref ref="Aluminum"/>
+	    <materialref ref="Iron"/>
 	    <solidref ref="UpstreamShield5"/>
 	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
 	</volume>
@@ -331,31 +332,31 @@
 	<volume name="logicCryostatInner">
 	    <materialref ref="StainlessSteel"/>
 	    <solidref ref="CryostatInner"/>
-	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/>
 	</volume>
 	
 	<volume name="logicCryostatOuter">
 	    <materialref ref="StainlessSteel"/>
 	    <solidref ref="CryostatOuter"/>
-	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/>
 	</volume>
 
 	<volume name="logicCryostatFlangeUpstream">
 	    <materialref ref="StainlessSteel"/>
 	    <solidref ref="CryostatFlangeUpstream"/>
-	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/>
 	</volume>
 
 	<volume name="logicCryostatFlangeDownstream">
 	    <materialref ref="StainlessSteel"/>
 	    <solidref ref="CryostatFlangeDownstream"/>
-	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/>
 	</volume>
 
 	<volume name="logicSolenoidMother">
 	    <materialref ref="Air"/>
 	    <solidref ref="SolenoidMother"/>
-	    <auxiliary auxtype="Color" auxvalue="Magenta"/>
+	    <!-- <auxiliary auxtype="Color" auxvalue="Magenta"/> -->
 
 	    <physvol>
 		<volumeref ref="logicCoil"/>

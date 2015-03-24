@@ -22,6 +22,7 @@ rmax = 265.0
 
 #6.25 cm a side gives 101.49 cm area per block
 blockside = 6.25
+blockside1 = 6.26
 
 nlayer  = 23
 nsector = 30
@@ -148,8 +149,8 @@ for i in range(30):
 
 
 print """	      <polyhedra name="ecalblock" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
-   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
-   	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
+   	          <zplane rmin="0" rmax="%3.2f" z="%3.2f"/>
+   	          <zplane rmin="0" rmax="%3.2f" z="%3.2f"/>
 	      </polyhedra>""" % (numsides,  blockside*sqrt(3.0)/2, -blockdepth/2, blockside*sqrt(3.0)/2,  blockdepth/2 )
 
 print """	      <tube name="ecalleadinglead" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (rmin, rmax, leadinglead)
@@ -204,7 +205,7 @@ print """	         <volume name="ecalcycdet_3_logic">
 		      <auxiliary auxtype="Visibility" auxvalue="true"/>
 		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
-	        </volume>""" % (ecalcycplanedetno+3)  # assign 70002 to plane cyclindrical detector
+	        </volume>""" % (ecalcycplanedetno+3)  # assign 70003 to plane cyclindrical detector
 
 print """	         <volume name="logicecalleadinglead">
 		      <materialref ref="%s"/> 
@@ -256,7 +257,7 @@ print """	         <volume name="logicecalblock">
 #comment following print line to disable PS scint
 print """	              <physvol>
 			     <volumeref ref="logicecalleadscint" />
-  			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="%3.4f"/>
+  			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="%3.2f"/>
                           </physvol>""" % (-blockdepth/2 + leadingscint/2)
 
 for i in range(nscintlayer):
@@ -311,8 +312,8 @@ print """	      <physvol>
 	        </physvol>""" % (-motherdepth/2 + deltaz_plane/2 + leadinglead/2)
 
 # number of x and y steps to consider
-xspace = blockside*3
-yspace = blockside*sqrt(3.0)
+xspace = blockside1*3
+yspace = blockside1*sqrt(3.0)
 
 
 nx = int(2.0*rmax/xspace) + 1
@@ -322,16 +323,16 @@ for i in range(nx):
 	thisx = -rmax + i*xspace
 	thisy = -rmax + j*yspace
 
-	if checkhexpoints( thisx, thisy, blockside ):
+	if checkhexpoints( thisx, thisy, blockside1 ):
 	    print """             <physvol>
 		  <volumeref ref="logicecalblock"/>
 		  <position name="ecalblockpos_%d_%d_%d" unit="cm" x="%3.2f" y ="%3.2f" z="%3.2f"/>
 	    </physvol>""" % (i, j, 0, thisx, thisy, motherdepth/2-blockdepth/2)
 #add 0.5 xspace and 0.5 yspace offsets and repeat above
-	thisx = -rmax + i*xspace+ blockside*1.5
-        thisy = -rmax + j*yspace + blockside*sqrt(3.0)/2
+	thisx = -rmax + i*xspace+ blockside1*1.5
+        thisy = -rmax + j*yspace + blockside1*sqrt(3.0)/2
 
-	if checkhexpoints( thisx, thisy, blockside ):
+	if checkhexpoints( thisx, thisy, blockside1 ):
 	    print """             <physvol>
 		  <volumeref ref="logicecalblock"/>
 		  <position  name="ecalblockpos_%d_%d_%d " unit="cm" x="%3.2f" y ="%3.2f" z="%3.2f"/>
