@@ -12,6 +12,7 @@
 #include "remollVEventGen.hh"
 #include "remollGenPion.hh"
 #include "remollGenFlat.hh"
+#include "remollGenBeam.hh"
 #include "remollPrimaryGeneratorAction.hh"
 #include "remollBeamTarget.hh"
 #include "remollRun.hh"
@@ -107,6 +108,10 @@ remollMessenger::remollMessenger(){
     flatCmd = new G4UIcmdWithAString("/remoll/flattype",this);
     flatCmd->SetGuidance("Generate flat distribution type");
     flatCmd->SetParameterName("flattype", false);
+
+    beamCmd = new G4UIcmdWithAString("/remoll/beamtype",this);
+    beamCmd->SetGuidance("Generate beam of particle type");
+    beamCmd->SetParameterName("beamtype", false);
 
     thminCmd = new G4UIcmdWithADoubleAndUnit("/remoll/thmin",this);
     thminCmd->SetGuidance("Minimum generation angle");
@@ -314,10 +319,30 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	    if( newValue.compareTo("pi0") == 0 ){
 		apion->SetParticleType("pi0");
 	    }
-
-	} else {
+	    if( newValue.compareTo("gamma") == 0 ){
+	      apion->SetParticleType("gamma");
+	    }
+	}else {
 	  G4cerr << __FILE__ << " line " << __LINE__ <<  ": Can't set particle type for non-generator" << newValue << G4endl;
 	}
+    }
+    if (cmd == beamCmd) {
+	remollVEventGen *agen = fprigen->GetGenerator();
+	remollGenBeam *abeam = dynamic_cast<remollGenBeam *>(agen);
+	if( abeam ){
+	  if( newValue.compareTo("e-") == 0 ){
+	    abeam->SetParticleType("e-");
+	  }else if( newValue.compareTo("gamma") == 0 ){
+	    abeam->SetParticleType("gamma");
+	  } else{
+	    G4cerr << __FILE__ << " line " << __LINE__ <<  ": Can't set beam particle type for non-generator supported " << newValue << " Error! and Existing..."<< G4endl;
+	    exit(1);
+	  }
+	    
+	}else {
+	  G4cerr << __FILE__ << " line " << __LINE__ <<  ": Can't set particle type for non-generator" << newValue << G4endl;
+	}
+	
     }
 
     if( cmd == EminCmd ){
