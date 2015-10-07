@@ -50,7 +50,7 @@ void remollGenUniformPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
   double intrad = 2.0*alpha*log(beamE/electron_mass_c2)/pi;
   
   if( !fHaveTotalXs ){
-    printf("Calculating total wiser cross section\n");
+    printf("Calculating total wiser cross section %3.3f %3.3f \n",intrad,rad_len*4.0/3.0);
     fTotal0Xs = wiser_total_sigma( beamE/GeV, intrad, rad_len*4.0/3.0, 0)*nanobarn;
     fTotal1Xs = wiser_total_sigma( beamE/GeV, intrad, rad_len*4.0/3.0, 1)*nanobarn;
     //printf("Calculated %10.5e  %10.5e   %10.5e \n",fTotal0Xs,fTotal1Xs,(vert->GetMaterial()->GetZ()*fTotal1Xs +  (vert->GetMaterial()->GetA()*mole/g-vert->GetMaterial()->GetZ())*fTotal0Xs)*1e-37);

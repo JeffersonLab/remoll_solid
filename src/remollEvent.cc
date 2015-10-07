@@ -59,7 +59,7 @@ G4bool remollEvent::EventIsSane(){
     unsigned int i;
 
     if( std::isnan(fEffXs) || std::isinf(fEffXs) || fEffXs < 0.0 ) return false;
-    if( std::isnan(fAsym) || std::isinf(fAsym) || fAsym < -1.0 || fAsym > 1.0 ) return false;
+    //if( std::isnan(fAsym) || std::isinf(fAsym) || fAsym < -1.0 || fAsym > 1.0 ) return false;
     if( std::isnan(fThCoM) || std::isinf(fThCoM) ) return false;
     if( std::isnan(fQ2) || std::isinf(fQ2) ) return false;
     if( std::isnan(fW2) || std::isinf(fW2) ) return false;
