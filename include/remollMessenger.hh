@@ -88,6 +88,7 @@ class remollMessenger : public G4UImessenger {
 	G4UIcmdWithAString   *pionCmd;
 
 	G4UIcmdWithAString   *flatCmd;
+	G4UIcmdWithAString   *beamCmd;
 
 	////////////////////////////////////////////////
 	// To general event generators
