@@ -41,7 +41,7 @@
 
 
     <solids>
-	<box lunit="mm" name="Worldbox" x="8000" y="8000" z="80000"/>
+	<box lunit="mm" name="Worldbox" x="100000" y="100000" z="100000"/>
     </solids>
 
     <structure>
@@ -56,11 +56,20 @@
 		<rotationref ref="identity"/>
 	    </physvol>
 
+<!--
+
+	    <physvol>
+		<file name="geometry_pvdis/target_Ca.gdml"/>
+		<positionref ref="origin"/>
+		<rotationref ref="identity"/>
+	    </physvol>
+-->
 	    <physvol>
 		<file name="geometry_pvdis/solenoid.gdml"/>
 		<positionref ref="origin"/>
 		<rotationref ref="identity"/>
 	    </physvol>
+
 
 
 	    <physvol>
@@ -71,13 +80,11 @@
 	    </physvol>
 
 
-	    <physvol> 
-		<file name="geometry_pvdis/cerenkov.gdml"/>
-		<positionref ref="cerpos"/>
-<!--		<file name="geometry_pvdis/cerenkov_orig.gdml"/>
-		<positionref ref="origin"/> -->
+	    <physvol>  
+		<file name="geometry_pvdis/cerenkov.gdml"/> 
+		<positionref ref="cerpos"/>  
 		<rotationref ref="identity"/>
-	    </physvol> 
+	    </physvol>
 
 <!--	    <physvol> -->
 		<!--		<file name="geometry_pvdis/gembaffles.gdml"/> -->
@@ -90,19 +97,12 @@
 
 <!--
              <physvol>
-		<file name="geometry_pvdis/gembaffles_babarmore1_noofset.gdml"/>
+		<file name="geometry_pvdis/gembaffles_babarmore1_krypto.gdml"/>
 		<positionref ref="gembafflepos"/>
 		<rotationref ref="identity"/>
 	    </physvol>
 -->
-<!--
-             <physvol>
-		<file name="geometry_pvdis/gembaffles_babarmore1.gdml"/>
-		<positionref ref="gembafflepos"/>
-		<rotationref ref="identity"/>
-	    </physvol>
 
--->
              <physvol>
 		<file name="geometry_pvdis/gembaffles_babarmore1.gdml"/>
 		<positionref ref="gembafflepos"/>
