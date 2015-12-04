@@ -64,19 +64,20 @@
 
 
 	    <physvol>
-		<file name="geometry_pvdis/ecal.gdml"/> 
+	      <!--ecal.gdml -->
+		<file name="geometry_pvdis/ecal_blocker.gdml"/> 
 		<positionref ref="ecalpos"/>
 		<rotationref ref="identity"/>
 	    </physvol>
 
 
 	    <physvol> 
-		<file name="geometry_pvdis/cerenkov.gdml"/> -->
-		<positionref ref="cerpos"/>  -->
+		<file name="geometry_pvdis/cerenkov.gdml"/>
+		<positionref ref="cerpos"/>
 <!--		<file name="geometry_pvdis/cerenkov_orig.gdml"/>
 		<positionref ref="origin"/> -->
 		<rotationref ref="identity"/>
-	    </physvol> -->
+	    </physvol> 
 
 <!--	    <physvol> -->
 		<!--		<file name="geometry_pvdis/gembaffles.gdml"/> -->
