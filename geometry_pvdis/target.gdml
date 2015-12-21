@@ -249,8 +249,8 @@
 	  <solidref ref="cDet_solid_1"/>
 	  <!-- <auxiliary auxtype="Color" auxvalue="green"/> -->
 	  <!-- <auxiliary auxtype="Visibility" auxvalue="false"/> -->
-	  <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-	  <auxiliary auxtype="DetNo" auxvalue="8001"/>
+	  <!--  <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	  <auxiliary auxtype="DetNo" auxvalue="8001"/> -->
 	</volume>
 
 	<volume name="cDet_2">
@@ -258,8 +258,8 @@
 	  <solidref ref="cDet_solid_2"/>
 	  <!-- <auxiliary auxtype="Color" auxvalue="green"/> -->
 	  <!-- <auxiliary auxtype="Visibility" auxvalue="false"/> -->
-	  <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
-	  <auxiliary auxtype="DetNo" auxvalue="8002"/>
+	  <!-- <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	  <auxiliary auxtype="DetNo" auxvalue="8002"/> -->
 	</volume>
 
 	<!---  Place volumes -->
