@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# generate ecal geometry with fiber holes in lead, scint, and gap
+# Rakitha Wed Dec 23 15:07:09 EST 2015
 from math import sin,cos,sqrt,fabs, pi, atan
 
 preshowerdetno = 80000
