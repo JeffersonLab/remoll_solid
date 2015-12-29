@@ -3,8 +3,8 @@
 frontgemdet1no = 1000
 frontgemdet2no = 2000
 
-bafmat = "Kryptonite"
-#bafmat = "Lead"
+#bafmat = "Kryptonite"
+bafmat = "Lead"
 
 ####################################################################
 # Beampipe/general parameters
