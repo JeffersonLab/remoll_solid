@@ -2061,13 +2061,13 @@
 		      <auxiliary auxtype="Color" auxvalue="Magenta"/>
 		   </volume>
 	         <volume name="logicbafring_in_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2078,13 +2078,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2095,13 +2095,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2112,13 +2112,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2129,13 +2129,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2146,13 +2146,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2163,13 +2163,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2180,13 +2180,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2197,13 +2197,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2214,13 +2214,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2231,13 +2231,13 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafring_in_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_in_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafring_out_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafring_out_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
@@ -2248,1321 +2248,1321 @@
 	              <auxiliary auxtype="Visibility" auxvalue="false"/>
 		      </volume>
 	         <volume name="logicbafblock_00_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_00_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_00_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_01_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_01_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_02_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_02_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_03_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_03_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_04_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_04_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_05_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_05_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_06_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_06_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_07_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_07_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_08_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_08_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_09_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_09_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_00">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_00"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_01">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_01"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_02">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_02"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_03">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_03"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_04">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_04"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_05">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_05"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_06">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_06"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_07">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_07"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_08">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_08"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_09">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_09"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_10">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_10"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_11">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_11"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_12">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_12"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_13">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_13"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_14">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_14"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_15">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_15"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_16">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_16"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_17">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_17"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_18">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_18"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
 		      </volume>
 	         <volume name="logicbafblock_10_19">
-		      <materialref ref ="Kryptonite"/> 
+		      <materialref ref ="Lead"/> 
 		      <solidref ref ="bafblock_10_19"/>
 	              <auxiliary auxtype="Visibility" auxvalue="true"/>
 		      <auxiliary auxtype="Color" auxvalue="Cyan"/>
