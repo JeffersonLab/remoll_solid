@@ -2081,10 +2081,6 @@
 		      <auxiliary auxtype="DetNo" auxvalue="99999"/>
 		      
 	              <physvol>
-			     <volumeref ref="logicecalleadscint" />
-  			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="-20.27"/>
-                          </physvol>
-	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
 			     <position name="ecalblockscintpos_0" unit="cm" x="0.0" y="0.0" z="-19.1590"/>
                         </physvol>
@@ -3654,10 +3650,6 @@
 	      <physvol>
                       <volumeref ref="ecalcycdet_3_logic"/>
 		      <position name="ecalcycdetpos_3" unit="cm" x="0.0" y ="0.0" z="0.0 + 22.0290"/>
-	        </physvol>
-	      <physvol>
-                        <volumeref ref="logicecalleadinglead"/>
- 		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="-21.3180"/>
 	        </physvol>
              <physvol>
 		  <volumeref ref="logicecalblock"/>
