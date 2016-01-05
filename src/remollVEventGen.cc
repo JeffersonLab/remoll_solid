@@ -93,7 +93,17 @@ void remollVEventGen::PolishEvent(remollEvent *ev){
 	(*iter) += ev->fVertexPos;
     }
 
-    ev->fRate  = ev->fEffXs*fBeamTarg->GetEffLumin()/((G4double) fRunData->GetNthrown());
+    /*
+    //set rate only if it not already set. for hall D based MC generator I set the rate not the cross section
+    //For this case target is empty and vertices from standalone generator are place in the target space. Therefore lumi is zero
+    //For this reason I have to set the rate (normalization factor) in the SamplePhysics routine - Rakitha 10/15/15
+    */
+    if (ev->GetRate()==0){//if the rate is not already set 
+      //ev->SetRate(ev->fEffXs*fBeamTarg->GetEffLumin()/((G4double) fRunData->GetNthrown()));
+      ev->fRate = ev->fEffXs*fBeamTarg->GetEffLumin()/((G4double) fRunData->GetNthrown());
+      //if (ev->fRate>0)
+      //printf("DEBUG: get rate %e lumi %e xs %e \n ",ev->fEffXs*fBeamTarg->GetEffLumin()/((G4double) fRunData->GetNthrown()),fBeamTarg->GetEffLumin(),ev->fEffXs); 
+    }
     ev->fmAsym = ev->fAsym*fBeamTarg->fBeamPol;
 
     return;
