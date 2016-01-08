@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+    <!-- Back GEMs -->
+
+        <define>
+	   <position name="backgem_origin" x="0.0" y="0.0" z="0.0" unit="cm"/>
+	   <rotation name="identity"/>
+	   <variable name="i0" value="1"/>
+	   <constant name="backgem_z1" value="306.000000"/>
+	   <constant name="backgem_z2" value="315.000000"/>
+	   <variable name="backgem_rmin1" value="105.000000"/>
+	   <constant name="backgem_rmax1" value="230.000000"/>
+	   <constant name="backgem_rmin2" value="109.000000"/>
+	   <constant name="backgem_rmax2" value="237.000000"/>
+        </define>
+        <materials>
+	   <material Z="1" name="Vacuum" state="gas">
+	       <T unit="K" value="2.73"/>
+  	       <P unit="pascal" value="3e-18"/>
+	       <D unit="g/cm3" value="1e-25"/>
+	       <atom unit="g/mole" value="1.01"/>
+	   </material>
+	   <material name="Nitrogen" Z="7">
+	       <D    unit="g/L" value="1.165"/>
+	       <atom unit="g/mole" value="14.0067"/>
+	   </material>
+	   <material name="Oxygen" Z="8">
+	       <D    unit="g/L" value="1.332"/>
+	       <atom unit="g/mole" value="16"/>
+	   </material>
+	   <material name="Carbon" Z="6">
+	       <D    unit="g/cm3" value="2.21"/>
+	       <atom unit="g/mole" value="12.011"/>
+	   </material>
+	   <material name="Hydrogen" Z="1">
+	       <D    unit="g/cm3" value="0.067"/>
+	       <atom unit="g/mole" value="1.01"/>
+	   </material>
+	   <material name="Silicon" Z="14">
+	       <D    unit="g/cm3" value="2.329"/>
+	       <atom unit="g/mole" value="28.086"/>
+	   </material>
+           <material name="Chlorine" Z="17">
+               <D    unit="g/cm3" value="1.574"/>
+               <atom unit="g/mole" value="35.453"/>
+           </material>
+
+
+	   <material name="Air" state="gas">
+	       <D value="0.00129" />
+	       <fraction n="0.7" ref="Nitrogen" />
+	       <fraction n="0.3" ref="Oxygen" />
+	   </material>
+
+	   <material name="NEMAG10" state="solid">
+	       <D unit="g/cm3" value="1.7"/>
+	       <composite n="1" ref="Silicon"/>
+	       <composite n="2" ref="Oxygen"/>
+	       <composite n="3" ref="Carbon"/>
+	       <composite n="4" ref="Hydrogen"/>
+	   </material>
+
+	   <material name="NOMEX_pure" state="solid">
+	       <D unit="g/cm3" value="1.38"/>
+	       <fraction n="0.23" ref="Chlorine"/>
+	       <fraction n="0.09" ref="Nitrogen"/>
+	       <fraction n="0.10" ref="Oxygen"/>
+	       <fraction n="0.54" ref="Carbon"/>
+	       <fraction n="0.04" ref="Hydrogen"/>
+	   </material>
+
+	   <material name="NOMEX" state="solid">
+	       <D unit="g/cm3" value="0.04"/>
+	       <fraction n="0.45" ref="NOMEX_pure"/>
+	       <fraction n="0.55" ref="Air"/>
+	   </material>
+
+	   <material  name="Kapton" state="solid">
+	       <D unit="g/cm3" value="1.42"/>
+	       <fraction n="0.026" ref="Hydrogen"/>
+	       <fraction n="0.692" ref="Carbon"/>
+	       <fraction n="0.073" ref="Nitrogen"/>
+	       <fraction n="0.209" ref="Oxygen"/>
+	   </material>
+
+	   <material Z="29" name="GEMCopper" state="solid">
+	       <D unit="g/cm3" value="8.960"/>
+	       <atom unit="g/mole" value="63.546"/>
+	   </material>
+
+	   <material Z="18" name="Argon" state="gas">
+	       <D unit="g/L" value="1.662"/>
+	       <atom unit="g/mole" value="39.948"/>
+	   </material>
+
+	   <material  name="CO2">
+	       <D unit="g/cm3" value="1.563"/>
+	       <composite n="1" ref="Carbon"/>
+	       <composite n="2" ref="Oxygen"/>
+	   </material>
+
+	   <material name="GEMgas" state="gas">
+	       <D unit="g/cm3" value="1e-25"/>
+	       <fraction n="0.713" ref="Argon"/>
+	       <fraction n="0.287" ref="CO2"/>
+	   </material>
+
+	   <material Z="82" name="Lead" state="solid">
+	       <D unit="g/cm3" value="11.350"/>
+	       <atom unit="g/mole" value="207.2"/>
+	   </material>
+
+        </materials>
+	
+	<solids>
+	      <cone name="backgemvol" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin1="backgem_rmin1+-0.500000" rmax1="backgem_rmax1" rmin2="backgem_rmin2" rmax2="backgem_rmax2+0.500000"  z="11.000000" />
+	         <tube name="backgem_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="backgem_rmin1" rmax="backgem_rmax1" z="0.1" />
+	         <tube name="backgem_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="backgem_rmin2" rmax="backgem_rmax2" z="0.1" />
+        </solids>
+
+	<structure>
+
+	         <volume name="logicbackgem_1">
+		      <materialref ref ="Vacuum"/> 
+		      <solidref ref ="backgem_1"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+                      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+                      <auxiliary auxtype="DetNo" auxvalue="40001"/>
+		      <auxiliary auxtype="Color" auxvalue="Magenta"/>
+		   </volume>
+	         <volume name="logicbackgem_2">
+		      <materialref ref ="Vacuum"/> 
+		      <solidref ref ="backgem_2"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+                      <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+                      <auxiliary auxtype="DetNo" auxvalue="40002"/>
+		      <auxiliary auxtype="Color" auxvalue="Magenta"/>
+		   </volume>
+
+        <!---  Place volumes -->
+	        <volume name="logicbackGEMMother">
+		      <materialref ref="Vacuum"/>
+		      <solidref ref="backgemvol"/>
+	              <auxiliary auxtype="Visibility" auxvalue="false"/>
+    
+
+	        <physvol>
+		       <volumeref ref="logicbackgem_1"/>
+		       <position name="backgempos_1" unit="cm" x="0" y="0" z="-5.000000"/>
+	        </physvol>
+    
+
+	        <physvol>
+		       <volumeref ref="logicbackgem_2"/>
+		       <position name="backgempos_2" unit="cm" x="0" y="0" z="4.000000"/>
+	        </physvol>
+    
+
+	        </volume>
+	</structure>
+
+	<setup name="backGEM" version="1.0">
+	     <world ref="logicbackGEMMother"/>
+	</setup>
+</gdml>
