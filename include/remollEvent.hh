@@ -20,6 +20,8 @@ class remollEvent {
 
 	void ProduceNewParticle( G4ThreeVector, G4ThreeVector, G4String );
 	void SetEffCrossSection( G4double xs ){ fEffXs = xs; }
+	void SetRate( G4double rate ){ fRate = rate/s; }
+	G4double GetRate(){ return fRate; }
 	void SetAsymmetry( G4double A ){ fAsym = A; }
 
 	void SetQ2( G4double q2 ){ fQ2 = q2; }
