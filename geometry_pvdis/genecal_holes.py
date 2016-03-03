@@ -30,9 +30,9 @@ nlayer  = 23
 nsector = 30
 
 #absorber thickness is 0.009.X_0 for shower blocks
-#absorbthick = 0.05
+absorbthick = 0.05
 #Testing with tungsten
-absorbthick = 0.034
+#absorbthick = 0.034
 scintthick  = 0.15
 gapthick = 0.024
 #for double the layers
@@ -403,9 +403,9 @@ print """	         <volume name="logicecalblockscint">
 
 # Now build blocks		
 # Preshower scint + mainshower layers
-# ecalmat = "Lead"
+ecalmat = "Lead"
 #change ecal material to Tungsten
-ecalmat = "Tungsten"
+#ecalmat = "Tungsten"
 print """	         <volume name="logicecalblock">
 		      <materialref ref ="%s"/> 
 		      <solidref ref ="ecalblock_%i"/>
@@ -417,10 +417,10 @@ print """	         <volume name="logicecalblock">
 #detector id for lead  showerdetno+9999
 
 #comment following print line to disable PS scint
-#print """	              <physvol>
-#			     <volumeref ref="logicecalleadscint" />
-#  			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="%3.2f"/>
-#                          </physvol>""" % (-blockdepth/2 + leadingscint/2)
+print """	              <physvol>
+			     <volumeref ref="logicecalleadscint" />
+  			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="%3.2f"/>
+                          </physvol>""" % (-blockdepth/2 + leadingscint/2)
 
 for i in range(nscintlayer):
     thiszoff = -blockdepth/2 + leadingscint + (i+1)*absorbthick + i*(scintthick + gapthick)
@@ -468,10 +468,10 @@ print """	      <physvol>
 
 
 #comment following print line to disable PS lead absorber
-#print """	      <physvol>
-#                        <volumeref ref="logicecalleadinglead"/>
-# 		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="%3.4f"/>
-#	        </physvol>""" % (-motherdepth/2 + deltaz_plane/2 + leadinglead/2)
+print """	      <physvol>
+                        <volumeref ref="logicecalleadinglead"/>
+ 		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="%3.4f"/>
+	        </physvol>""" % (-motherdepth/2 + deltaz_plane/2 + leadinglead/2)
 
 # number of x and y steps to consider
 xspace = blockside1*3
