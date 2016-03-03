@@ -60,8 +60,8 @@
         </materials>
 	
 	<solids>
-	      <tube name="ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="109.0000" rmax="270.0000" z="55.8580"/>
-	      <tube name="ecalcycdet_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="269.4000" rmax="269.5000" z="42.8580"/>
+	      <tube name="ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="109.0000" rmax="270.0000" z="58.9780"/>
+	      <tube name="ecalcycdet_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="269.4000" rmax="269.5000" z="45.9780"/>
 	      <tube name="ecalcycdet_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="109.0000" rmax="269.0000" z="0.1000"/>
 	      <tube name="ecalcycdet_3" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="109.0000" rmax="269.0000" z="0.1000"/>
 	      <tube name="ecalphotblock_solid_1" aunit="deg" startphi="2.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
@@ -95,11 +95,11 @@
 	      <tube name="ecalphotblock_solid_29" aunit="deg" startphi="338.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
 	      <tube name="ecalphotblock_solid_30" aunit="deg" startphi="350.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
 	      <polyhedra name="ecalblock_nh" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="6" >
-   	          <zplane rmin="0" rmax="5.41" z="-21.27"/>
-   	          <zplane rmin="0" rmax="5.41" z="21.27"/>
+   	          <zplane rmin="0" rmax="5.41" z="-22.83"/>
+   	          <zplane rmin="0" rmax="5.41" z="22.83"/>
 	      </polyhedra>
  
- <tube name="fibreHole_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0.0" rmax="0.0800" z="42.6360"/>
+ <tube name="fibreHole_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0.0" rmax="0.0800" z="45.7560"/>
  
 <subtraction name ="ecalblock_0">
     <first ref="ecalblock_nh"/>
@@ -2082,1559 +2082,1559 @@
 		      
 	              <physvol>
 			     <volumeref ref="logicecalleadscint" />
-  			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="-20.27"/>
+  			     <position name="ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="-21.83"/>
                           </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_0" unit="cm" x="0.0" y="0.0" z="-19.1590"/>
+			     <position name="ecalblockscintpos_0" unit="cm" x="0.0" y="0.0" z="-20.7030"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_0" unit="cm" x="0.0" y="0.0" z="-19.0720"/>
+			     <position name="ecalgappos_0" unit="cm" x="0.0" y="0.0" z="-20.6160"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_1" unit="cm" x="0.0" y="0.0" z="-18.9510"/>
+			     <position name="ecalblockscintpos_1" unit="cm" x="0.0" y="0.0" z="-20.4790"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_1" unit="cm" x="0.0" y="0.0" z="-18.8640"/>
+			     <position name="ecalgappos_1" unit="cm" x="0.0" y="0.0" z="-20.3920"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_2" unit="cm" x="0.0" y="0.0" z="-18.7430"/>
+			     <position name="ecalblockscintpos_2" unit="cm" x="0.0" y="0.0" z="-20.2550"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_2" unit="cm" x="0.0" y="0.0" z="-18.6560"/>
+			     <position name="ecalgappos_2" unit="cm" x="0.0" y="0.0" z="-20.1680"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_3" unit="cm" x="0.0" y="0.0" z="-18.5350"/>
+			     <position name="ecalblockscintpos_3" unit="cm" x="0.0" y="0.0" z="-20.0310"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_3" unit="cm" x="0.0" y="0.0" z="-18.4480"/>
+			     <position name="ecalgappos_3" unit="cm" x="0.0" y="0.0" z="-19.9440"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_4" unit="cm" x="0.0" y="0.0" z="-18.3270"/>
+			     <position name="ecalblockscintpos_4" unit="cm" x="0.0" y="0.0" z="-19.8070"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_4" unit="cm" x="0.0" y="0.0" z="-18.2400"/>
+			     <position name="ecalgappos_4" unit="cm" x="0.0" y="0.0" z="-19.7200"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_5" unit="cm" x="0.0" y="0.0" z="-18.1190"/>
+			     <position name="ecalblockscintpos_5" unit="cm" x="0.0" y="0.0" z="-19.5830"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_5" unit="cm" x="0.0" y="0.0" z="-18.0320"/>
+			     <position name="ecalgappos_5" unit="cm" x="0.0" y="0.0" z="-19.4960"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_6" unit="cm" x="0.0" y="0.0" z="-17.9110"/>
+			     <position name="ecalblockscintpos_6" unit="cm" x="0.0" y="0.0" z="-19.3590"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_6" unit="cm" x="0.0" y="0.0" z="-17.8240"/>
+			     <position name="ecalgappos_6" unit="cm" x="0.0" y="0.0" z="-19.2720"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_7" unit="cm" x="0.0" y="0.0" z="-17.7030"/>
+			     <position name="ecalblockscintpos_7" unit="cm" x="0.0" y="0.0" z="-19.1350"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_7" unit="cm" x="0.0" y="0.0" z="-17.6160"/>
+			     <position name="ecalgappos_7" unit="cm" x="0.0" y="0.0" z="-19.0480"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_8" unit="cm" x="0.0" y="0.0" z="-17.4950"/>
+			     <position name="ecalblockscintpos_8" unit="cm" x="0.0" y="0.0" z="-18.9110"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_8" unit="cm" x="0.0" y="0.0" z="-17.4080"/>
+			     <position name="ecalgappos_8" unit="cm" x="0.0" y="0.0" z="-18.8240"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_9" unit="cm" x="0.0" y="0.0" z="-17.2870"/>
+			     <position name="ecalblockscintpos_9" unit="cm" x="0.0" y="0.0" z="-18.6870"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_9" unit="cm" x="0.0" y="0.0" z="-17.2000"/>
+			     <position name="ecalgappos_9" unit="cm" x="0.0" y="0.0" z="-18.6000"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_10" unit="cm" x="0.0" y="0.0" z="-17.0790"/>
+			     <position name="ecalblockscintpos_10" unit="cm" x="0.0" y="0.0" z="-18.4630"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_10" unit="cm" x="0.0" y="0.0" z="-16.9920"/>
+			     <position name="ecalgappos_10" unit="cm" x="0.0" y="0.0" z="-18.3760"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_11" unit="cm" x="0.0" y="0.0" z="-16.8710"/>
+			     <position name="ecalblockscintpos_11" unit="cm" x="0.0" y="0.0" z="-18.2390"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_11" unit="cm" x="0.0" y="0.0" z="-16.7840"/>
+			     <position name="ecalgappos_11" unit="cm" x="0.0" y="0.0" z="-18.1520"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_12" unit="cm" x="0.0" y="0.0" z="-16.6630"/>
+			     <position name="ecalblockscintpos_12" unit="cm" x="0.0" y="0.0" z="-18.0150"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_12" unit="cm" x="0.0" y="0.0" z="-16.5760"/>
+			     <position name="ecalgappos_12" unit="cm" x="0.0" y="0.0" z="-17.9280"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_13" unit="cm" x="0.0" y="0.0" z="-16.4550"/>
+			     <position name="ecalblockscintpos_13" unit="cm" x="0.0" y="0.0" z="-17.7910"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_13" unit="cm" x="0.0" y="0.0" z="-16.3680"/>
+			     <position name="ecalgappos_13" unit="cm" x="0.0" y="0.0" z="-17.7040"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_14" unit="cm" x="0.0" y="0.0" z="-16.2470"/>
+			     <position name="ecalblockscintpos_14" unit="cm" x="0.0" y="0.0" z="-17.5670"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_14" unit="cm" x="0.0" y="0.0" z="-16.1600"/>
+			     <position name="ecalgappos_14" unit="cm" x="0.0" y="0.0" z="-17.4800"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_15" unit="cm" x="0.0" y="0.0" z="-16.0390"/>
+			     <position name="ecalblockscintpos_15" unit="cm" x="0.0" y="0.0" z="-17.3430"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_15" unit="cm" x="0.0" y="0.0" z="-15.9520"/>
+			     <position name="ecalgappos_15" unit="cm" x="0.0" y="0.0" z="-17.2560"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_16" unit="cm" x="0.0" y="0.0" z="-15.8310"/>
+			     <position name="ecalblockscintpos_16" unit="cm" x="0.0" y="0.0" z="-17.1190"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_16" unit="cm" x="0.0" y="0.0" z="-15.7440"/>
+			     <position name="ecalgappos_16" unit="cm" x="0.0" y="0.0" z="-17.0320"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_17" unit="cm" x="0.0" y="0.0" z="-15.6230"/>
+			     <position name="ecalblockscintpos_17" unit="cm" x="0.0" y="0.0" z="-16.8950"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_17" unit="cm" x="0.0" y="0.0" z="-15.5360"/>
+			     <position name="ecalgappos_17" unit="cm" x="0.0" y="0.0" z="-16.8080"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_18" unit="cm" x="0.0" y="0.0" z="-15.4150"/>
+			     <position name="ecalblockscintpos_18" unit="cm" x="0.0" y="0.0" z="-16.6710"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_18" unit="cm" x="0.0" y="0.0" z="-15.3280"/>
+			     <position name="ecalgappos_18" unit="cm" x="0.0" y="0.0" z="-16.5840"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_19" unit="cm" x="0.0" y="0.0" z="-15.2070"/>
+			     <position name="ecalblockscintpos_19" unit="cm" x="0.0" y="0.0" z="-16.4470"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_19" unit="cm" x="0.0" y="0.0" z="-15.1200"/>
+			     <position name="ecalgappos_19" unit="cm" x="0.0" y="0.0" z="-16.3600"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_20" unit="cm" x="0.0" y="0.0" z="-14.9990"/>
+			     <position name="ecalblockscintpos_20" unit="cm" x="0.0" y="0.0" z="-16.2230"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_20" unit="cm" x="0.0" y="0.0" z="-14.9120"/>
+			     <position name="ecalgappos_20" unit="cm" x="0.0" y="0.0" z="-16.1360"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_21" unit="cm" x="0.0" y="0.0" z="-14.7910"/>
+			     <position name="ecalblockscintpos_21" unit="cm" x="0.0" y="0.0" z="-15.9990"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_21" unit="cm" x="0.0" y="0.0" z="-14.7040"/>
+			     <position name="ecalgappos_21" unit="cm" x="0.0" y="0.0" z="-15.9120"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_22" unit="cm" x="0.0" y="0.0" z="-14.5830"/>
+			     <position name="ecalblockscintpos_22" unit="cm" x="0.0" y="0.0" z="-15.7750"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_22" unit="cm" x="0.0" y="0.0" z="-14.4960"/>
+			     <position name="ecalgappos_22" unit="cm" x="0.0" y="0.0" z="-15.6880"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_23" unit="cm" x="0.0" y="0.0" z="-14.3750"/>
+			     <position name="ecalblockscintpos_23" unit="cm" x="0.0" y="0.0" z="-15.5510"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_23" unit="cm" x="0.0" y="0.0" z="-14.2880"/>
+			     <position name="ecalgappos_23" unit="cm" x="0.0" y="0.0" z="-15.4640"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_24" unit="cm" x="0.0" y="0.0" z="-14.1670"/>
+			     <position name="ecalblockscintpos_24" unit="cm" x="0.0" y="0.0" z="-15.3270"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_24" unit="cm" x="0.0" y="0.0" z="-14.0800"/>
+			     <position name="ecalgappos_24" unit="cm" x="0.0" y="0.0" z="-15.2400"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_25" unit="cm" x="0.0" y="0.0" z="-13.9590"/>
+			     <position name="ecalblockscintpos_25" unit="cm" x="0.0" y="0.0" z="-15.1030"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_25" unit="cm" x="0.0" y="0.0" z="-13.8720"/>
+			     <position name="ecalgappos_25" unit="cm" x="0.0" y="0.0" z="-15.0160"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_26" unit="cm" x="0.0" y="0.0" z="-13.7510"/>
+			     <position name="ecalblockscintpos_26" unit="cm" x="0.0" y="0.0" z="-14.8790"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_26" unit="cm" x="0.0" y="0.0" z="-13.6640"/>
+			     <position name="ecalgappos_26" unit="cm" x="0.0" y="0.0" z="-14.7920"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_27" unit="cm" x="0.0" y="0.0" z="-13.5430"/>
+			     <position name="ecalblockscintpos_27" unit="cm" x="0.0" y="0.0" z="-14.6550"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_27" unit="cm" x="0.0" y="0.0" z="-13.4560"/>
+			     <position name="ecalgappos_27" unit="cm" x="0.0" y="0.0" z="-14.5680"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_28" unit="cm" x="0.0" y="0.0" z="-13.3350"/>
+			     <position name="ecalblockscintpos_28" unit="cm" x="0.0" y="0.0" z="-14.4310"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_28" unit="cm" x="0.0" y="0.0" z="-13.2480"/>
+			     <position name="ecalgappos_28" unit="cm" x="0.0" y="0.0" z="-14.3440"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_29" unit="cm" x="0.0" y="0.0" z="-13.1270"/>
+			     <position name="ecalblockscintpos_29" unit="cm" x="0.0" y="0.0" z="-14.2070"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_29" unit="cm" x="0.0" y="0.0" z="-13.0400"/>
+			     <position name="ecalgappos_29" unit="cm" x="0.0" y="0.0" z="-14.1200"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_30" unit="cm" x="0.0" y="0.0" z="-12.9190"/>
+			     <position name="ecalblockscintpos_30" unit="cm" x="0.0" y="0.0" z="-13.9830"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_30" unit="cm" x="0.0" y="0.0" z="-12.8320"/>
+			     <position name="ecalgappos_30" unit="cm" x="0.0" y="0.0" z="-13.8960"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_31" unit="cm" x="0.0" y="0.0" z="-12.7110"/>
+			     <position name="ecalblockscintpos_31" unit="cm" x="0.0" y="0.0" z="-13.7590"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_31" unit="cm" x="0.0" y="0.0" z="-12.6240"/>
+			     <position name="ecalgappos_31" unit="cm" x="0.0" y="0.0" z="-13.6720"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_32" unit="cm" x="0.0" y="0.0" z="-12.5030"/>
+			     <position name="ecalblockscintpos_32" unit="cm" x="0.0" y="0.0" z="-13.5350"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_32" unit="cm" x="0.0" y="0.0" z="-12.4160"/>
+			     <position name="ecalgappos_32" unit="cm" x="0.0" y="0.0" z="-13.4480"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_33" unit="cm" x="0.0" y="0.0" z="-12.2950"/>
+			     <position name="ecalblockscintpos_33" unit="cm" x="0.0" y="0.0" z="-13.3110"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_33" unit="cm" x="0.0" y="0.0" z="-12.2080"/>
+			     <position name="ecalgappos_33" unit="cm" x="0.0" y="0.0" z="-13.2240"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_34" unit="cm" x="0.0" y="0.0" z="-12.0870"/>
+			     <position name="ecalblockscintpos_34" unit="cm" x="0.0" y="0.0" z="-13.0870"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_34" unit="cm" x="0.0" y="0.0" z="-12.0000"/>
+			     <position name="ecalgappos_34" unit="cm" x="0.0" y="0.0" z="-13.0000"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_35" unit="cm" x="0.0" y="0.0" z="-11.8790"/>
+			     <position name="ecalblockscintpos_35" unit="cm" x="0.0" y="0.0" z="-12.8630"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_35" unit="cm" x="0.0" y="0.0" z="-11.7920"/>
+			     <position name="ecalgappos_35" unit="cm" x="0.0" y="0.0" z="-12.7760"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_36" unit="cm" x="0.0" y="0.0" z="-11.6710"/>
+			     <position name="ecalblockscintpos_36" unit="cm" x="0.0" y="0.0" z="-12.6390"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_36" unit="cm" x="0.0" y="0.0" z="-11.5840"/>
+			     <position name="ecalgappos_36" unit="cm" x="0.0" y="0.0" z="-12.5520"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_37" unit="cm" x="0.0" y="0.0" z="-11.4630"/>
+			     <position name="ecalblockscintpos_37" unit="cm" x="0.0" y="0.0" z="-12.4150"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_37" unit="cm" x="0.0" y="0.0" z="-11.3760"/>
+			     <position name="ecalgappos_37" unit="cm" x="0.0" y="0.0" z="-12.3280"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_38" unit="cm" x="0.0" y="0.0" z="-11.2550"/>
+			     <position name="ecalblockscintpos_38" unit="cm" x="0.0" y="0.0" z="-12.1910"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_38" unit="cm" x="0.0" y="0.0" z="-11.1680"/>
+			     <position name="ecalgappos_38" unit="cm" x="0.0" y="0.0" z="-12.1040"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_39" unit="cm" x="0.0" y="0.0" z="-11.0470"/>
+			     <position name="ecalblockscintpos_39" unit="cm" x="0.0" y="0.0" z="-11.9670"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_39" unit="cm" x="0.0" y="0.0" z="-10.9600"/>
+			     <position name="ecalgappos_39" unit="cm" x="0.0" y="0.0" z="-11.8800"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_40" unit="cm" x="0.0" y="0.0" z="-10.8390"/>
+			     <position name="ecalblockscintpos_40" unit="cm" x="0.0" y="0.0" z="-11.7430"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_40" unit="cm" x="0.0" y="0.0" z="-10.7520"/>
+			     <position name="ecalgappos_40" unit="cm" x="0.0" y="0.0" z="-11.6560"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_41" unit="cm" x="0.0" y="0.0" z="-10.6310"/>
+			     <position name="ecalblockscintpos_41" unit="cm" x="0.0" y="0.0" z="-11.5190"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_41" unit="cm" x="0.0" y="0.0" z="-10.5440"/>
+			     <position name="ecalgappos_41" unit="cm" x="0.0" y="0.0" z="-11.4320"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_42" unit="cm" x="0.0" y="0.0" z="-10.4230"/>
+			     <position name="ecalblockscintpos_42" unit="cm" x="0.0" y="0.0" z="-11.2950"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_42" unit="cm" x="0.0" y="0.0" z="-10.3360"/>
+			     <position name="ecalgappos_42" unit="cm" x="0.0" y="0.0" z="-11.2080"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_43" unit="cm" x="0.0" y="0.0" z="-10.2150"/>
+			     <position name="ecalblockscintpos_43" unit="cm" x="0.0" y="0.0" z="-11.0710"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_43" unit="cm" x="0.0" y="0.0" z="-10.1280"/>
+			     <position name="ecalgappos_43" unit="cm" x="0.0" y="0.0" z="-10.9840"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_44" unit="cm" x="0.0" y="0.0" z="-10.0070"/>
+			     <position name="ecalblockscintpos_44" unit="cm" x="0.0" y="0.0" z="-10.8470"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_44" unit="cm" x="0.0" y="0.0" z="-9.9200"/>
+			     <position name="ecalgappos_44" unit="cm" x="0.0" y="0.0" z="-10.7600"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_45" unit="cm" x="0.0" y="0.0" z="-9.7990"/>
+			     <position name="ecalblockscintpos_45" unit="cm" x="0.0" y="0.0" z="-10.6230"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_45" unit="cm" x="0.0" y="0.0" z="-9.7120"/>
+			     <position name="ecalgappos_45" unit="cm" x="0.0" y="0.0" z="-10.5360"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_46" unit="cm" x="0.0" y="0.0" z="-9.5910"/>
+			     <position name="ecalblockscintpos_46" unit="cm" x="0.0" y="0.0" z="-10.3990"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_46" unit="cm" x="0.0" y="0.0" z="-9.5040"/>
+			     <position name="ecalgappos_46" unit="cm" x="0.0" y="0.0" z="-10.3120"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_47" unit="cm" x="0.0" y="0.0" z="-9.3830"/>
+			     <position name="ecalblockscintpos_47" unit="cm" x="0.0" y="0.0" z="-10.1750"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_47" unit="cm" x="0.0" y="0.0" z="-9.2960"/>
+			     <position name="ecalgappos_47" unit="cm" x="0.0" y="0.0" z="-10.0880"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_48" unit="cm" x="0.0" y="0.0" z="-9.1750"/>
+			     <position name="ecalblockscintpos_48" unit="cm" x="0.0" y="0.0" z="-9.9510"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_48" unit="cm" x="0.0" y="0.0" z="-9.0880"/>
+			     <position name="ecalgappos_48" unit="cm" x="0.0" y="0.0" z="-9.8640"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_49" unit="cm" x="0.0" y="0.0" z="-8.9670"/>
+			     <position name="ecalblockscintpos_49" unit="cm" x="0.0" y="0.0" z="-9.7270"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_49" unit="cm" x="0.0" y="0.0" z="-8.8800"/>
+			     <position name="ecalgappos_49" unit="cm" x="0.0" y="0.0" z="-9.6400"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_50" unit="cm" x="0.0" y="0.0" z="-8.7590"/>
+			     <position name="ecalblockscintpos_50" unit="cm" x="0.0" y="0.0" z="-9.5030"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_50" unit="cm" x="0.0" y="0.0" z="-8.6720"/>
+			     <position name="ecalgappos_50" unit="cm" x="0.0" y="0.0" z="-9.4160"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_51" unit="cm" x="0.0" y="0.0" z="-8.5510"/>
+			     <position name="ecalblockscintpos_51" unit="cm" x="0.0" y="0.0" z="-9.2790"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_51" unit="cm" x="0.0" y="0.0" z="-8.4640"/>
+			     <position name="ecalgappos_51" unit="cm" x="0.0" y="0.0" z="-9.1920"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_52" unit="cm" x="0.0" y="0.0" z="-8.3430"/>
+			     <position name="ecalblockscintpos_52" unit="cm" x="0.0" y="0.0" z="-9.0550"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_52" unit="cm" x="0.0" y="0.0" z="-8.2560"/>
+			     <position name="ecalgappos_52" unit="cm" x="0.0" y="0.0" z="-8.9680"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_53" unit="cm" x="0.0" y="0.0" z="-8.1350"/>
+			     <position name="ecalblockscintpos_53" unit="cm" x="0.0" y="0.0" z="-8.8310"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_53" unit="cm" x="0.0" y="0.0" z="-8.0480"/>
+			     <position name="ecalgappos_53" unit="cm" x="0.0" y="0.0" z="-8.7440"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_54" unit="cm" x="0.0" y="0.0" z="-7.9270"/>
+			     <position name="ecalblockscintpos_54" unit="cm" x="0.0" y="0.0" z="-8.6070"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_54" unit="cm" x="0.0" y="0.0" z="-7.8400"/>
+			     <position name="ecalgappos_54" unit="cm" x="0.0" y="0.0" z="-8.5200"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_55" unit="cm" x="0.0" y="0.0" z="-7.7190"/>
+			     <position name="ecalblockscintpos_55" unit="cm" x="0.0" y="0.0" z="-8.3830"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_55" unit="cm" x="0.0" y="0.0" z="-7.6320"/>
+			     <position name="ecalgappos_55" unit="cm" x="0.0" y="0.0" z="-8.2960"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_56" unit="cm" x="0.0" y="0.0" z="-7.5110"/>
+			     <position name="ecalblockscintpos_56" unit="cm" x="0.0" y="0.0" z="-8.1590"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_56" unit="cm" x="0.0" y="0.0" z="-7.4240"/>
+			     <position name="ecalgappos_56" unit="cm" x="0.0" y="0.0" z="-8.0720"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_57" unit="cm" x="0.0" y="0.0" z="-7.3030"/>
+			     <position name="ecalblockscintpos_57" unit="cm" x="0.0" y="0.0" z="-7.9350"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_57" unit="cm" x="0.0" y="0.0" z="-7.2160"/>
+			     <position name="ecalgappos_57" unit="cm" x="0.0" y="0.0" z="-7.8480"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_58" unit="cm" x="0.0" y="0.0" z="-7.0950"/>
+			     <position name="ecalblockscintpos_58" unit="cm" x="0.0" y="0.0" z="-7.7110"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_58" unit="cm" x="0.0" y="0.0" z="-7.0080"/>
+			     <position name="ecalgappos_58" unit="cm" x="0.0" y="0.0" z="-7.6240"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_59" unit="cm" x="0.0" y="0.0" z="-6.8870"/>
+			     <position name="ecalblockscintpos_59" unit="cm" x="0.0" y="0.0" z="-7.4870"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_59" unit="cm" x="0.0" y="0.0" z="-6.8000"/>
+			     <position name="ecalgappos_59" unit="cm" x="0.0" y="0.0" z="-7.4000"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_60" unit="cm" x="0.0" y="0.0" z="-6.6790"/>
+			     <position name="ecalblockscintpos_60" unit="cm" x="0.0" y="0.0" z="-7.2630"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_60" unit="cm" x="0.0" y="0.0" z="-6.5920"/>
+			     <position name="ecalgappos_60" unit="cm" x="0.0" y="0.0" z="-7.1760"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_61" unit="cm" x="0.0" y="0.0" z="-6.4710"/>
+			     <position name="ecalblockscintpos_61" unit="cm" x="0.0" y="0.0" z="-7.0390"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_61" unit="cm" x="0.0" y="0.0" z="-6.3840"/>
+			     <position name="ecalgappos_61" unit="cm" x="0.0" y="0.0" z="-6.9520"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_62" unit="cm" x="0.0" y="0.0" z="-6.2630"/>
+			     <position name="ecalblockscintpos_62" unit="cm" x="0.0" y="0.0" z="-6.8150"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_62" unit="cm" x="0.0" y="0.0" z="-6.1760"/>
+			     <position name="ecalgappos_62" unit="cm" x="0.0" y="0.0" z="-6.7280"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_63" unit="cm" x="0.0" y="0.0" z="-6.0550"/>
+			     <position name="ecalblockscintpos_63" unit="cm" x="0.0" y="0.0" z="-6.5910"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_63" unit="cm" x="0.0" y="0.0" z="-5.9680"/>
+			     <position name="ecalgappos_63" unit="cm" x="0.0" y="0.0" z="-6.5040"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_64" unit="cm" x="0.0" y="0.0" z="-5.8470"/>
+			     <position name="ecalblockscintpos_64" unit="cm" x="0.0" y="0.0" z="-6.3670"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_64" unit="cm" x="0.0" y="0.0" z="-5.7600"/>
+			     <position name="ecalgappos_64" unit="cm" x="0.0" y="0.0" z="-6.2800"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_65" unit="cm" x="0.0" y="0.0" z="-5.6390"/>
+			     <position name="ecalblockscintpos_65" unit="cm" x="0.0" y="0.0" z="-6.1430"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_65" unit="cm" x="0.0" y="0.0" z="-5.5520"/>
+			     <position name="ecalgappos_65" unit="cm" x="0.0" y="0.0" z="-6.0560"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_66" unit="cm" x="0.0" y="0.0" z="-5.4310"/>
+			     <position name="ecalblockscintpos_66" unit="cm" x="0.0" y="0.0" z="-5.9190"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_66" unit="cm" x="0.0" y="0.0" z="-5.3440"/>
+			     <position name="ecalgappos_66" unit="cm" x="0.0" y="0.0" z="-5.8320"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_67" unit="cm" x="0.0" y="0.0" z="-5.2230"/>
+			     <position name="ecalblockscintpos_67" unit="cm" x="0.0" y="0.0" z="-5.6950"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_67" unit="cm" x="0.0" y="0.0" z="-5.1360"/>
+			     <position name="ecalgappos_67" unit="cm" x="0.0" y="0.0" z="-5.6080"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_68" unit="cm" x="0.0" y="0.0" z="-5.0150"/>
+			     <position name="ecalblockscintpos_68" unit="cm" x="0.0" y="0.0" z="-5.4710"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_68" unit="cm" x="0.0" y="0.0" z="-4.9280"/>
+			     <position name="ecalgappos_68" unit="cm" x="0.0" y="0.0" z="-5.3840"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_69" unit="cm" x="0.0" y="0.0" z="-4.8070"/>
+			     <position name="ecalblockscintpos_69" unit="cm" x="0.0" y="0.0" z="-5.2470"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_69" unit="cm" x="0.0" y="0.0" z="-4.7200"/>
+			     <position name="ecalgappos_69" unit="cm" x="0.0" y="0.0" z="-5.1600"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_70" unit="cm" x="0.0" y="0.0" z="-4.5990"/>
+			     <position name="ecalblockscintpos_70" unit="cm" x="0.0" y="0.0" z="-5.0230"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_70" unit="cm" x="0.0" y="0.0" z="-4.5120"/>
+			     <position name="ecalgappos_70" unit="cm" x="0.0" y="0.0" z="-4.9360"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_71" unit="cm" x="0.0" y="0.0" z="-4.3910"/>
+			     <position name="ecalblockscintpos_71" unit="cm" x="0.0" y="0.0" z="-4.7990"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_71" unit="cm" x="0.0" y="0.0" z="-4.3040"/>
+			     <position name="ecalgappos_71" unit="cm" x="0.0" y="0.0" z="-4.7120"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_72" unit="cm" x="0.0" y="0.0" z="-4.1830"/>
+			     <position name="ecalblockscintpos_72" unit="cm" x="0.0" y="0.0" z="-4.5750"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_72" unit="cm" x="0.0" y="0.0" z="-4.0960"/>
+			     <position name="ecalgappos_72" unit="cm" x="0.0" y="0.0" z="-4.4880"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_73" unit="cm" x="0.0" y="0.0" z="-3.9750"/>
+			     <position name="ecalblockscintpos_73" unit="cm" x="0.0" y="0.0" z="-4.3510"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_73" unit="cm" x="0.0" y="0.0" z="-3.8880"/>
+			     <position name="ecalgappos_73" unit="cm" x="0.0" y="0.0" z="-4.2640"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_74" unit="cm" x="0.0" y="0.0" z="-3.7670"/>
+			     <position name="ecalblockscintpos_74" unit="cm" x="0.0" y="0.0" z="-4.1270"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_74" unit="cm" x="0.0" y="0.0" z="-3.6800"/>
+			     <position name="ecalgappos_74" unit="cm" x="0.0" y="0.0" z="-4.0400"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_75" unit="cm" x="0.0" y="0.0" z="-3.5590"/>
+			     <position name="ecalblockscintpos_75" unit="cm" x="0.0" y="0.0" z="-3.9030"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_75" unit="cm" x="0.0" y="0.0" z="-3.4720"/>
+			     <position name="ecalgappos_75" unit="cm" x="0.0" y="0.0" z="-3.8160"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_76" unit="cm" x="0.0" y="0.0" z="-3.3510"/>
+			     <position name="ecalblockscintpos_76" unit="cm" x="0.0" y="0.0" z="-3.6790"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_76" unit="cm" x="0.0" y="0.0" z="-3.2640"/>
+			     <position name="ecalgappos_76" unit="cm" x="0.0" y="0.0" z="-3.5920"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_77" unit="cm" x="0.0" y="0.0" z="-3.1430"/>
+			     <position name="ecalblockscintpos_77" unit="cm" x="0.0" y="0.0" z="-3.4550"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_77" unit="cm" x="0.0" y="0.0" z="-3.0560"/>
+			     <position name="ecalgappos_77" unit="cm" x="0.0" y="0.0" z="-3.3680"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_78" unit="cm" x="0.0" y="0.0" z="-2.9350"/>
+			     <position name="ecalblockscintpos_78" unit="cm" x="0.0" y="0.0" z="-3.2310"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_78" unit="cm" x="0.0" y="0.0" z="-2.8480"/>
+			     <position name="ecalgappos_78" unit="cm" x="0.0" y="0.0" z="-3.1440"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_79" unit="cm" x="0.0" y="0.0" z="-2.7270"/>
+			     <position name="ecalblockscintpos_79" unit="cm" x="0.0" y="0.0" z="-3.0070"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_79" unit="cm" x="0.0" y="0.0" z="-2.6400"/>
+			     <position name="ecalgappos_79" unit="cm" x="0.0" y="0.0" z="-2.9200"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_80" unit="cm" x="0.0" y="0.0" z="-2.5190"/>
+			     <position name="ecalblockscintpos_80" unit="cm" x="0.0" y="0.0" z="-2.7830"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_80" unit="cm" x="0.0" y="0.0" z="-2.4320"/>
+			     <position name="ecalgappos_80" unit="cm" x="0.0" y="0.0" z="-2.6960"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_81" unit="cm" x="0.0" y="0.0" z="-2.3110"/>
+			     <position name="ecalblockscintpos_81" unit="cm" x="0.0" y="0.0" z="-2.5590"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_81" unit="cm" x="0.0" y="0.0" z="-2.2240"/>
+			     <position name="ecalgappos_81" unit="cm" x="0.0" y="0.0" z="-2.4720"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_82" unit="cm" x="0.0" y="0.0" z="-2.1030"/>
+			     <position name="ecalblockscintpos_82" unit="cm" x="0.0" y="0.0" z="-2.3350"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_82" unit="cm" x="0.0" y="0.0" z="-2.0160"/>
+			     <position name="ecalgappos_82" unit="cm" x="0.0" y="0.0" z="-2.2480"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_83" unit="cm" x="0.0" y="0.0" z="-1.8950"/>
+			     <position name="ecalblockscintpos_83" unit="cm" x="0.0" y="0.0" z="-2.1110"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_83" unit="cm" x="0.0" y="0.0" z="-1.8080"/>
+			     <position name="ecalgappos_83" unit="cm" x="0.0" y="0.0" z="-2.0240"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_84" unit="cm" x="0.0" y="0.0" z="-1.6870"/>
+			     <position name="ecalblockscintpos_84" unit="cm" x="0.0" y="0.0" z="-1.8870"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_84" unit="cm" x="0.0" y="0.0" z="-1.6000"/>
+			     <position name="ecalgappos_84" unit="cm" x="0.0" y="0.0" z="-1.8000"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_85" unit="cm" x="0.0" y="0.0" z="-1.4790"/>
+			     <position name="ecalblockscintpos_85" unit="cm" x="0.0" y="0.0" z="-1.6630"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_85" unit="cm" x="0.0" y="0.0" z="-1.3920"/>
+			     <position name="ecalgappos_85" unit="cm" x="0.0" y="0.0" z="-1.5760"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_86" unit="cm" x="0.0" y="0.0" z="-1.2710"/>
+			     <position name="ecalblockscintpos_86" unit="cm" x="0.0" y="0.0" z="-1.4390"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_86" unit="cm" x="0.0" y="0.0" z="-1.1840"/>
+			     <position name="ecalgappos_86" unit="cm" x="0.0" y="0.0" z="-1.3520"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_87" unit="cm" x="0.0" y="0.0" z="-1.0630"/>
+			     <position name="ecalblockscintpos_87" unit="cm" x="0.0" y="0.0" z="-1.2150"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_87" unit="cm" x="0.0" y="0.0" z="-0.9760"/>
+			     <position name="ecalgappos_87" unit="cm" x="0.0" y="0.0" z="-1.1280"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_88" unit="cm" x="0.0" y="0.0" z="-0.8550"/>
+			     <position name="ecalblockscintpos_88" unit="cm" x="0.0" y="0.0" z="-0.9910"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_88" unit="cm" x="0.0" y="0.0" z="-0.7680"/>
+			     <position name="ecalgappos_88" unit="cm" x="0.0" y="0.0" z="-0.9040"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_89" unit="cm" x="0.0" y="0.0" z="-0.6470"/>
+			     <position name="ecalblockscintpos_89" unit="cm" x="0.0" y="0.0" z="-0.7670"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_89" unit="cm" x="0.0" y="0.0" z="-0.5600"/>
+			     <position name="ecalgappos_89" unit="cm" x="0.0" y="0.0" z="-0.6800"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_90" unit="cm" x="0.0" y="0.0" z="-0.4390"/>
+			     <position name="ecalblockscintpos_90" unit="cm" x="0.0" y="0.0" z="-0.5430"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_90" unit="cm" x="0.0" y="0.0" z="-0.3520"/>
+			     <position name="ecalgappos_90" unit="cm" x="0.0" y="0.0" z="-0.4560"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_91" unit="cm" x="0.0" y="0.0" z="-0.2310"/>
+			     <position name="ecalblockscintpos_91" unit="cm" x="0.0" y="0.0" z="-0.3190"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_91" unit="cm" x="0.0" y="0.0" z="-0.1440"/>
+			     <position name="ecalgappos_91" unit="cm" x="0.0" y="0.0" z="-0.2320"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_92" unit="cm" x="0.0" y="0.0" z="-0.0230"/>
+			     <position name="ecalblockscintpos_92" unit="cm" x="0.0" y="0.0" z="-0.0950"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_92" unit="cm" x="0.0" y="0.0" z="0.0640"/>
+			     <position name="ecalgappos_92" unit="cm" x="0.0" y="0.0" z="-0.0080"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_93" unit="cm" x="0.0" y="0.0" z="0.1850"/>
+			     <position name="ecalblockscintpos_93" unit="cm" x="0.0" y="0.0" z="0.1290"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_93" unit="cm" x="0.0" y="0.0" z="0.2720"/>
+			     <position name="ecalgappos_93" unit="cm" x="0.0" y="0.0" z="0.2160"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_94" unit="cm" x="0.0" y="0.0" z="0.3930"/>
+			     <position name="ecalblockscintpos_94" unit="cm" x="0.0" y="0.0" z="0.3530"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_94" unit="cm" x="0.0" y="0.0" z="0.4800"/>
+			     <position name="ecalgappos_94" unit="cm" x="0.0" y="0.0" z="0.4400"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_95" unit="cm" x="0.0" y="0.0" z="0.6010"/>
+			     <position name="ecalblockscintpos_95" unit="cm" x="0.0" y="0.0" z="0.5770"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_95" unit="cm" x="0.0" y="0.0" z="0.6880"/>
+			     <position name="ecalgappos_95" unit="cm" x="0.0" y="0.0" z="0.6640"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_96" unit="cm" x="0.0" y="0.0" z="0.8090"/>
+			     <position name="ecalblockscintpos_96" unit="cm" x="0.0" y="0.0" z="0.8010"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_96" unit="cm" x="0.0" y="0.0" z="0.8960"/>
+			     <position name="ecalgappos_96" unit="cm" x="0.0" y="0.0" z="0.8880"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_97" unit="cm" x="0.0" y="0.0" z="1.0170"/>
+			     <position name="ecalblockscintpos_97" unit="cm" x="0.0" y="0.0" z="1.0250"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_97" unit="cm" x="0.0" y="0.0" z="1.1040"/>
+			     <position name="ecalgappos_97" unit="cm" x="0.0" y="0.0" z="1.1120"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_98" unit="cm" x="0.0" y="0.0" z="1.2250"/>
+			     <position name="ecalblockscintpos_98" unit="cm" x="0.0" y="0.0" z="1.2490"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_98" unit="cm" x="0.0" y="0.0" z="1.3120"/>
+			     <position name="ecalgappos_98" unit="cm" x="0.0" y="0.0" z="1.3360"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_99" unit="cm" x="0.0" y="0.0" z="1.4330"/>
+			     <position name="ecalblockscintpos_99" unit="cm" x="0.0" y="0.0" z="1.4730"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_99" unit="cm" x="0.0" y="0.0" z="1.5200"/>
+			     <position name="ecalgappos_99" unit="cm" x="0.0" y="0.0" z="1.5600"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_100" unit="cm" x="0.0" y="0.0" z="1.6410"/>
+			     <position name="ecalblockscintpos_100" unit="cm" x="0.0" y="0.0" z="1.6970"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_100" unit="cm" x="0.0" y="0.0" z="1.7280"/>
+			     <position name="ecalgappos_100" unit="cm" x="0.0" y="0.0" z="1.7840"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_101" unit="cm" x="0.0" y="0.0" z="1.8490"/>
+			     <position name="ecalblockscintpos_101" unit="cm" x="0.0" y="0.0" z="1.9210"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_101" unit="cm" x="0.0" y="0.0" z="1.9360"/>
+			     <position name="ecalgappos_101" unit="cm" x="0.0" y="0.0" z="2.0080"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_102" unit="cm" x="0.0" y="0.0" z="2.0570"/>
+			     <position name="ecalblockscintpos_102" unit="cm" x="0.0" y="0.0" z="2.1450"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_102" unit="cm" x="0.0" y="0.0" z="2.1440"/>
+			     <position name="ecalgappos_102" unit="cm" x="0.0" y="0.0" z="2.2320"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_103" unit="cm" x="0.0" y="0.0" z="2.2650"/>
+			     <position name="ecalblockscintpos_103" unit="cm" x="0.0" y="0.0" z="2.3690"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_103" unit="cm" x="0.0" y="0.0" z="2.3520"/>
+			     <position name="ecalgappos_103" unit="cm" x="0.0" y="0.0" z="2.4560"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_104" unit="cm" x="0.0" y="0.0" z="2.4730"/>
+			     <position name="ecalblockscintpos_104" unit="cm" x="0.0" y="0.0" z="2.5930"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_104" unit="cm" x="0.0" y="0.0" z="2.5600"/>
+			     <position name="ecalgappos_104" unit="cm" x="0.0" y="0.0" z="2.6800"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_105" unit="cm" x="0.0" y="0.0" z="2.6810"/>
+			     <position name="ecalblockscintpos_105" unit="cm" x="0.0" y="0.0" z="2.8170"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_105" unit="cm" x="0.0" y="0.0" z="2.7680"/>
+			     <position name="ecalgappos_105" unit="cm" x="0.0" y="0.0" z="2.9040"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_106" unit="cm" x="0.0" y="0.0" z="2.8890"/>
+			     <position name="ecalblockscintpos_106" unit="cm" x="0.0" y="0.0" z="3.0410"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_106" unit="cm" x="0.0" y="0.0" z="2.9760"/>
+			     <position name="ecalgappos_106" unit="cm" x="0.0" y="0.0" z="3.1280"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_107" unit="cm" x="0.0" y="0.0" z="3.0970"/>
+			     <position name="ecalblockscintpos_107" unit="cm" x="0.0" y="0.0" z="3.2650"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_107" unit="cm" x="0.0" y="0.0" z="3.1840"/>
+			     <position name="ecalgappos_107" unit="cm" x="0.0" y="0.0" z="3.3520"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_108" unit="cm" x="0.0" y="0.0" z="3.3050"/>
+			     <position name="ecalblockscintpos_108" unit="cm" x="0.0" y="0.0" z="3.4890"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_108" unit="cm" x="0.0" y="0.0" z="3.3920"/>
+			     <position name="ecalgappos_108" unit="cm" x="0.0" y="0.0" z="3.5760"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_109" unit="cm" x="0.0" y="0.0" z="3.5130"/>
+			     <position name="ecalblockscintpos_109" unit="cm" x="0.0" y="0.0" z="3.7130"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_109" unit="cm" x="0.0" y="0.0" z="3.6000"/>
+			     <position name="ecalgappos_109" unit="cm" x="0.0" y="0.0" z="3.8000"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_110" unit="cm" x="0.0" y="0.0" z="3.7210"/>
+			     <position name="ecalblockscintpos_110" unit="cm" x="0.0" y="0.0" z="3.9370"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_110" unit="cm" x="0.0" y="0.0" z="3.8080"/>
+			     <position name="ecalgappos_110" unit="cm" x="0.0" y="0.0" z="4.0240"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_111" unit="cm" x="0.0" y="0.0" z="3.9290"/>
+			     <position name="ecalblockscintpos_111" unit="cm" x="0.0" y="0.0" z="4.1610"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_111" unit="cm" x="0.0" y="0.0" z="4.0160"/>
+			     <position name="ecalgappos_111" unit="cm" x="0.0" y="0.0" z="4.2480"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_112" unit="cm" x="0.0" y="0.0" z="4.1370"/>
+			     <position name="ecalblockscintpos_112" unit="cm" x="0.0" y="0.0" z="4.3850"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_112" unit="cm" x="0.0" y="0.0" z="4.2240"/>
+			     <position name="ecalgappos_112" unit="cm" x="0.0" y="0.0" z="4.4720"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_113" unit="cm" x="0.0" y="0.0" z="4.3450"/>
+			     <position name="ecalblockscintpos_113" unit="cm" x="0.0" y="0.0" z="4.6090"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_113" unit="cm" x="0.0" y="0.0" z="4.4320"/>
+			     <position name="ecalgappos_113" unit="cm" x="0.0" y="0.0" z="4.6960"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_114" unit="cm" x="0.0" y="0.0" z="4.5530"/>
+			     <position name="ecalblockscintpos_114" unit="cm" x="0.0" y="0.0" z="4.8330"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_114" unit="cm" x="0.0" y="0.0" z="4.6400"/>
+			     <position name="ecalgappos_114" unit="cm" x="0.0" y="0.0" z="4.9200"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_115" unit="cm" x="0.0" y="0.0" z="4.7610"/>
+			     <position name="ecalblockscintpos_115" unit="cm" x="0.0" y="0.0" z="5.0570"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_115" unit="cm" x="0.0" y="0.0" z="4.8480"/>
+			     <position name="ecalgappos_115" unit="cm" x="0.0" y="0.0" z="5.1440"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_116" unit="cm" x="0.0" y="0.0" z="4.9690"/>
+			     <position name="ecalblockscintpos_116" unit="cm" x="0.0" y="0.0" z="5.2810"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_116" unit="cm" x="0.0" y="0.0" z="5.0560"/>
+			     <position name="ecalgappos_116" unit="cm" x="0.0" y="0.0" z="5.3680"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_117" unit="cm" x="0.0" y="0.0" z="5.1770"/>
+			     <position name="ecalblockscintpos_117" unit="cm" x="0.0" y="0.0" z="5.5050"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_117" unit="cm" x="0.0" y="0.0" z="5.2640"/>
+			     <position name="ecalgappos_117" unit="cm" x="0.0" y="0.0" z="5.5920"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_118" unit="cm" x="0.0" y="0.0" z="5.3850"/>
+			     <position name="ecalblockscintpos_118" unit="cm" x="0.0" y="0.0" z="5.7290"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_118" unit="cm" x="0.0" y="0.0" z="5.4720"/>
+			     <position name="ecalgappos_118" unit="cm" x="0.0" y="0.0" z="5.8160"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_119" unit="cm" x="0.0" y="0.0" z="5.5930"/>
+			     <position name="ecalblockscintpos_119" unit="cm" x="0.0" y="0.0" z="5.9530"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_119" unit="cm" x="0.0" y="0.0" z="5.6800"/>
+			     <position name="ecalgappos_119" unit="cm" x="0.0" y="0.0" z="6.0400"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_120" unit="cm" x="0.0" y="0.0" z="5.8010"/>
+			     <position name="ecalblockscintpos_120" unit="cm" x="0.0" y="0.0" z="6.1770"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_120" unit="cm" x="0.0" y="0.0" z="5.8880"/>
+			     <position name="ecalgappos_120" unit="cm" x="0.0" y="0.0" z="6.2640"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_121" unit="cm" x="0.0" y="0.0" z="6.0090"/>
+			     <position name="ecalblockscintpos_121" unit="cm" x="0.0" y="0.0" z="6.4010"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_121" unit="cm" x="0.0" y="0.0" z="6.0960"/>
+			     <position name="ecalgappos_121" unit="cm" x="0.0" y="0.0" z="6.4880"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_122" unit="cm" x="0.0" y="0.0" z="6.2170"/>
+			     <position name="ecalblockscintpos_122" unit="cm" x="0.0" y="0.0" z="6.6250"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_122" unit="cm" x="0.0" y="0.0" z="6.3040"/>
+			     <position name="ecalgappos_122" unit="cm" x="0.0" y="0.0" z="6.7120"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_123" unit="cm" x="0.0" y="0.0" z="6.4250"/>
+			     <position name="ecalblockscintpos_123" unit="cm" x="0.0" y="0.0" z="6.8490"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_123" unit="cm" x="0.0" y="0.0" z="6.5120"/>
+			     <position name="ecalgappos_123" unit="cm" x="0.0" y="0.0" z="6.9360"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_124" unit="cm" x="0.0" y="0.0" z="6.6330"/>
+			     <position name="ecalblockscintpos_124" unit="cm" x="0.0" y="0.0" z="7.0730"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_124" unit="cm" x="0.0" y="0.0" z="6.7200"/>
+			     <position name="ecalgappos_124" unit="cm" x="0.0" y="0.0" z="7.1600"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_125" unit="cm" x="0.0" y="0.0" z="6.8410"/>
+			     <position name="ecalblockscintpos_125" unit="cm" x="0.0" y="0.0" z="7.2970"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_125" unit="cm" x="0.0" y="0.0" z="6.9280"/>
+			     <position name="ecalgappos_125" unit="cm" x="0.0" y="0.0" z="7.3840"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_126" unit="cm" x="0.0" y="0.0" z="7.0490"/>
+			     <position name="ecalblockscintpos_126" unit="cm" x="0.0" y="0.0" z="7.5210"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_126" unit="cm" x="0.0" y="0.0" z="7.1360"/>
+			     <position name="ecalgappos_126" unit="cm" x="0.0" y="0.0" z="7.6080"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_127" unit="cm" x="0.0" y="0.0" z="7.2570"/>
+			     <position name="ecalblockscintpos_127" unit="cm" x="0.0" y="0.0" z="7.7450"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_127" unit="cm" x="0.0" y="0.0" z="7.3440"/>
+			     <position name="ecalgappos_127" unit="cm" x="0.0" y="0.0" z="7.8320"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_128" unit="cm" x="0.0" y="0.0" z="7.4650"/>
+			     <position name="ecalblockscintpos_128" unit="cm" x="0.0" y="0.0" z="7.9690"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_128" unit="cm" x="0.0" y="0.0" z="7.5520"/>
+			     <position name="ecalgappos_128" unit="cm" x="0.0" y="0.0" z="8.0560"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_129" unit="cm" x="0.0" y="0.0" z="7.6730"/>
+			     <position name="ecalblockscintpos_129" unit="cm" x="0.0" y="0.0" z="8.1930"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_129" unit="cm" x="0.0" y="0.0" z="7.7600"/>
+			     <position name="ecalgappos_129" unit="cm" x="0.0" y="0.0" z="8.2800"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_130" unit="cm" x="0.0" y="0.0" z="7.8810"/>
+			     <position name="ecalblockscintpos_130" unit="cm" x="0.0" y="0.0" z="8.4170"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_130" unit="cm" x="0.0" y="0.0" z="7.9680"/>
+			     <position name="ecalgappos_130" unit="cm" x="0.0" y="0.0" z="8.5040"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_131" unit="cm" x="0.0" y="0.0" z="8.0890"/>
+			     <position name="ecalblockscintpos_131" unit="cm" x="0.0" y="0.0" z="8.6410"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_131" unit="cm" x="0.0" y="0.0" z="8.1760"/>
+			     <position name="ecalgappos_131" unit="cm" x="0.0" y="0.0" z="8.7280"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_132" unit="cm" x="0.0" y="0.0" z="8.2970"/>
+			     <position name="ecalblockscintpos_132" unit="cm" x="0.0" y="0.0" z="8.8650"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_132" unit="cm" x="0.0" y="0.0" z="8.3840"/>
+			     <position name="ecalgappos_132" unit="cm" x="0.0" y="0.0" z="8.9520"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_133" unit="cm" x="0.0" y="0.0" z="8.5050"/>
+			     <position name="ecalblockscintpos_133" unit="cm" x="0.0" y="0.0" z="9.0890"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_133" unit="cm" x="0.0" y="0.0" z="8.5920"/>
+			     <position name="ecalgappos_133" unit="cm" x="0.0" y="0.0" z="9.1760"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_134" unit="cm" x="0.0" y="0.0" z="8.7130"/>
+			     <position name="ecalblockscintpos_134" unit="cm" x="0.0" y="0.0" z="9.3130"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_134" unit="cm" x="0.0" y="0.0" z="8.8000"/>
+			     <position name="ecalgappos_134" unit="cm" x="0.0" y="0.0" z="9.4000"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_135" unit="cm" x="0.0" y="0.0" z="8.9210"/>
+			     <position name="ecalblockscintpos_135" unit="cm" x="0.0" y="0.0" z="9.5370"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_135" unit="cm" x="0.0" y="0.0" z="9.0080"/>
+			     <position name="ecalgappos_135" unit="cm" x="0.0" y="0.0" z="9.6240"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_136" unit="cm" x="0.0" y="0.0" z="9.1290"/>
+			     <position name="ecalblockscintpos_136" unit="cm" x="0.0" y="0.0" z="9.7610"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_136" unit="cm" x="0.0" y="0.0" z="9.2160"/>
+			     <position name="ecalgappos_136" unit="cm" x="0.0" y="0.0" z="9.8480"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_137" unit="cm" x="0.0" y="0.0" z="9.3370"/>
+			     <position name="ecalblockscintpos_137" unit="cm" x="0.0" y="0.0" z="9.9850"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_137" unit="cm" x="0.0" y="0.0" z="9.4240"/>
+			     <position name="ecalgappos_137" unit="cm" x="0.0" y="0.0" z="10.0720"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_138" unit="cm" x="0.0" y="0.0" z="9.5450"/>
+			     <position name="ecalblockscintpos_138" unit="cm" x="0.0" y="0.0" z="10.2090"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_138" unit="cm" x="0.0" y="0.0" z="9.6320"/>
+			     <position name="ecalgappos_138" unit="cm" x="0.0" y="0.0" z="10.2960"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_139" unit="cm" x="0.0" y="0.0" z="9.7530"/>
+			     <position name="ecalblockscintpos_139" unit="cm" x="0.0" y="0.0" z="10.4330"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_139" unit="cm" x="0.0" y="0.0" z="9.8400"/>
+			     <position name="ecalgappos_139" unit="cm" x="0.0" y="0.0" z="10.5200"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_140" unit="cm" x="0.0" y="0.0" z="9.9610"/>
+			     <position name="ecalblockscintpos_140" unit="cm" x="0.0" y="0.0" z="10.6570"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_140" unit="cm" x="0.0" y="0.0" z="10.0480"/>
+			     <position name="ecalgappos_140" unit="cm" x="0.0" y="0.0" z="10.7440"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_141" unit="cm" x="0.0" y="0.0" z="10.1690"/>
+			     <position name="ecalblockscintpos_141" unit="cm" x="0.0" y="0.0" z="10.8810"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_141" unit="cm" x="0.0" y="0.0" z="10.2560"/>
+			     <position name="ecalgappos_141" unit="cm" x="0.0" y="0.0" z="10.9680"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_142" unit="cm" x="0.0" y="0.0" z="10.3770"/>
+			     <position name="ecalblockscintpos_142" unit="cm" x="0.0" y="0.0" z="11.1050"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_142" unit="cm" x="0.0" y="0.0" z="10.4640"/>
+			     <position name="ecalgappos_142" unit="cm" x="0.0" y="0.0" z="11.1920"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_143" unit="cm" x="0.0" y="0.0" z="10.5850"/>
+			     <position name="ecalblockscintpos_143" unit="cm" x="0.0" y="0.0" z="11.3290"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_143" unit="cm" x="0.0" y="0.0" z="10.6720"/>
+			     <position name="ecalgappos_143" unit="cm" x="0.0" y="0.0" z="11.4160"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_144" unit="cm" x="0.0" y="0.0" z="10.7930"/>
+			     <position name="ecalblockscintpos_144" unit="cm" x="0.0" y="0.0" z="11.5530"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_144" unit="cm" x="0.0" y="0.0" z="10.8800"/>
+			     <position name="ecalgappos_144" unit="cm" x="0.0" y="0.0" z="11.6400"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_145" unit="cm" x="0.0" y="0.0" z="11.0010"/>
+			     <position name="ecalblockscintpos_145" unit="cm" x="0.0" y="0.0" z="11.7770"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_145" unit="cm" x="0.0" y="0.0" z="11.0880"/>
+			     <position name="ecalgappos_145" unit="cm" x="0.0" y="0.0" z="11.8640"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_146" unit="cm" x="0.0" y="0.0" z="11.2090"/>
+			     <position name="ecalblockscintpos_146" unit="cm" x="0.0" y="0.0" z="12.0010"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_146" unit="cm" x="0.0" y="0.0" z="11.2960"/>
+			     <position name="ecalgappos_146" unit="cm" x="0.0" y="0.0" z="12.0880"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_147" unit="cm" x="0.0" y="0.0" z="11.4170"/>
+			     <position name="ecalblockscintpos_147" unit="cm" x="0.0" y="0.0" z="12.2250"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_147" unit="cm" x="0.0" y="0.0" z="11.5040"/>
+			     <position name="ecalgappos_147" unit="cm" x="0.0" y="0.0" z="12.3120"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_148" unit="cm" x="0.0" y="0.0" z="11.6250"/>
+			     <position name="ecalblockscintpos_148" unit="cm" x="0.0" y="0.0" z="12.4490"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_148" unit="cm" x="0.0" y="0.0" z="11.7120"/>
+			     <position name="ecalgappos_148" unit="cm" x="0.0" y="0.0" z="12.5360"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_149" unit="cm" x="0.0" y="0.0" z="11.8330"/>
+			     <position name="ecalblockscintpos_149" unit="cm" x="0.0" y="0.0" z="12.6730"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_149" unit="cm" x="0.0" y="0.0" z="11.9200"/>
+			     <position name="ecalgappos_149" unit="cm" x="0.0" y="0.0" z="12.7600"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_150" unit="cm" x="0.0" y="0.0" z="12.0410"/>
+			     <position name="ecalblockscintpos_150" unit="cm" x="0.0" y="0.0" z="12.8970"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_150" unit="cm" x="0.0" y="0.0" z="12.1280"/>
+			     <position name="ecalgappos_150" unit="cm" x="0.0" y="0.0" z="12.9840"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_151" unit="cm" x="0.0" y="0.0" z="12.2490"/>
+			     <position name="ecalblockscintpos_151" unit="cm" x="0.0" y="0.0" z="13.1210"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_151" unit="cm" x="0.0" y="0.0" z="12.3360"/>
+			     <position name="ecalgappos_151" unit="cm" x="0.0" y="0.0" z="13.2080"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_152" unit="cm" x="0.0" y="0.0" z="12.4570"/>
+			     <position name="ecalblockscintpos_152" unit="cm" x="0.0" y="0.0" z="13.3450"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_152" unit="cm" x="0.0" y="0.0" z="12.5440"/>
+			     <position name="ecalgappos_152" unit="cm" x="0.0" y="0.0" z="13.4320"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_153" unit="cm" x="0.0" y="0.0" z="12.6650"/>
+			     <position name="ecalblockscintpos_153" unit="cm" x="0.0" y="0.0" z="13.5690"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_153" unit="cm" x="0.0" y="0.0" z="12.7520"/>
+			     <position name="ecalgappos_153" unit="cm" x="0.0" y="0.0" z="13.6560"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_154" unit="cm" x="0.0" y="0.0" z="12.8730"/>
+			     <position name="ecalblockscintpos_154" unit="cm" x="0.0" y="0.0" z="13.7930"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_154" unit="cm" x="0.0" y="0.0" z="12.9600"/>
+			     <position name="ecalgappos_154" unit="cm" x="0.0" y="0.0" z="13.8800"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_155" unit="cm" x="0.0" y="0.0" z="13.0810"/>
+			     <position name="ecalblockscintpos_155" unit="cm" x="0.0" y="0.0" z="14.0170"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_155" unit="cm" x="0.0" y="0.0" z="13.1680"/>
+			     <position name="ecalgappos_155" unit="cm" x="0.0" y="0.0" z="14.1040"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_156" unit="cm" x="0.0" y="0.0" z="13.2890"/>
+			     <position name="ecalblockscintpos_156" unit="cm" x="0.0" y="0.0" z="14.2410"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_156" unit="cm" x="0.0" y="0.0" z="13.3760"/>
+			     <position name="ecalgappos_156" unit="cm" x="0.0" y="0.0" z="14.3280"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_157" unit="cm" x="0.0" y="0.0" z="13.4970"/>
+			     <position name="ecalblockscintpos_157" unit="cm" x="0.0" y="0.0" z="14.4650"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_157" unit="cm" x="0.0" y="0.0" z="13.5840"/>
+			     <position name="ecalgappos_157" unit="cm" x="0.0" y="0.0" z="14.5520"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_158" unit="cm" x="0.0" y="0.0" z="13.7050"/>
+			     <position name="ecalblockscintpos_158" unit="cm" x="0.0" y="0.0" z="14.6890"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_158" unit="cm" x="0.0" y="0.0" z="13.7920"/>
+			     <position name="ecalgappos_158" unit="cm" x="0.0" y="0.0" z="14.7760"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_159" unit="cm" x="0.0" y="0.0" z="13.9130"/>
+			     <position name="ecalblockscintpos_159" unit="cm" x="0.0" y="0.0" z="14.9130"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_159" unit="cm" x="0.0" y="0.0" z="14.0000"/>
+			     <position name="ecalgappos_159" unit="cm" x="0.0" y="0.0" z="15.0000"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_160" unit="cm" x="0.0" y="0.0" z="14.1210"/>
+			     <position name="ecalblockscintpos_160" unit="cm" x="0.0" y="0.0" z="15.1370"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_160" unit="cm" x="0.0" y="0.0" z="14.2080"/>
+			     <position name="ecalgappos_160" unit="cm" x="0.0" y="0.0" z="15.2240"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_161" unit="cm" x="0.0" y="0.0" z="14.3290"/>
+			     <position name="ecalblockscintpos_161" unit="cm" x="0.0" y="0.0" z="15.3610"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_161" unit="cm" x="0.0" y="0.0" z="14.4160"/>
+			     <position name="ecalgappos_161" unit="cm" x="0.0" y="0.0" z="15.4480"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_162" unit="cm" x="0.0" y="0.0" z="14.5370"/>
+			     <position name="ecalblockscintpos_162" unit="cm" x="0.0" y="0.0" z="15.5850"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_162" unit="cm" x="0.0" y="0.0" z="14.6240"/>
+			     <position name="ecalgappos_162" unit="cm" x="0.0" y="0.0" z="15.6720"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_163" unit="cm" x="0.0" y="0.0" z="14.7450"/>
+			     <position name="ecalblockscintpos_163" unit="cm" x="0.0" y="0.0" z="15.8090"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_163" unit="cm" x="0.0" y="0.0" z="14.8320"/>
+			     <position name="ecalgappos_163" unit="cm" x="0.0" y="0.0" z="15.8960"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_164" unit="cm" x="0.0" y="0.0" z="14.9530"/>
+			     <position name="ecalblockscintpos_164" unit="cm" x="0.0" y="0.0" z="16.0330"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_164" unit="cm" x="0.0" y="0.0" z="15.0400"/>
+			     <position name="ecalgappos_164" unit="cm" x="0.0" y="0.0" z="16.1200"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_165" unit="cm" x="0.0" y="0.0" z="15.1610"/>
+			     <position name="ecalblockscintpos_165" unit="cm" x="0.0" y="0.0" z="16.2570"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_165" unit="cm" x="0.0" y="0.0" z="15.2480"/>
+			     <position name="ecalgappos_165" unit="cm" x="0.0" y="0.0" z="16.3440"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_166" unit="cm" x="0.0" y="0.0" z="15.3690"/>
+			     <position name="ecalblockscintpos_166" unit="cm" x="0.0" y="0.0" z="16.4810"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_166" unit="cm" x="0.0" y="0.0" z="15.4560"/>
+			     <position name="ecalgappos_166" unit="cm" x="0.0" y="0.0" z="16.5680"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_167" unit="cm" x="0.0" y="0.0" z="15.5770"/>
+			     <position name="ecalblockscintpos_167" unit="cm" x="0.0" y="0.0" z="16.7050"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_167" unit="cm" x="0.0" y="0.0" z="15.6640"/>
+			     <position name="ecalgappos_167" unit="cm" x="0.0" y="0.0" z="16.7920"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_168" unit="cm" x="0.0" y="0.0" z="15.7850"/>
+			     <position name="ecalblockscintpos_168" unit="cm" x="0.0" y="0.0" z="16.9290"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_168" unit="cm" x="0.0" y="0.0" z="15.8720"/>
+			     <position name="ecalgappos_168" unit="cm" x="0.0" y="0.0" z="17.0160"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_169" unit="cm" x="0.0" y="0.0" z="15.9930"/>
+			     <position name="ecalblockscintpos_169" unit="cm" x="0.0" y="0.0" z="17.1530"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_169" unit="cm" x="0.0" y="0.0" z="16.0800"/>
+			     <position name="ecalgappos_169" unit="cm" x="0.0" y="0.0" z="17.2400"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_170" unit="cm" x="0.0" y="0.0" z="16.2010"/>
+			     <position name="ecalblockscintpos_170" unit="cm" x="0.0" y="0.0" z="17.3770"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_170" unit="cm" x="0.0" y="0.0" z="16.2880"/>
+			     <position name="ecalgappos_170" unit="cm" x="0.0" y="0.0" z="17.4640"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_171" unit="cm" x="0.0" y="0.0" z="16.4090"/>
+			     <position name="ecalblockscintpos_171" unit="cm" x="0.0" y="0.0" z="17.6010"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_171" unit="cm" x="0.0" y="0.0" z="16.4960"/>
+			     <position name="ecalgappos_171" unit="cm" x="0.0" y="0.0" z="17.6880"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_172" unit="cm" x="0.0" y="0.0" z="16.6170"/>
+			     <position name="ecalblockscintpos_172" unit="cm" x="0.0" y="0.0" z="17.8250"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_172" unit="cm" x="0.0" y="0.0" z="16.7040"/>
+			     <position name="ecalgappos_172" unit="cm" x="0.0" y="0.0" z="17.9120"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_173" unit="cm" x="0.0" y="0.0" z="16.8250"/>
+			     <position name="ecalblockscintpos_173" unit="cm" x="0.0" y="0.0" z="18.0490"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_173" unit="cm" x="0.0" y="0.0" z="16.9120"/>
+			     <position name="ecalgappos_173" unit="cm" x="0.0" y="0.0" z="18.1360"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_174" unit="cm" x="0.0" y="0.0" z="17.0330"/>
+			     <position name="ecalblockscintpos_174" unit="cm" x="0.0" y="0.0" z="18.2730"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_174" unit="cm" x="0.0" y="0.0" z="17.1200"/>
+			     <position name="ecalgappos_174" unit="cm" x="0.0" y="0.0" z="18.3600"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_175" unit="cm" x="0.0" y="0.0" z="17.2410"/>
+			     <position name="ecalblockscintpos_175" unit="cm" x="0.0" y="0.0" z="18.4970"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_175" unit="cm" x="0.0" y="0.0" z="17.3280"/>
+			     <position name="ecalgappos_175" unit="cm" x="0.0" y="0.0" z="18.5840"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_176" unit="cm" x="0.0" y="0.0" z="17.4490"/>
+			     <position name="ecalblockscintpos_176" unit="cm" x="0.0" y="0.0" z="18.7210"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_176" unit="cm" x="0.0" y="0.0" z="17.5360"/>
+			     <position name="ecalgappos_176" unit="cm" x="0.0" y="0.0" z="18.8080"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_177" unit="cm" x="0.0" y="0.0" z="17.6570"/>
+			     <position name="ecalblockscintpos_177" unit="cm" x="0.0" y="0.0" z="18.9450"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_177" unit="cm" x="0.0" y="0.0" z="17.7440"/>
+			     <position name="ecalgappos_177" unit="cm" x="0.0" y="0.0" z="19.0320"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_178" unit="cm" x="0.0" y="0.0" z="17.8650"/>
+			     <position name="ecalblockscintpos_178" unit="cm" x="0.0" y="0.0" z="19.1690"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_178" unit="cm" x="0.0" y="0.0" z="17.9520"/>
+			     <position name="ecalgappos_178" unit="cm" x="0.0" y="0.0" z="19.2560"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_179" unit="cm" x="0.0" y="0.0" z="18.0730"/>
+			     <position name="ecalblockscintpos_179" unit="cm" x="0.0" y="0.0" z="19.3930"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_179" unit="cm" x="0.0" y="0.0" z="18.1600"/>
+			     <position name="ecalgappos_179" unit="cm" x="0.0" y="0.0" z="19.4800"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_180" unit="cm" x="0.0" y="0.0" z="18.2810"/>
+			     <position name="ecalblockscintpos_180" unit="cm" x="0.0" y="0.0" z="19.6170"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_180" unit="cm" x="0.0" y="0.0" z="18.3680"/>
+			     <position name="ecalgappos_180" unit="cm" x="0.0" y="0.0" z="19.7040"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_181" unit="cm" x="0.0" y="0.0" z="18.4890"/>
+			     <position name="ecalblockscintpos_181" unit="cm" x="0.0" y="0.0" z="19.8410"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_181" unit="cm" x="0.0" y="0.0" z="18.5760"/>
+			     <position name="ecalgappos_181" unit="cm" x="0.0" y="0.0" z="19.9280"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_182" unit="cm" x="0.0" y="0.0" z="18.6970"/>
+			     <position name="ecalblockscintpos_182" unit="cm" x="0.0" y="0.0" z="20.0650"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_182" unit="cm" x="0.0" y="0.0" z="18.7840"/>
+			     <position name="ecalgappos_182" unit="cm" x="0.0" y="0.0" z="20.1520"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_183" unit="cm" x="0.0" y="0.0" z="18.9050"/>
+			     <position name="ecalblockscintpos_183" unit="cm" x="0.0" y="0.0" z="20.2890"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_183" unit="cm" x="0.0" y="0.0" z="18.9920"/>
+			     <position name="ecalgappos_183" unit="cm" x="0.0" y="0.0" z="20.3760"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_184" unit="cm" x="0.0" y="0.0" z="19.1130"/>
+			     <position name="ecalblockscintpos_184" unit="cm" x="0.0" y="0.0" z="20.5130"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_184" unit="cm" x="0.0" y="0.0" z="19.2000"/>
+			     <position name="ecalgappos_184" unit="cm" x="0.0" y="0.0" z="20.6000"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_185" unit="cm" x="0.0" y="0.0" z="19.3210"/>
+			     <position name="ecalblockscintpos_185" unit="cm" x="0.0" y="0.0" z="20.7370"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_185" unit="cm" x="0.0" y="0.0" z="19.4080"/>
+			     <position name="ecalgappos_185" unit="cm" x="0.0" y="0.0" z="20.8240"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_186" unit="cm" x="0.0" y="0.0" z="19.5290"/>
+			     <position name="ecalblockscintpos_186" unit="cm" x="0.0" y="0.0" z="20.9610"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_186" unit="cm" x="0.0" y="0.0" z="19.6160"/>
+			     <position name="ecalgappos_186" unit="cm" x="0.0" y="0.0" z="21.0480"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_187" unit="cm" x="0.0" y="0.0" z="19.7370"/>
+			     <position name="ecalblockscintpos_187" unit="cm" x="0.0" y="0.0" z="21.1850"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_187" unit="cm" x="0.0" y="0.0" z="19.8240"/>
+			     <position name="ecalgappos_187" unit="cm" x="0.0" y="0.0" z="21.2720"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_188" unit="cm" x="0.0" y="0.0" z="19.9450"/>
+			     <position name="ecalblockscintpos_188" unit="cm" x="0.0" y="0.0" z="21.4090"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_188" unit="cm" x="0.0" y="0.0" z="20.0320"/>
+			     <position name="ecalgappos_188" unit="cm" x="0.0" y="0.0" z="21.4960"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_189" unit="cm" x="0.0" y="0.0" z="20.1530"/>
+			     <position name="ecalblockscintpos_189" unit="cm" x="0.0" y="0.0" z="21.6330"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_189" unit="cm" x="0.0" y="0.0" z="20.2400"/>
+			     <position name="ecalgappos_189" unit="cm" x="0.0" y="0.0" z="21.7200"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_190" unit="cm" x="0.0" y="0.0" z="20.3610"/>
+			     <position name="ecalblockscintpos_190" unit="cm" x="0.0" y="0.0" z="21.8570"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_190" unit="cm" x="0.0" y="0.0" z="20.4480"/>
+			     <position name="ecalgappos_190" unit="cm" x="0.0" y="0.0" z="21.9440"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_191" unit="cm" x="0.0" y="0.0" z="20.5690"/>
+			     <position name="ecalblockscintpos_191" unit="cm" x="0.0" y="0.0" z="22.0810"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_191" unit="cm" x="0.0" y="0.0" z="20.6560"/>
+			     <position name="ecalgappos_191" unit="cm" x="0.0" y="0.0" z="22.1680"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_192" unit="cm" x="0.0" y="0.0" z="20.7770"/>
+			     <position name="ecalblockscintpos_192" unit="cm" x="0.0" y="0.0" z="22.3050"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_192" unit="cm" x="0.0" y="0.0" z="20.8640"/>
+			     <position name="ecalgappos_192" unit="cm" x="0.0" y="0.0" z="22.3920"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalblockscint" />
-			     <position name="ecalblockscintpos_193" unit="cm" x="0.0" y="0.0" z="20.9850"/>
+			     <position name="ecalblockscintpos_193" unit="cm" x="0.0" y="0.0" z="22.5290"/>
                         </physvol>
 	              <physvol>
 			     <volumeref ref="logicecalgap" />
-			     <position name="ecalgappos_193" unit="cm" x="0.0" y="0.0" z="21.0720"/>
+			     <position name="ecalgappos_193" unit="cm" x="0.0" y="0.0" z="22.6160"/>
                         </physvol>
 	        </volume>
 
@@ -3649,15 +3649,15 @@
 	        </physvol>
 	      <physvol>
                       <volumeref ref="ecalcycdet_2_logic"/>
-		      <position name="ecalcycdetpos_2" unit="cm" x="0.0" y ="0.0" z="0.0 + -22.0290"/>
+		      <position name="ecalcycdetpos_2" unit="cm" x="0.0" y ="0.0" z="0.0 + -23.5890"/>
 	        </physvol>
 	      <physvol>
                       <volumeref ref="ecalcycdet_3_logic"/>
-		      <position name="ecalcycdetpos_3" unit="cm" x="0.0" y ="0.0" z="0.0 + 22.0290"/>
+		      <position name="ecalcycdetpos_3" unit="cm" x="0.0" y ="0.0" z="0.0 + 23.5890"/>
 	        </physvol>
 	      <physvol>
                         <volumeref ref="logicecalleadinglead"/>
- 		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="-21.3180"/>
+ 		      <position name="ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="-22.8780"/>
 	        </physvol>
              <physvol>
 		  <volumeref ref="logicecalblock"/>
