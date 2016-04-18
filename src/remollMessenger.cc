@@ -333,6 +333,9 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 	    if( newValue.compareTo("gamma") == 0 ){
 	      apion->SetParticleType("gamma");
 	    }
+	    if( newValue.compareTo("mu-") == 0 ){
+	      apion->SetParticleType("mu-");
+	    }
 	}else {
 	  G4cerr << __FILE__ << " line " << __LINE__ <<  ": Can't set particle type for non-generator" << newValue << G4endl;
 	}
