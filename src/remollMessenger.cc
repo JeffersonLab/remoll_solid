@@ -12,6 +12,7 @@
 #include "remollVEventGen.hh"
 #include "remollGenPion.hh"
 #include "remollGenFlat.hh"
+#include "remollGenLUND.hh"
 #include "remollGenBeam.hh"
 #include "remollPrimaryGeneratorAction.hh"
 #include "remollBeamTarget.hh"
@@ -100,6 +101,10 @@ remollMessenger::remollMessenger(){
     fileCmd = new G4UIcmdWithAString("/remoll/filename",this);
     fileCmd->SetGuidance("Output filename");
     fileCmd->SetParameterName("filename", false);
+
+    LUNDfileCmd = new G4UIcmdWithAString("/remoll/LUNDfilename",this);
+    LUNDfileCmd->SetGuidance("LUND input filename");
+    LUNDfileCmd->SetParameterName("LUNDfilename", false);
 
     pionCmd = new G4UIcmdWithAString("/remoll/piontype",this);
     pionCmd->SetGuidance("Generate pion type");
@@ -282,6 +287,12 @@ void remollMessenger::SetNewValue(G4UIcommand* cmd, G4String newValue){
 
     if( cmd == fileCmd ){
 	fIO->SetFilename(newValue);
+    }
+
+    if( cmd == LUNDfileCmd ){
+      	remollVEventGen *agen = fprigen->GetGenerator();
+	remollGenLUND *aLUND = dynamic_cast<remollGenLUND *>(agen);
+	aLUND->SetLUNDFile(newValue);
     }
 
     if( cmd == pionCmd ){

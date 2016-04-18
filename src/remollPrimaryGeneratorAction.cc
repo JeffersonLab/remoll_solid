@@ -21,6 +21,7 @@
 #include "remollGenDIS.hh"
 #include "remollGenHighZDIS.hh"
 #include "remollGenFlat.hh"
+#include "remollGenLUND.hh"
 
 remollPrimaryGeneratorAction::remollPrimaryGeneratorAction() {
   G4int n_particle = 1;
@@ -89,6 +90,10 @@ void remollPrimaryGeneratorAction::SetGenerator(G4String genname) {
 
     if( genname == "flat" ){
 	fEventGen = new remollGenFlat();
+    }
+
+    if( genname == "lund" ){
+	fEventGen = new remollGenLUND();
     }
 
     if( !fEventGen ){
