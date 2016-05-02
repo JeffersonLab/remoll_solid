@@ -29,8 +29,14 @@ nsector = 30
 
 #absorber thickness is 0.009.X_0 for shower blocks
 absorbthick = 0.05
+#Testing with tungsten
+#absorbthick = 0.034
 scintthick  = 0.15
 gapthick = 0.024
+#for double the layers
+#absorbthick = 0.025
+#scintthick  = 0.075
+#gapthick = 0.012
 
 #absorber thickness is 2.X_0 for pre-shower blocks (default value used so far 0.05137*2 : rakitha Wed Aug 20 10:03:04 EDT 2014)
 #for lead X_0 = 5.612 mm
@@ -39,12 +45,13 @@ leadingscint = 2
 
 numsides = 6
 nscintlayer  = 194
+#nscintlayer  = 387
 
 deltaz_plane = 0.1
 deltaz_blocker_space = 12
 deltaz_cyc_det_space = 1.5
 #blockdepth = 45.432
-blockdepth = (absorbthick+scintthick+gapthick)*nscintlayer - gapthick + leadingscint
+blockdepth = (absorbthick+scintthick+gapthick)*(nscintlayer+1) - gapthick + leadingscint
 #motherdepth = 46.754
 motherdepth = blockdepth + leadinglead + deltaz_plane*2 
 motherrmin = 109.0
@@ -116,6 +123,10 @@ print """        <materials>
 	       <D unit="g/cm3" value="11.350"/>
 	       <atom unit="g/mole" value="207.2"/>
 	   </material>
+           <material Z="74" name="Tungsten" state="solid">
+               <D unit="g/cm3" value="19.3"/>
+               <atom unit="g/mole" value="183.85"/>
+           </material>
 	   <material Z="82" name="Kryptonite" state="solid">
 	       <D unit="g/cm3" value="11.350"/>
 	       <atom unit="g/mole" value="207.2"/>
@@ -243,7 +254,9 @@ print """	         <volume name="logicecalblockscint">
 
 # Now build blocks		
 # Preshower scint + mainshower layers
-
+# ecalmat = "Lead"
+#change ecal material to Tungsten
+ecalmat = "Tungsten"
 print """	         <volume name="logicecalblock">
 		      <materialref ref ="%s"/> 
 		      <solidref ref ="ecalblock"/>
