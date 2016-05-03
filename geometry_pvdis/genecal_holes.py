@@ -1,5 +1,7 @@
 #!/usr/bin/python
-from math import sin,cos,sqrt,fabs, pi
+# generate ecal geometry with fiber holes in lead, scint, and gap
+# Rakitha Wed Dec 23 15:07:09 EST 2015
+from math import sin,cos,sqrt,fabs, pi, atan
 
 preshowerdetno = 80000
 showerdetno = 90000
@@ -47,6 +49,10 @@ numsides = 6
 nscintlayer  = 194
 #nscintlayer  = 387
 
+
+### fibre optic hole dimensions
+fibre_hole_radius = 0.160/2
+
 deltaz_plane = 0.1
 deltaz_blocker_space = 12
 deltaz_cyc_det_space = 1.5
@@ -82,16 +88,76 @@ def checkhexpoints( x, y, r ):
 
 ####################################################################
 
+####################################################################
+def checkHolePoints(x, y):
+    # return true is x,y lie in the hexagon. coordinate is wrt center of the hexagon
+    isOK = True
+    #get the angle in degrees
+    if x != 0:
+        theta1 = (atan(fabs(y)/fabs(x)))*180/pi
+    else:
+        theta1 = 90
+    #correct for the quadrant of the coordinate
+    if x > 0 and y > 0 :
+        theta1 = theta1 + 0
+    elif x < 0 and y > 0 :
+        theta1 = 180 - theta1
+    elif x < 0 and y < 0 :
+        theta1 = theta1 + 180
+    elif x > 0 and y < 0 :
+        theta1 = 360 - theta1
+
+    #print """Full angle %3.1f """ %theta1 
+    ##Get the angle within a 60 deg segment
+    theta1 = theta1%60
+    #print """Angle within a 60 deg segment %3.1f """ %theta1 
+
+    #compute the max radius at this angle
+    #theta1 = 60 - theta1
+    max_radius = blockside/(cos(theta1*pi/180) + sin(theta1*pi/180)/sqrt(3))
+    #radius for the give coordinates
+    radius_xy = sqrt(x*x + y*y)
+    #print """ max radius at this angle %3.3f """ %max_radius
+    #print """ radius at this coordinate %3.3f """ %radius_xy
+
+    #Check x,y location is in the hex,
+    if radius_xy < (max_radius - 0.0) :
+        isOK = True
+    else:
+        isOK = False
+
+    return isOK
+
+####################################################################
+
+
 header = """<?xml version="1.0" encoding="UTF-8"?>
 <gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
     <!-- Hex Calorimeter -->
 
         <define>
 	   <position name="ecal_origin" x="0.0" y="0.0" z="0.0" unit="cm"/>
+           <position name="hexBlock_origin" x="0.0" y="0.0" z="0.0" unit="cm"/>
 	   <rotation name="identity"/>
 	   <variable name="i0" value="1"/>"""
 
 print header
+###################################
+## Testing a routine
+#checkHolePoints(1,1)
+#checkHolePoints(-1,1)
+#checkHolePoints(-1,-1)
+#checkHolePoints(1,-1)
+#checkHolePoints(6.2,0)
+#checkHolePoints(-6.2,0)
+#checkHolePoints(0,5.2)
+#checkHolePoints(0,-5.2)
+#checkHolePoints(5.63,0.54)
+#checkHolePoints(-5.63,0.54)
+#exit(0)
+
+#exit(0)
+################################
 print "        </define>"
 
 
@@ -159,10 +225,23 @@ for i in range(30):
     print """	      <tube name="ecalphotblock_solid_%d" aunit="deg" startphi="%f" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>"""% (i+1, (i*12+2.2))
 
 
-print """	      <polyhedra name="ecalblock" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
+print """	      <polyhedra name="ecalblock_nh" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
    	          <zplane rmin="0" rmax="%3.2f" z="%3.2f"/>
    	          <zplane rmin="0" rmax="%3.2f" z="%3.2f"/>
 	      </polyhedra>""" % (numsides,  blockside*sqrt(3.0)/2, -blockdepth/2, blockside*sqrt(3.0)/2,  blockdepth/2 )
+
+print """ 
+ <tube name="fibreHole_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0.0" rmax="%3.4f" z="%3.4f"/>"""% (fibre_hole_radius, blockdepth+0.1)
+
+
+print """ 
+<subtraction name ="ecalblock_0">
+    <first ref="ecalblock_nh"/>
+    <second ref="fibreHole_1"/>
+    <positionref ref="hexBlock_origin"/>
+</subtraction>
+"""
+
 
 print """	      <tube name="ecalleadinglead" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="%3.4f" rmax="%3.4f" z="%3.4f"/>"""% (rmin, rmax, leadinglead)
 
@@ -171,14 +250,83 @@ print """	      <polyhedra name="ecalleadscint" aunit="deg" startphi="0" deltaph
    	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
 	      </polyhedra>""" % (numsides,  blockside*sqrt(3.0)/2, -leadingscint/2, blockside*sqrt(3.0)/2,  leadingscint/2)
 
-print """	      <polyhedra name="ecalgap" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
+print """	      <polyhedra name="ecalgap_nh" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
    	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
    	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
 	      </polyhedra>""" % (numsides,  blockside*sqrt(3.0)/2, -gapthick/2, blockside*sqrt(3.0)/2,  gapthick/2)
-print """	      <polyhedra name="ecalblockscint" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
+
+print """ 
+ <tube name="fibreHole_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0.0" rmax="%3.4f" z="%3.4f"/>"""% (fibre_hole_radius, gapthick+0.1)
+
+print """ 
+<subtraction name ="ecalgap_0">
+    <first ref="ecalgap_nh"/>
+    <second ref="fibreHole_2"/>
+    <positionref ref="hexBlock_origin"/>
+</subtraction>
+""" 
+print """	      <polyhedra name="ecalblockscint_nh" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="%d" >
    	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
    	          <zplane rmin="0" rmax="%3.4f" z="%3.4f"/>
 	      </polyhedra>""" % (numsides,  blockside*sqrt(3.0)/2, -scintthick/2, blockside*sqrt(3.0)/2,  scintthick/2)
+
+print """ 
+ <tube name="fibreHole_3" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="0.0" rmax="%3.4f" z="%3.4f"/>"""% (fibre_hole_radius, scintthick+0.1)
+
+print """ 
+<subtraction name ="ecalblockscint_0">
+    <first ref="ecalblockscint_nh"/>
+    <second ref="fibreHole_3"/>
+    <positionref ref="hexBlock_origin"/>
+</subtraction>
+""" 
+
+##nested two for loops to subtract holes from ecalblockscint, ecalgap and ecalblock
+delta_x = 18.76/10
+nypoints = 19
+delta_y = 5.42/10
+x_0 = 0
+y_0 = 48.74/10
+nxpoints = 9
+xpoints = [x_0, x_0+delta_x, x_0+2*delta_x, x_0+3*delta_x, x_0+4*delta_x, x_0-delta_x, x_0-2*delta_x, x_0-3*delta_x, x_0-4*delta_x]
+count_holes = 0
+for i in range(nypoints):
+    for j in range(nxpoints):
+        y = y_0 - i*delta_y
+        if i%2 == 0 :
+            x = xpoints[j]
+        else:
+           x = xpoints[j] + delta_x/2
+
+        if checkHolePoints(x, y) :
+            count_holes=count_holes+1
+            #print """[%i,%i] (%3.2f,%3.2f) """ % (i+1,count_holes,x,y)
+            print """ 
+            <subtraction name ="ecalblock_%i">
+               <first ref="ecalblock_%i"/>
+               <second ref="fibreHole_1"/>
+               <position name="ecalblockpos_%i" unit="cm" x="%3.4f" y="%3.4f" z="0"/>
+            </subtraction> """ %(count_holes,count_holes-1,count_holes,x,y)
+            print """ 
+            <subtraction name ="ecalgap_%i">
+               <first ref="ecalgap_%i"/>
+               <second ref="fibreHole_2"/>
+               <position name="ecalairgappos_%i" unit="cm" x="%3.4f" y="%3.4f" z="0"/>
+            </subtraction> """ %(count_holes,count_holes-1,count_holes,x,y)
+            print """ 
+            <subtraction name ="ecalblockscint_%i">
+               <first ref="ecalblockscint_%i"/>
+               <second ref="fibreHole_3"/>
+               <position name="ecalscintpos_%i" unit="cm" x="%3.4f" y="%3.4f" z="0"/>
+            </subtraction> """ %(count_holes,count_holes-1,count_holes,x,y)
+
+#print """ 
+#<subtraction name ="ecalblock">
+#    <first ref="ecalblock_%i"/>
+#    <second ref="fibreHole_1"/>
+#    <positionref ref="hexBlock_origin"/>
+#</subtraction> """ %(count_holes)
+
 
 print """        </solids>
 
@@ -218,6 +366,7 @@ print """	         <volume name="ecalcycdet_3_logic">
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
 	        </volume>""" % (ecalcycplanedetno+3)  # assign 70003 to plane cyclindrical detector
 
+
 print """	         <volume name="logicecalleadinglead">
 		      <materialref ref="%s"/> 
 		      <solidref ref="ecalleadinglead"/>
@@ -238,33 +387,33 @@ print """	         <volume name="logicecalleadscint">
 
 print """	         <volume name="logicecalgap">
 		      <materialref ref ="Air"/> 
-		      <solidref ref ="ecalgap"/>
+		      <solidref ref ="ecalgap_%i"/>
 		      <auxiliary auxtype="Visibility" auxvalue="false"/>
                       <!-- <auxiliary auxtype="Color" auxvalue="Blue"/> -->
-	        </volume>"""
+	        </volume>""" %(count_holes)
 
 print """	         <volume name="logicecalblockscint">
 		      <materialref ref ="Scint"/> 
-		      <solidref ref ="ecalblockscint"/>
+		      <solidref ref ="ecalblockscint_%i"/>
 		      <auxiliary auxtype="Visibility" auxvalue="false"/> 
 		      <!-- <auxiliary auxtype="Color" auxvalue="Yellow"/> -->
 		      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
-	        </volume>""" % showerdetno
+	        </volume>""" %(count_holes, showerdetno)
 
 # Now build blocks		
 # Preshower scint + mainshower layers
-# ecalmat = "Lead"
+ecalmat = "Lead"
 #change ecal material to Tungsten
-ecalmat = "Tungsten"
+#ecalmat = "Tungsten"
 print """	         <volume name="logicecalblock">
 		      <materialref ref ="%s"/> 
-		      <solidref ref ="ecalblock"/>
+		      <solidref ref ="ecalblock_%i"/>
 		      <auxiliary auxtype="Visibility" auxvalue="True"/>
 		      <auxiliary auxtype="Color" auxvalue="Gray"/>
                       <auxiliary auxtype="SensDet" auxvalue="Cal"/>
 		      <auxiliary auxtype="DetNo" auxvalue="%d"/>
-		      """ % (ecalmat, showerdetno+9999)
+		      """ % (ecalmat,count_holes, showerdetno+9999)
 #detector id for lead  showerdetno+9999
 
 #comment following print line to disable PS scint

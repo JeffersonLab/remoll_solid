@@ -72,13 +72,6 @@
 
 
 
-	    <physvol>
-		<!-- <file name="geometry_pvdis/ecal.gdml"/> -->
-		<file name="geometry_pvdis/ecal_blocker.gdml"/>
-		<positionref ref="ecalpos"/>
-		<rotationref ref="identity"/>
-	    </physvol>
-
 
 	    <physvol>  
 		<file name="geometry_pvdis/cerenkov_nodet.gdml"/> 

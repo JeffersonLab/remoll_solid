@@ -69,7 +69,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
     }
     fGDMLParser = new G4GDMLParser();
     fGDMLParser->Clear();
-    fGDMLParser->SetOverlapCheck(false);//true
+    fGDMLParser->SetOverlapCheck(true);//false
 
     fprintf(stdout, "Reading %s\n", fDetFileName.data());
 
@@ -379,7 +379,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
     UpdateCopyNo(worldVolume,1); 
     
     
-    G4cout << G4endl << "Geometry tree: " << G4endl << G4endl;
+    //G4cout << G4endl << "Geometry tree: " << G4endl << G4endl;
     //commented out to save terminal output length 
     //DumpGeometricalTree(worldVolume);   
 
@@ -445,3 +445,4 @@ void remollDetectorConstruction::CreateGlobalMagneticField() {
 void remollDetectorConstruction::SetDetectorGeomFile(const G4String &str){
     fDetFileName = str;
 }
+ 

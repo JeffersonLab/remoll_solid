@@ -42,7 +42,8 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
 
     //For Scintillator, we need the ionization energy deposit. This can be obtained by subtracting non-ionization energy : Rakitha Fri Aug 15 10:20:13 EDT 2014
     //for some discussion : http://hypernews.slac.stanford.edu/HyperNews/geant4/get/eventtrackmanage/1043/1/1.html 
-    G4double edep = step->GetTotalEnergyDeposit() - step->GetNonIonizingEnergyDeposit();
+    //G4double edep = step->GetTotalEnergyDeposit() - step->GetNonIonizingEnergyDeposit();
+    G4double edep = step->GetTotalEnergyDeposit();
     G4double globaltime_firsthit = 0;//step->GetPreStepPoint()->GetGlobalTime();
     G4double globaltime = step->GetPreStepPoint()->GetGlobalTime();
     

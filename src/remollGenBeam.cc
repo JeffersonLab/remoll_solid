@@ -20,6 +20,11 @@ remollGenBeam::remollGenBeam(){
     fBeamTarg = remollBeamTarget::GetBeamTarget();
 
     fZpos = -5.0*m;
+    
+    fE_min =     11.0*GeV;
+    fE_max =     11.0*GeV;
+
+    fParticleType = "e-";
 }
 
 remollGenBeam::~remollGenBeam(){
@@ -28,8 +33,16 @@ remollGenBeam::~remollGenBeam(){
 void remollGenBeam::SamplePhysics(remollVertex *vert, remollEvent *evt){
     // Get initial beam energy instead of using other sampling
     double beamE = fBeamTarg->fBeamE;
+    double beam_mass = electron_mass_c2;
+    if (fE_min < fE_max)
+      beamE  = CLHEP::RandFlat::shoot(fE_min, fE_max);
+
+    if (fParticleType.compareTo("gamma")==0)//for gamma beam set mass to zero
+      beam_mass = 0;
+      
     evt->fBeamE = beamE;
-    evt->fBeamMomentum = evt->fBeamMomentum.unit()*sqrt(beamE*beamE - electron_mass_c2*electron_mass_c2);;
+    //Fix the mass based on the energy and mass of the fParticleType
+    evt->fBeamMomentum = evt->fBeamMomentum.unit()*sqrt(beamE*beamE - beam_mass*beam_mass);;
 
     //G4cout << "Beam energy corrected " << evt->fBeamMomentum  << " uncorrected " << fBeamTarg->fBeamE << G4endl;
     // Override target sampling z
@@ -37,9 +50,10 @@ void remollGenBeam::SamplePhysics(remollVertex *vert, remollEvent *evt){
     //evt->fVertexPos.setX( 0 );
     //evt->fVertexPos.setY( 0 );
 
+
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
 	    evt->fBeamMomentum, 
-	    "e-" );
+	    fParticleType );
 
     evt->SetEffCrossSection(0.0);
     evt->SetAsymmetry(0.0);

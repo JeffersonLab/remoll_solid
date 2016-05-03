@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+    <!-- Target and beamline -->
+
+    <define>
+	<constant name="targetz" value="10.0"/>
+	<!-- <constant name="targetz" value="0.0"/> -->
+	<constant name="targetHalfLength" value="20"/>
+	<constant name="entwinthick" value="0.0125"/>
+	<constant name="extwinthick" value="0.0125"/>
+
+	<position name="target_z0" x="0.0" y="0.0" z="targetz" unit="cm"/>
+	<position name="target_upstr" x="0.0" y="0.0" z="targetz+50" unit="cm"/>
+	<position name="target_v0" x="0.0" y="0.0" z="0.0" unit="cm"/>
+	<position name="target_v1" x="0.0" y="0.0" z="-24.975" unit="cm"/>
+	<position name="target_v2" x="0.0" y="0.0" z="24.975" unit="cm"/>
+
+	<position name="beampipe_z1" x="0.0" y="0.0" z="-675+330.0" unit="cm"/>
+	<position name="beampipe_z2" x="0.0" y="0.0" z="-675+330.0*2-entwinthick" unit="cm"/>
+
+	<position name="beampipe_z3" x="0.0" y="0.0" z="45+232.5" unit="cm"/>
+	<position name="beampipe_z4" x="0.0" y="0.0" z="45+232.5*2+extwinthick" unit="cm"/>
+	<position name="beampipe_z5" x="0.0" y="0.0" z="40" unit="cm"/>
+
+	<rotation name="identity"/>
+    </define>
+
+    <materials>
+	<material Z="1" name="Vacuum" state="gas">
+	    <T unit="K" value="2.73"/>
+	    <P unit="pascal" value="3e-18"/>
+	    <D unit="g/cm3" value="1e-25"/>
+	    <atom unit="g/mole" value="1.01"/>
+	</material>
+
+	<material Z="1" name="targetmat" state="liquid">
+	    <D unit="g/cm3" value="0.071"/>
+	    <atom unit="g/mole" value="1.01"/>
+	</material>
+
+	<material Z="13" name="Aluminum" state="solid">
+	    <D unit="g/cm3" value="2.70"/>
+	    <atom unit="g/mole" value="26.98"/>
+	</material>
+	<material Z="82" name="Kryptonite" state="solid">
+	  <D unit="g/cm3" value="11.350"/>
+	  <atom unit="g/mole" value="207.2"/>
+	</material>
+
+    </materials>
+
+
+    <solids>
+	<!-- Target volumes -->
+	<tube aunit="deg" deltaphi="360" lunit="m" name="targetMother" rmax="2" rmin="0" startphi="0" z="20"/>
+
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetTube" rmax="1.918" rmin="0" startphi="0" z="targetHalfLength*2"/>
+
+
+    </solids>
+
+    <structure>
+	<volume name="cryoTarg">
+	    <materialref ref="targetmat"/>
+	    <solidref ref="targetTube"/>
+	    <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	    <auxiliary auxtype="DetNo" auxvalue="666"/>
+	    <auxiliary auxtype="Color" auxvalue="red"/> 
+	    <auxiliary auxtype="Target" auxvalue="Material"/> 	    
+	</volume>
+
+	<!---  Place volumes -->
+
+	<volume name="logicTarget">
+	    <materialref ref="Vacuum"/>
+	    <solidref ref="targetMother"/>
+	    <auxiliary auxtype="Target" auxvalue="Mother"/> 
+
+	    <physvol>
+		<volumeref ref="cryoTarg"/>
+		<positionref ref="target_z0"/>
+	    </physvol>
+
+	</volume>
+
+    </structure>
+
+    <setup name="Target" version="1.0">
+	<world ref="logicTarget"/>
+    </setup>
+
+</gdml>
+
+

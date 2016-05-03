@@ -93,6 +93,7 @@ void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
     //also see main.f rate calculation in original fortran code  (main.f lines 209 - 211)
     //rakitha  Tue Sep 24 11:06:41 EDT 2013
     evt->SetEffCrossSection(V*thisxs);
+    //printf("DEBUG:  xs %f \n ",V*thisxs); 
 
     if( vert->GetMaterial()->GetNumberOfElements() != 1 ){
 	G4cerr << __FILE__ << " line " << __LINE__ << 
@@ -101,7 +102,7 @@ void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
     }
 
     evt->SetAsymmetry(0.0);
-
+    evt->SetRate(0);
 
     evt->ProduceNewParticle( G4ThreeVector(0.0, 0.0, 0.0), 
 	    G4ThreeVector(pf*sin(ph)*sin(th), pf*cos(ph)*sin(th), pf*cos(th)), 
@@ -254,6 +255,9 @@ Double_t remollGenPion::wiser_sigma(Double_t Ebeam, Double_t pf, Double_t thf, D
 };
 
 Double_t remollGenPion::wiser_total_sigma(Double_t Ebeam, Double_t intrad, Double_t extrad, Int_t type){
+  /*
+    	TF3(const char* name, void* fcn, Double_t xmin = 0, Double_t xmax = 1, Double_t ymin = 0, Double_t ymax = 1, Double_t zmin = 0, Double_t zmax = 1, Int_t npar = 0)
+   */
     TF3 *fullwiser = new TF3("fullwiser", remollGenPion::wiser_tf3, 0, Ebeam, -1.0, 1.0, 0, 1.0, 4);
 
     fullwiser->SetParameter(0, Ebeam);
