@@ -1,0 +1,3156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+    <!-- Hex Calorimeter -->
+
+        <define>
+	   <position name="sidis_la_ecal_origin" x="0.0" y="0.0" z="0.0" unit="cm"/>
+	   <rotation name="identity"/>
+	   <variable name="i0" value="1"/>
+        </define>
+        <materials>
+	   <material Z="1" name="Vacuum" state="gas">
+	       <T unit="K" value="2.73"/>
+  	       <P unit="pascal" value="3e-18"/>
+	       <D unit="g/cm3" value="1e-25"/>
+	       <atom unit="g/mole" value="1.01"/>
+	   </material>
+	   <material name="Carbon" Z="6">
+	       <D    unit="g/cm3" value="2.21"/>
+	       <atom unit="g/mole" value="12.011"/>
+	   </material>
+	   <material name="Hydrogen" Z="1">
+	       <D    unit="g/cm3" value="0.067"/>
+	       <atom unit="g/mole" value="1.01"/>
+	   </material>
+	   <material name="Nitrogen" Z="7">
+	       <D    unit="g/L" value="1.165"/>
+	       <atom unit="g/mole" value="14.0067"/>
+	   </material>
+	   <material name="Oxygen" Z="8">
+	       <D    unit="g/L" value="1.332"/>
+	       <atom unit="g/mole" value="16"/>
+	   </material>
+
+	   <material Z="82" name="Lead" state="solid">
+	       <D unit="g/cm3" value="11.350"/>
+	       <atom unit="g/mole" value="207.2"/>
+	   </material>
+           <material Z="74" name="Tungsten" state="solid">
+               <D unit="g/cm3" value="19.3"/>
+               <atom unit="g/mole" value="183.85"/>
+           </material>
+	   <material Z="82" name="Kryptonite" state="solid">
+	       <D unit="g/cm3" value="11.350"/>
+	       <atom unit="g/mole" value="207.2"/>
+	   </material>
+
+	   <material name="Scint" state="gas">
+	       <D unit="g/cm3" value="1.032"/>
+	       <composite n="10" ref="Hydrogen"/>
+	       <composite n="9" ref="Carbon"/>
+	   </material>
+
+	   <material name="Air" state="gas">
+	       <D value="0.00129" />
+	       <fraction n="0.7" ref="Nitrogen" />
+	       <fraction n="0.3" ref="Oxygen" />
+	   </material>
+
+        </materials>
+	
+	<solids>
+	      <tube name="sidis_la_ecalmother" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="82.0000" rmax="142.0000" z="58.9780"/>
+	      <tube name="sidis_la_ecalcycdet_1" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="141.4000" rmax="141.5000" z="45.9780"/>
+	      <tube name="sidis_la_ecalcycdet_2" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="82.0000" rmax="141.0000" z="0.1000"/>
+	      <tube name="sidis_la_ecalcycdet_3" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="82.0000" rmax="141.0000" z="0.1000"/>
+	      <tube name="sidis_la_ecalphotblock_solid_1" aunit="deg" startphi="2.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_2" aunit="deg" startphi="14.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_3" aunit="deg" startphi="26.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_4" aunit="deg" startphi="38.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_5" aunit="deg" startphi="50.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_6" aunit="deg" startphi="62.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_7" aunit="deg" startphi="74.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_8" aunit="deg" startphi="86.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_9" aunit="deg" startphi="98.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_10" aunit="deg" startphi="110.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_11" aunit="deg" startphi="122.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_12" aunit="deg" startphi="134.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_13" aunit="deg" startphi="146.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_14" aunit="deg" startphi="158.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_15" aunit="deg" startphi="170.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_16" aunit="deg" startphi="182.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_17" aunit="deg" startphi="194.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_18" aunit="deg" startphi="206.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_19" aunit="deg" startphi="218.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_20" aunit="deg" startphi="230.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_21" aunit="deg" startphi="242.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_22" aunit="deg" startphi="254.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_23" aunit="deg" startphi="266.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_24" aunit="deg" startphi="278.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_25" aunit="deg" startphi="290.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_26" aunit="deg" startphi="302.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_27" aunit="deg" startphi="314.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_28" aunit="deg" startphi="326.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_29" aunit="deg" startphi="338.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <tube name="sidis_la_ecalphotblock_solid_30" aunit="deg" startphi="350.200000" deltaphi="2.5" lunit="cm" rmin="110" rmax="200" z="5"/>
+	      <polyhedra name="sidis_la_ecalblock" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="6" >
+   	          <zplane rmin="0" rmax="5.41" z="-22.83"/>
+   	          <zplane rmin="0" rmax="5.41" z="22.83"/>
+	      </polyhedra>
+	      <tube name="sidis_la_ecalleadinglead" aunit="deg" startphi="0" deltaphi="360" lunit="cm" rmin="83.0000" rmax="140.0000" z="1.1220"/>
+	      <polyhedra name="sidis_la_ecalleadscint" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="6" >
+   	          <zplane rmin="0" rmax="5.4127" z="-1.0000"/>
+   	          <zplane rmin="0" rmax="5.4127" z="1.0000"/>
+	      </polyhedra>
+	      <polyhedra name="sidis_la_ecalgap" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="6" >
+   	          <zplane rmin="0" rmax="5.4127" z="-0.0120"/>
+   	          <zplane rmin="0" rmax="5.4127" z="0.0120"/>
+	      </polyhedra>
+	      <polyhedra name="sidis_la_ecalblockscint" aunit="deg" startphi="0" deltaphi="360" lunit="cm" numsides="6" >
+   	          <zplane rmin="0" rmax="5.4127" z="-0.0750"/>
+   	          <zplane rmin="0" rmax="5.4127" z="0.0750"/>
+	      </polyhedra>
+        </solids>
+
+	<structure>
+
+	         <volume name="sidis_la_ecalphotblock_logic_1">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_1"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_2">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_2"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_3">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_3"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_4">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_4"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_5">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_5"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_6">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_6"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_7">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_7"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_8">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_8"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_9">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_9"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_10">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_10"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_11">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_11"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_12">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_12"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_13">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_13"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_14">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_14"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_15">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_15"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_16">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_16"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_17">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_17"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_18">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_18"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_19">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_19"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_20">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_20"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_21">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_21"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_22">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_22"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_23">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_23"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_24">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_24"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_25">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_25"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_26">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_26"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_27">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_27"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_28">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_28"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_29">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_29"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalphotblock_logic_30">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalphotblock_solid_30"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+	        </volume>
+	         <volume name="sidis_la_ecalcycdet_1_logic">
+		      <materialref ref="Vacuum"/> 
+		      <solidref ref="sidis_la_ecalcycdet_1"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71001"/>
+	        </volume>
+	         <volume name="sidis_la_ecalcycdet_2_logic">
+		      <materialref ref="Vacuum"/> 
+		      <solidref ref="sidis_la_ecalcycdet_2"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71002"/>
+	        </volume>
+	         <volume name="sidis_la_ecalcycdet_3_logic">
+		      <materialref ref="Vacuum"/> 
+		      <solidref ref="sidis_la_ecalcycdet_3"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		       <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+		      <auxiliary auxtype="DetNo" auxvalue="71003"/>
+	        </volume>
+	         <volume name="sidis_la_logicecalleadinglead">
+		      <materialref ref="Lead"/> 
+		      <solidref ref="sidis_la_ecalleadinglead"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		      <auxiliary auxtype="Color" auxvalue="Gray"/>
+		       <auxiliary auxtype="SensDet" auxvalue="Cal"/>
+		      <auxiliary auxtype="DetNo" auxvalue="90999"/>
+	        </volume>
+	         <volume name="sidis_la_logicecalleadscint">
+		      <materialref ref ="Scint"/>
+		      <!--<materialref ref ="Vacuum"/>  -->
+		      <solidref ref ="sidis_la_ecalleadscint"/>
+		      <auxiliary auxtype="Visibility" auxvalue="true"/>
+		      <auxiliary auxtype="Color" auxvalue="Yellow"/>
+		      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
+		      <auxiliary auxtype="DetNo" auxvalue="81000"/>
+	        </volume>
+	         <volume name="sidis_la_logicecalgap">
+		      <materialref ref ="Air"/> 
+		      <solidref ref ="sidis_la_ecalgap"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/>
+                      <!-- <auxiliary auxtype="Color" auxvalue="Blue"/> -->
+	        </volume>
+	         <volume name="sidis_la_logicecalblockscint">
+		      <materialref ref ="Scint"/> 
+		      <solidref ref ="sidis_la_ecalblockscint"/>
+		      <auxiliary auxtype="Visibility" auxvalue="false"/> 
+		      <!-- <auxiliary auxtype="Color" auxvalue="Yellow"/> -->
+		      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
+		      <auxiliary auxtype="DetNo" auxvalue="91000"/>
+	        </volume>
+	         <volume name="sidis_la_logicecalblock">
+		      <materialref ref ="Tungsten"/> 
+		      <solidref ref ="sidis_la_ecalblock"/>
+		      <auxiliary auxtype="Visibility" auxvalue="True"/>
+		      <auxiliary auxtype="Color" auxvalue="Gray"/>
+                      <auxiliary auxtype="SensDet" auxvalue="Cal"/>
+		      <auxiliary auxtype="DetNo" auxvalue="100999"/>
+		      
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalleadscint" />
+  			     <position name="sidis_la_ecalleadscintpos" unit="cm" x="0.0" y="0.0" z="-21.83"/>
+                          </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_0" unit="cm" x="0.0" y="0.0" z="-20.7030"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_0" unit="cm" x="0.0" y="0.0" z="-20.6160"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_1" unit="cm" x="0.0" y="0.0" z="-20.4790"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_1" unit="cm" x="0.0" y="0.0" z="-20.3920"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_2" unit="cm" x="0.0" y="0.0" z="-20.2550"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_2" unit="cm" x="0.0" y="0.0" z="-20.1680"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_3" unit="cm" x="0.0" y="0.0" z="-20.0310"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_3" unit="cm" x="0.0" y="0.0" z="-19.9440"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_4" unit="cm" x="0.0" y="0.0" z="-19.8070"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_4" unit="cm" x="0.0" y="0.0" z="-19.7200"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_5" unit="cm" x="0.0" y="0.0" z="-19.5830"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_5" unit="cm" x="0.0" y="0.0" z="-19.4960"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_6" unit="cm" x="0.0" y="0.0" z="-19.3590"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_6" unit="cm" x="0.0" y="0.0" z="-19.2720"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_7" unit="cm" x="0.0" y="0.0" z="-19.1350"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_7" unit="cm" x="0.0" y="0.0" z="-19.0480"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_8" unit="cm" x="0.0" y="0.0" z="-18.9110"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_8" unit="cm" x="0.0" y="0.0" z="-18.8240"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_9" unit="cm" x="0.0" y="0.0" z="-18.6870"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_9" unit="cm" x="0.0" y="0.0" z="-18.6000"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_10" unit="cm" x="0.0" y="0.0" z="-18.4630"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_10" unit="cm" x="0.0" y="0.0" z="-18.3760"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_11" unit="cm" x="0.0" y="0.0" z="-18.2390"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_11" unit="cm" x="0.0" y="0.0" z="-18.1520"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_12" unit="cm" x="0.0" y="0.0" z="-18.0150"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_12" unit="cm" x="0.0" y="0.0" z="-17.9280"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_13" unit="cm" x="0.0" y="0.0" z="-17.7910"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_13" unit="cm" x="0.0" y="0.0" z="-17.7040"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_14" unit="cm" x="0.0" y="0.0" z="-17.5670"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_14" unit="cm" x="0.0" y="0.0" z="-17.4800"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_15" unit="cm" x="0.0" y="0.0" z="-17.3430"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_15" unit="cm" x="0.0" y="0.0" z="-17.2560"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_16" unit="cm" x="0.0" y="0.0" z="-17.1190"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_16" unit="cm" x="0.0" y="0.0" z="-17.0320"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_17" unit="cm" x="0.0" y="0.0" z="-16.8950"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_17" unit="cm" x="0.0" y="0.0" z="-16.8080"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_18" unit="cm" x="0.0" y="0.0" z="-16.6710"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_18" unit="cm" x="0.0" y="0.0" z="-16.5840"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_19" unit="cm" x="0.0" y="0.0" z="-16.4470"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_19" unit="cm" x="0.0" y="0.0" z="-16.3600"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_20" unit="cm" x="0.0" y="0.0" z="-16.2230"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_20" unit="cm" x="0.0" y="0.0" z="-16.1360"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_21" unit="cm" x="0.0" y="0.0" z="-15.9990"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_21" unit="cm" x="0.0" y="0.0" z="-15.9120"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_22" unit="cm" x="0.0" y="0.0" z="-15.7750"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_22" unit="cm" x="0.0" y="0.0" z="-15.6880"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_23" unit="cm" x="0.0" y="0.0" z="-15.5510"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_23" unit="cm" x="0.0" y="0.0" z="-15.4640"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_24" unit="cm" x="0.0" y="0.0" z="-15.3270"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_24" unit="cm" x="0.0" y="0.0" z="-15.2400"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_25" unit="cm" x="0.0" y="0.0" z="-15.1030"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_25" unit="cm" x="0.0" y="0.0" z="-15.0160"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_26" unit="cm" x="0.0" y="0.0" z="-14.8790"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_26" unit="cm" x="0.0" y="0.0" z="-14.7920"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_27" unit="cm" x="0.0" y="0.0" z="-14.6550"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_27" unit="cm" x="0.0" y="0.0" z="-14.5680"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_28" unit="cm" x="0.0" y="0.0" z="-14.4310"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_28" unit="cm" x="0.0" y="0.0" z="-14.3440"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_29" unit="cm" x="0.0" y="0.0" z="-14.2070"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_29" unit="cm" x="0.0" y="0.0" z="-14.1200"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_30" unit="cm" x="0.0" y="0.0" z="-13.9830"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_30" unit="cm" x="0.0" y="0.0" z="-13.8960"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_31" unit="cm" x="0.0" y="0.0" z="-13.7590"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_31" unit="cm" x="0.0" y="0.0" z="-13.6720"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_32" unit="cm" x="0.0" y="0.0" z="-13.5350"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_32" unit="cm" x="0.0" y="0.0" z="-13.4480"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_33" unit="cm" x="0.0" y="0.0" z="-13.3110"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_33" unit="cm" x="0.0" y="0.0" z="-13.2240"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_34" unit="cm" x="0.0" y="0.0" z="-13.0870"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_34" unit="cm" x="0.0" y="0.0" z="-13.0000"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_35" unit="cm" x="0.0" y="0.0" z="-12.8630"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_35" unit="cm" x="0.0" y="0.0" z="-12.7760"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_36" unit="cm" x="0.0" y="0.0" z="-12.6390"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_36" unit="cm" x="0.0" y="0.0" z="-12.5520"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_37" unit="cm" x="0.0" y="0.0" z="-12.4150"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_37" unit="cm" x="0.0" y="0.0" z="-12.3280"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_38" unit="cm" x="0.0" y="0.0" z="-12.1910"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_38" unit="cm" x="0.0" y="0.0" z="-12.1040"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_39" unit="cm" x="0.0" y="0.0" z="-11.9670"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_39" unit="cm" x="0.0" y="0.0" z="-11.8800"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_40" unit="cm" x="0.0" y="0.0" z="-11.7430"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_40" unit="cm" x="0.0" y="0.0" z="-11.6560"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_41" unit="cm" x="0.0" y="0.0" z="-11.5190"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_41" unit="cm" x="0.0" y="0.0" z="-11.4320"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_42" unit="cm" x="0.0" y="0.0" z="-11.2950"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_42" unit="cm" x="0.0" y="0.0" z="-11.2080"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_43" unit="cm" x="0.0" y="0.0" z="-11.0710"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_43" unit="cm" x="0.0" y="0.0" z="-10.9840"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_44" unit="cm" x="0.0" y="0.0" z="-10.8470"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_44" unit="cm" x="0.0" y="0.0" z="-10.7600"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_45" unit="cm" x="0.0" y="0.0" z="-10.6230"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_45" unit="cm" x="0.0" y="0.0" z="-10.5360"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_46" unit="cm" x="0.0" y="0.0" z="-10.3990"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_46" unit="cm" x="0.0" y="0.0" z="-10.3120"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_47" unit="cm" x="0.0" y="0.0" z="-10.1750"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_47" unit="cm" x="0.0" y="0.0" z="-10.0880"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_48" unit="cm" x="0.0" y="0.0" z="-9.9510"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_48" unit="cm" x="0.0" y="0.0" z="-9.8640"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_49" unit="cm" x="0.0" y="0.0" z="-9.7270"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_49" unit="cm" x="0.0" y="0.0" z="-9.6400"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_50" unit="cm" x="0.0" y="0.0" z="-9.5030"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_50" unit="cm" x="0.0" y="0.0" z="-9.4160"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_51" unit="cm" x="0.0" y="0.0" z="-9.2790"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_51" unit="cm" x="0.0" y="0.0" z="-9.1920"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_52" unit="cm" x="0.0" y="0.0" z="-9.0550"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_52" unit="cm" x="0.0" y="0.0" z="-8.9680"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_53" unit="cm" x="0.0" y="0.0" z="-8.8310"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_53" unit="cm" x="0.0" y="0.0" z="-8.7440"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_54" unit="cm" x="0.0" y="0.0" z="-8.6070"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_54" unit="cm" x="0.0" y="0.0" z="-8.5200"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_55" unit="cm" x="0.0" y="0.0" z="-8.3830"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_55" unit="cm" x="0.0" y="0.0" z="-8.2960"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_56" unit="cm" x="0.0" y="0.0" z="-8.1590"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_56" unit="cm" x="0.0" y="0.0" z="-8.0720"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_57" unit="cm" x="0.0" y="0.0" z="-7.9350"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_57" unit="cm" x="0.0" y="0.0" z="-7.8480"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_58" unit="cm" x="0.0" y="0.0" z="-7.7110"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_58" unit="cm" x="0.0" y="0.0" z="-7.6240"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_59" unit="cm" x="0.0" y="0.0" z="-7.4870"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_59" unit="cm" x="0.0" y="0.0" z="-7.4000"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_60" unit="cm" x="0.0" y="0.0" z="-7.2630"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_60" unit="cm" x="0.0" y="0.0" z="-7.1760"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_61" unit="cm" x="0.0" y="0.0" z="-7.0390"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_61" unit="cm" x="0.0" y="0.0" z="-6.9520"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_62" unit="cm" x="0.0" y="0.0" z="-6.8150"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_62" unit="cm" x="0.0" y="0.0" z="-6.7280"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_63" unit="cm" x="0.0" y="0.0" z="-6.5910"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_63" unit="cm" x="0.0" y="0.0" z="-6.5040"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_64" unit="cm" x="0.0" y="0.0" z="-6.3670"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_64" unit="cm" x="0.0" y="0.0" z="-6.2800"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_65" unit="cm" x="0.0" y="0.0" z="-6.1430"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_65" unit="cm" x="0.0" y="0.0" z="-6.0560"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_66" unit="cm" x="0.0" y="0.0" z="-5.9190"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_66" unit="cm" x="0.0" y="0.0" z="-5.8320"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_67" unit="cm" x="0.0" y="0.0" z="-5.6950"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_67" unit="cm" x="0.0" y="0.0" z="-5.6080"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_68" unit="cm" x="0.0" y="0.0" z="-5.4710"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_68" unit="cm" x="0.0" y="0.0" z="-5.3840"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_69" unit="cm" x="0.0" y="0.0" z="-5.2470"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_69" unit="cm" x="0.0" y="0.0" z="-5.1600"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_70" unit="cm" x="0.0" y="0.0" z="-5.0230"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_70" unit="cm" x="0.0" y="0.0" z="-4.9360"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_71" unit="cm" x="0.0" y="0.0" z="-4.7990"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_71" unit="cm" x="0.0" y="0.0" z="-4.7120"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_72" unit="cm" x="0.0" y="0.0" z="-4.5750"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_72" unit="cm" x="0.0" y="0.0" z="-4.4880"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_73" unit="cm" x="0.0" y="0.0" z="-4.3510"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_73" unit="cm" x="0.0" y="0.0" z="-4.2640"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_74" unit="cm" x="0.0" y="0.0" z="-4.1270"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_74" unit="cm" x="0.0" y="0.0" z="-4.0400"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_75" unit="cm" x="0.0" y="0.0" z="-3.9030"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_75" unit="cm" x="0.0" y="0.0" z="-3.8160"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_76" unit="cm" x="0.0" y="0.0" z="-3.6790"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_76" unit="cm" x="0.0" y="0.0" z="-3.5920"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_77" unit="cm" x="0.0" y="0.0" z="-3.4550"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_77" unit="cm" x="0.0" y="0.0" z="-3.3680"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_78" unit="cm" x="0.0" y="0.0" z="-3.2310"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_78" unit="cm" x="0.0" y="0.0" z="-3.1440"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_79" unit="cm" x="0.0" y="0.0" z="-3.0070"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_79" unit="cm" x="0.0" y="0.0" z="-2.9200"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_80" unit="cm" x="0.0" y="0.0" z="-2.7830"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_80" unit="cm" x="0.0" y="0.0" z="-2.6960"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_81" unit="cm" x="0.0" y="0.0" z="-2.5590"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_81" unit="cm" x="0.0" y="0.0" z="-2.4720"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_82" unit="cm" x="0.0" y="0.0" z="-2.3350"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_82" unit="cm" x="0.0" y="0.0" z="-2.2480"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_83" unit="cm" x="0.0" y="0.0" z="-2.1110"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_83" unit="cm" x="0.0" y="0.0" z="-2.0240"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_84" unit="cm" x="0.0" y="0.0" z="-1.8870"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_84" unit="cm" x="0.0" y="0.0" z="-1.8000"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_85" unit="cm" x="0.0" y="0.0" z="-1.6630"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_85" unit="cm" x="0.0" y="0.0" z="-1.5760"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_86" unit="cm" x="0.0" y="0.0" z="-1.4390"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_86" unit="cm" x="0.0" y="0.0" z="-1.3520"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_87" unit="cm" x="0.0" y="0.0" z="-1.2150"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_87" unit="cm" x="0.0" y="0.0" z="-1.1280"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_88" unit="cm" x="0.0" y="0.0" z="-0.9910"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_88" unit="cm" x="0.0" y="0.0" z="-0.9040"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_89" unit="cm" x="0.0" y="0.0" z="-0.7670"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_89" unit="cm" x="0.0" y="0.0" z="-0.6800"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_90" unit="cm" x="0.0" y="0.0" z="-0.5430"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_90" unit="cm" x="0.0" y="0.0" z="-0.4560"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_91" unit="cm" x="0.0" y="0.0" z="-0.3190"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_91" unit="cm" x="0.0" y="0.0" z="-0.2320"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_92" unit="cm" x="0.0" y="0.0" z="-0.0950"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_92" unit="cm" x="0.0" y="0.0" z="-0.0080"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_93" unit="cm" x="0.0" y="0.0" z="0.1290"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_93" unit="cm" x="0.0" y="0.0" z="0.2160"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_94" unit="cm" x="0.0" y="0.0" z="0.3530"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_94" unit="cm" x="0.0" y="0.0" z="0.4400"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_95" unit="cm" x="0.0" y="0.0" z="0.5770"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_95" unit="cm" x="0.0" y="0.0" z="0.6640"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_96" unit="cm" x="0.0" y="0.0" z="0.8010"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_96" unit="cm" x="0.0" y="0.0" z="0.8880"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_97" unit="cm" x="0.0" y="0.0" z="1.0250"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_97" unit="cm" x="0.0" y="0.0" z="1.1120"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_98" unit="cm" x="0.0" y="0.0" z="1.2490"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_98" unit="cm" x="0.0" y="0.0" z="1.3360"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_99" unit="cm" x="0.0" y="0.0" z="1.4730"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_99" unit="cm" x="0.0" y="0.0" z="1.5600"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_100" unit="cm" x="0.0" y="0.0" z="1.6970"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_100" unit="cm" x="0.0" y="0.0" z="1.7840"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_101" unit="cm" x="0.0" y="0.0" z="1.9210"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_101" unit="cm" x="0.0" y="0.0" z="2.0080"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_102" unit="cm" x="0.0" y="0.0" z="2.1450"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_102" unit="cm" x="0.0" y="0.0" z="2.2320"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_103" unit="cm" x="0.0" y="0.0" z="2.3690"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_103" unit="cm" x="0.0" y="0.0" z="2.4560"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_104" unit="cm" x="0.0" y="0.0" z="2.5930"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_104" unit="cm" x="0.0" y="0.0" z="2.6800"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_105" unit="cm" x="0.0" y="0.0" z="2.8170"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_105" unit="cm" x="0.0" y="0.0" z="2.9040"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_106" unit="cm" x="0.0" y="0.0" z="3.0410"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_106" unit="cm" x="0.0" y="0.0" z="3.1280"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_107" unit="cm" x="0.0" y="0.0" z="3.2650"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_107" unit="cm" x="0.0" y="0.0" z="3.3520"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_108" unit="cm" x="0.0" y="0.0" z="3.4890"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_108" unit="cm" x="0.0" y="0.0" z="3.5760"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_109" unit="cm" x="0.0" y="0.0" z="3.7130"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_109" unit="cm" x="0.0" y="0.0" z="3.8000"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_110" unit="cm" x="0.0" y="0.0" z="3.9370"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_110" unit="cm" x="0.0" y="0.0" z="4.0240"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_111" unit="cm" x="0.0" y="0.0" z="4.1610"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_111" unit="cm" x="0.0" y="0.0" z="4.2480"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_112" unit="cm" x="0.0" y="0.0" z="4.3850"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_112" unit="cm" x="0.0" y="0.0" z="4.4720"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_113" unit="cm" x="0.0" y="0.0" z="4.6090"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_113" unit="cm" x="0.0" y="0.0" z="4.6960"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_114" unit="cm" x="0.0" y="0.0" z="4.8330"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_114" unit="cm" x="0.0" y="0.0" z="4.9200"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_115" unit="cm" x="0.0" y="0.0" z="5.0570"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_115" unit="cm" x="0.0" y="0.0" z="5.1440"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_116" unit="cm" x="0.0" y="0.0" z="5.2810"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_116" unit="cm" x="0.0" y="0.0" z="5.3680"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_117" unit="cm" x="0.0" y="0.0" z="5.5050"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_117" unit="cm" x="0.0" y="0.0" z="5.5920"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_118" unit="cm" x="0.0" y="0.0" z="5.7290"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_118" unit="cm" x="0.0" y="0.0" z="5.8160"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_119" unit="cm" x="0.0" y="0.0" z="5.9530"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_119" unit="cm" x="0.0" y="0.0" z="6.0400"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_120" unit="cm" x="0.0" y="0.0" z="6.1770"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_120" unit="cm" x="0.0" y="0.0" z="6.2640"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_121" unit="cm" x="0.0" y="0.0" z="6.4010"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_121" unit="cm" x="0.0" y="0.0" z="6.4880"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_122" unit="cm" x="0.0" y="0.0" z="6.6250"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_122" unit="cm" x="0.0" y="0.0" z="6.7120"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_123" unit="cm" x="0.0" y="0.0" z="6.8490"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_123" unit="cm" x="0.0" y="0.0" z="6.9360"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_124" unit="cm" x="0.0" y="0.0" z="7.0730"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_124" unit="cm" x="0.0" y="0.0" z="7.1600"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_125" unit="cm" x="0.0" y="0.0" z="7.2970"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_125" unit="cm" x="0.0" y="0.0" z="7.3840"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_126" unit="cm" x="0.0" y="0.0" z="7.5210"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_126" unit="cm" x="0.0" y="0.0" z="7.6080"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_127" unit="cm" x="0.0" y="0.0" z="7.7450"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_127" unit="cm" x="0.0" y="0.0" z="7.8320"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_128" unit="cm" x="0.0" y="0.0" z="7.9690"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_128" unit="cm" x="0.0" y="0.0" z="8.0560"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_129" unit="cm" x="0.0" y="0.0" z="8.1930"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_129" unit="cm" x="0.0" y="0.0" z="8.2800"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_130" unit="cm" x="0.0" y="0.0" z="8.4170"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_130" unit="cm" x="0.0" y="0.0" z="8.5040"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_131" unit="cm" x="0.0" y="0.0" z="8.6410"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_131" unit="cm" x="0.0" y="0.0" z="8.7280"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_132" unit="cm" x="0.0" y="0.0" z="8.8650"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_132" unit="cm" x="0.0" y="0.0" z="8.9520"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_133" unit="cm" x="0.0" y="0.0" z="9.0890"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_133" unit="cm" x="0.0" y="0.0" z="9.1760"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_134" unit="cm" x="0.0" y="0.0" z="9.3130"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_134" unit="cm" x="0.0" y="0.0" z="9.4000"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_135" unit="cm" x="0.0" y="0.0" z="9.5370"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_135" unit="cm" x="0.0" y="0.0" z="9.6240"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_136" unit="cm" x="0.0" y="0.0" z="9.7610"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_136" unit="cm" x="0.0" y="0.0" z="9.8480"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_137" unit="cm" x="0.0" y="0.0" z="9.9850"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_137" unit="cm" x="0.0" y="0.0" z="10.0720"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_138" unit="cm" x="0.0" y="0.0" z="10.2090"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_138" unit="cm" x="0.0" y="0.0" z="10.2960"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_139" unit="cm" x="0.0" y="0.0" z="10.4330"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_139" unit="cm" x="0.0" y="0.0" z="10.5200"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_140" unit="cm" x="0.0" y="0.0" z="10.6570"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_140" unit="cm" x="0.0" y="0.0" z="10.7440"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_141" unit="cm" x="0.0" y="0.0" z="10.8810"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_141" unit="cm" x="0.0" y="0.0" z="10.9680"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_142" unit="cm" x="0.0" y="0.0" z="11.1050"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_142" unit="cm" x="0.0" y="0.0" z="11.1920"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_143" unit="cm" x="0.0" y="0.0" z="11.3290"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_143" unit="cm" x="0.0" y="0.0" z="11.4160"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_144" unit="cm" x="0.0" y="0.0" z="11.5530"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_144" unit="cm" x="0.0" y="0.0" z="11.6400"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_145" unit="cm" x="0.0" y="0.0" z="11.7770"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_145" unit="cm" x="0.0" y="0.0" z="11.8640"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_146" unit="cm" x="0.0" y="0.0" z="12.0010"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_146" unit="cm" x="0.0" y="0.0" z="12.0880"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_147" unit="cm" x="0.0" y="0.0" z="12.2250"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_147" unit="cm" x="0.0" y="0.0" z="12.3120"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_148" unit="cm" x="0.0" y="0.0" z="12.4490"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_148" unit="cm" x="0.0" y="0.0" z="12.5360"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_149" unit="cm" x="0.0" y="0.0" z="12.6730"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_149" unit="cm" x="0.0" y="0.0" z="12.7600"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_150" unit="cm" x="0.0" y="0.0" z="12.8970"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_150" unit="cm" x="0.0" y="0.0" z="12.9840"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_151" unit="cm" x="0.0" y="0.0" z="13.1210"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_151" unit="cm" x="0.0" y="0.0" z="13.2080"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_152" unit="cm" x="0.0" y="0.0" z="13.3450"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_152" unit="cm" x="0.0" y="0.0" z="13.4320"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_153" unit="cm" x="0.0" y="0.0" z="13.5690"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_153" unit="cm" x="0.0" y="0.0" z="13.6560"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_154" unit="cm" x="0.0" y="0.0" z="13.7930"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_154" unit="cm" x="0.0" y="0.0" z="13.8800"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_155" unit="cm" x="0.0" y="0.0" z="14.0170"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_155" unit="cm" x="0.0" y="0.0" z="14.1040"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_156" unit="cm" x="0.0" y="0.0" z="14.2410"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_156" unit="cm" x="0.0" y="0.0" z="14.3280"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_157" unit="cm" x="0.0" y="0.0" z="14.4650"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_157" unit="cm" x="0.0" y="0.0" z="14.5520"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_158" unit="cm" x="0.0" y="0.0" z="14.6890"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_158" unit="cm" x="0.0" y="0.0" z="14.7760"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_159" unit="cm" x="0.0" y="0.0" z="14.9130"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_159" unit="cm" x="0.0" y="0.0" z="15.0000"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_160" unit="cm" x="0.0" y="0.0" z="15.1370"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_160" unit="cm" x="0.0" y="0.0" z="15.2240"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_161" unit="cm" x="0.0" y="0.0" z="15.3610"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_161" unit="cm" x="0.0" y="0.0" z="15.4480"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_162" unit="cm" x="0.0" y="0.0" z="15.5850"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_162" unit="cm" x="0.0" y="0.0" z="15.6720"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_163" unit="cm" x="0.0" y="0.0" z="15.8090"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_163" unit="cm" x="0.0" y="0.0" z="15.8960"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_164" unit="cm" x="0.0" y="0.0" z="16.0330"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_164" unit="cm" x="0.0" y="0.0" z="16.1200"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_165" unit="cm" x="0.0" y="0.0" z="16.2570"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_165" unit="cm" x="0.0" y="0.0" z="16.3440"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_166" unit="cm" x="0.0" y="0.0" z="16.4810"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_166" unit="cm" x="0.0" y="0.0" z="16.5680"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_167" unit="cm" x="0.0" y="0.0" z="16.7050"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_167" unit="cm" x="0.0" y="0.0" z="16.7920"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_168" unit="cm" x="0.0" y="0.0" z="16.9290"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_168" unit="cm" x="0.0" y="0.0" z="17.0160"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_169" unit="cm" x="0.0" y="0.0" z="17.1530"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_169" unit="cm" x="0.0" y="0.0" z="17.2400"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_170" unit="cm" x="0.0" y="0.0" z="17.3770"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_170" unit="cm" x="0.0" y="0.0" z="17.4640"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_171" unit="cm" x="0.0" y="0.0" z="17.6010"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_171" unit="cm" x="0.0" y="0.0" z="17.6880"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_172" unit="cm" x="0.0" y="0.0" z="17.8250"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_172" unit="cm" x="0.0" y="0.0" z="17.9120"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_173" unit="cm" x="0.0" y="0.0" z="18.0490"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_173" unit="cm" x="0.0" y="0.0" z="18.1360"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_174" unit="cm" x="0.0" y="0.0" z="18.2730"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_174" unit="cm" x="0.0" y="0.0" z="18.3600"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_175" unit="cm" x="0.0" y="0.0" z="18.4970"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_175" unit="cm" x="0.0" y="0.0" z="18.5840"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_176" unit="cm" x="0.0" y="0.0" z="18.7210"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_176" unit="cm" x="0.0" y="0.0" z="18.8080"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_177" unit="cm" x="0.0" y="0.0" z="18.9450"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_177" unit="cm" x="0.0" y="0.0" z="19.0320"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_178" unit="cm" x="0.0" y="0.0" z="19.1690"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_178" unit="cm" x="0.0" y="0.0" z="19.2560"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_179" unit="cm" x="0.0" y="0.0" z="19.3930"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_179" unit="cm" x="0.0" y="0.0" z="19.4800"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_180" unit="cm" x="0.0" y="0.0" z="19.6170"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_180" unit="cm" x="0.0" y="0.0" z="19.7040"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_181" unit="cm" x="0.0" y="0.0" z="19.8410"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_181" unit="cm" x="0.0" y="0.0" z="19.9280"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_182" unit="cm" x="0.0" y="0.0" z="20.0650"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_182" unit="cm" x="0.0" y="0.0" z="20.1520"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_183" unit="cm" x="0.0" y="0.0" z="20.2890"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_183" unit="cm" x="0.0" y="0.0" z="20.3760"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_184" unit="cm" x="0.0" y="0.0" z="20.5130"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_184" unit="cm" x="0.0" y="0.0" z="20.6000"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_185" unit="cm" x="0.0" y="0.0" z="20.7370"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_185" unit="cm" x="0.0" y="0.0" z="20.8240"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_186" unit="cm" x="0.0" y="0.0" z="20.9610"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_186" unit="cm" x="0.0" y="0.0" z="21.0480"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_187" unit="cm" x="0.0" y="0.0" z="21.1850"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_187" unit="cm" x="0.0" y="0.0" z="21.2720"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_188" unit="cm" x="0.0" y="0.0" z="21.4090"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_188" unit="cm" x="0.0" y="0.0" z="21.4960"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_189" unit="cm" x="0.0" y="0.0" z="21.6330"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_189" unit="cm" x="0.0" y="0.0" z="21.7200"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_190" unit="cm" x="0.0" y="0.0" z="21.8570"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_190" unit="cm" x="0.0" y="0.0" z="21.9440"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_191" unit="cm" x="0.0" y="0.0" z="22.0810"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_191" unit="cm" x="0.0" y="0.0" z="22.1680"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_192" unit="cm" x="0.0" y="0.0" z="22.3050"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_192" unit="cm" x="0.0" y="0.0" z="22.3920"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalblockscint" />
+			     <position name="sidis_la_ecalblockscintpos_193" unit="cm" x="0.0" y="0.0" z="22.5290"/>
+                        </physvol>
+	              <physvol>
+			     <volumeref ref="sidis_la_logicecalgap" />
+			     <position name="sidis_la_ecalgappos_193" unit="cm" x="0.0" y="0.0" z="22.6160"/>
+                        </physvol>
+	        </volume>
+
+        <!---  Place volumes -->
+	        <volume name="sidis_la_logicEcalMother">
+		      <materialref ref="Vacuum"/>
+		      <solidref ref="sidis_la_ecalmother"/>
+	              <auxiliary auxtype="Visibility" auxvalue="false"/>
+	      <physvol>
+                      <volumeref ref="sidis_la_ecalcycdet_1_logic"/>
+		      <position name="sidis_la_ecalcycdetpos_1" unit="cm" x="0.0" y ="0.0" z="0.0"/>
+	        </physvol>
+	      <physvol>
+                      <volumeref ref="sidis_la_ecalcycdet_2_logic"/>
+		      <position name="sidis_la_ecalcycdetpos_2" unit="cm" x="0.0" y ="0.0" z="0.0 + -23.5890"/>
+	        </physvol>
+	      <physvol>
+                      <volumeref ref="sidis_la_ecalcycdet_3_logic"/>
+		      <position name="sidis_la_ecalcycdetpos_3" unit="cm" x="0.0" y ="0.0" z="0.0 + 23.5890"/>
+	        </physvol>
+	      <physvol>
+                        <volumeref ref="sidis_la_logicecalleadinglead"/>
+ 		      <position name="sidis_la_ecalleadingleadpos" unit="cm" x="0.0" y ="0.0" z="-22.8780"/>
+	        </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_0_10_1 " unit="cm" x="-130.61" y ="-26.15" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_0_11_1 " unit="cm" x="-130.61" y ="-15.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_0_12_1 " unit="cm" x="-130.61" y ="-4.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_0_13_1 " unit="cm" x="-130.61" y ="6.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_0_14_1 " unit="cm" x="-130.61" y ="17.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_0_15_1 " unit="cm" x="-130.61" y ="28.06" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_6_1 " unit="cm" x="-111.83" y ="-69.52" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_7_1 " unit="cm" x="-111.83" y ="-58.68" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_8_0" unit="cm" x="-121.22" y ="-53.26" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_8_1 " unit="cm" x="-111.83" y ="-47.84" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_9_0" unit="cm" x="-121.22" y ="-42.42" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_9_1 " unit="cm" x="-111.83" y ="-36.99" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_10_0" unit="cm" x="-121.22" y ="-31.57" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_10_1 " unit="cm" x="-111.83" y ="-26.15" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_11_0" unit="cm" x="-121.22" y ="-20.73" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_11_1 " unit="cm" x="-111.83" y ="-15.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_12_0" unit="cm" x="-121.22" y ="-9.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_12_1 " unit="cm" x="-111.83" y ="-4.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_13_0" unit="cm" x="-121.22" y ="0.95" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_13_1 " unit="cm" x="-111.83" y ="6.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_14_0" unit="cm" x="-121.22" y ="11.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_14_1 " unit="cm" x="-111.83" y ="17.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_15_0" unit="cm" x="-121.22" y ="22.64" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_15_1 " unit="cm" x="-111.83" y ="28.06" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_16_0" unit="cm" x="-121.22" y ="33.48" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_16_1 " unit="cm" x="-111.83" y ="38.90" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_17_0" unit="cm" x="-121.22" y ="44.32" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_17_1 " unit="cm" x="-111.83" y ="49.75" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_1_18_0" unit="cm" x="-121.22" y ="55.17" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_18_1 " unit="cm" x="-111.83" y ="60.59" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_1_19_1 " unit="cm" x="-111.83" y ="71.43" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_4_1 " unit="cm" x="-93.05" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_5_0" unit="cm" x="-102.44" y ="-85.79" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_5_1 " unit="cm" x="-93.05" y ="-80.37" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_6_0" unit="cm" x="-102.44" y ="-74.94" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_6_1 " unit="cm" x="-93.05" y ="-69.52" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_7_0" unit="cm" x="-102.44" y ="-64.10" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_7_1 " unit="cm" x="-93.05" y ="-58.68" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_8_0" unit="cm" x="-102.44" y ="-53.26" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_8_1 " unit="cm" x="-93.05" y ="-47.84" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_9_0" unit="cm" x="-102.44" y ="-42.42" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_9_1 " unit="cm" x="-93.05" y ="-36.99" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_10_0" unit="cm" x="-102.44" y ="-31.57" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_10_1 " unit="cm" x="-93.05" y ="-26.15" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_11_0" unit="cm" x="-102.44" y ="-20.73" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_11_1 " unit="cm" x="-93.05" y ="-15.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_12_0" unit="cm" x="-102.44" y ="-9.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_12_1 " unit="cm" x="-93.05" y ="-4.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_13_0" unit="cm" x="-102.44" y ="0.95" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_13_1 " unit="cm" x="-93.05" y ="6.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_14_0" unit="cm" x="-102.44" y ="11.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_14_1 " unit="cm" x="-93.05" y ="17.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_15_0" unit="cm" x="-102.44" y ="22.64" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_15_1 " unit="cm" x="-93.05" y ="28.06" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_16_0" unit="cm" x="-102.44" y ="33.48" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_16_1 " unit="cm" x="-93.05" y ="38.90" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_17_0" unit="cm" x="-102.44" y ="44.32" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_17_1 " unit="cm" x="-93.05" y ="49.75" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_18_0" unit="cm" x="-102.44" y ="55.17" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_18_1 " unit="cm" x="-93.05" y ="60.59" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_19_0" unit="cm" x="-102.44" y ="66.01" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_19_1 " unit="cm" x="-93.05" y ="71.43" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_2_20_0" unit="cm" x="-102.44" y ="76.85" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_20_1 " unit="cm" x="-93.05" y ="82.27" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_2_21_1 " unit="cm" x="-93.05" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_3_1 " unit="cm" x="-74.27" y ="-102.05" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_4_0" unit="cm" x="-83.66" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_4_1 " unit="cm" x="-74.27" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_5_0" unit="cm" x="-83.66" y ="-85.79" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_5_1 " unit="cm" x="-74.27" y ="-80.37" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_6_0" unit="cm" x="-83.66" y ="-74.94" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_6_1 " unit="cm" x="-74.27" y ="-69.52" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_7_0" unit="cm" x="-83.66" y ="-64.10" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_7_1 " unit="cm" x="-74.27" y ="-58.68" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_8_0" unit="cm" x="-83.66" y ="-53.26" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_9_0" unit="cm" x="-83.66" y ="-42.42" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_10_0" unit="cm" x="-83.66" y ="-31.57" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_16_0" unit="cm" x="-83.66" y ="33.48" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_17_0" unit="cm" x="-83.66" y ="44.32" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_17_1 " unit="cm" x="-74.27" y ="49.75" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_18_0" unit="cm" x="-83.66" y ="55.17" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_18_1 " unit="cm" x="-74.27" y ="60.59" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_19_0" unit="cm" x="-83.66" y ="66.01" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_19_1 " unit="cm" x="-74.27" y ="71.43" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_20_0" unit="cm" x="-83.66" y ="76.85" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_20_1 " unit="cm" x="-74.27" y ="82.27" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_21_0" unit="cm" x="-83.66" y ="87.70" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_21_1 " unit="cm" x="-74.27" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_3_22_0" unit="cm" x="-83.66" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_3_22_1 " unit="cm" x="-74.27" y ="103.96" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_4_2_1 " unit="cm" x="-55.49" y ="-112.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_3_0" unit="cm" x="-64.88" y ="-107.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_4_3_1 " unit="cm" x="-55.49" y ="-102.05" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_4_0" unit="cm" x="-64.88" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_4_4_1 " unit="cm" x="-55.49" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_5_0" unit="cm" x="-64.88" y ="-85.79" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_4_5_1 " unit="cm" x="-55.49" y ="-80.37" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_6_0" unit="cm" x="-64.88" y ="-74.94" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_7_0" unit="cm" x="-64.88" y ="-64.10" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_19_0" unit="cm" x="-64.88" y ="66.01" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_4_19_1 " unit="cm" x="-55.49" y ="71.43" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_20_0" unit="cm" x="-64.88" y ="76.85" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_4_20_1 " unit="cm" x="-55.49" y ="82.27" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_21_0" unit="cm" x="-64.88" y ="87.70" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_4_21_1 " unit="cm" x="-55.49" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_22_0" unit="cm" x="-64.88" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_4_22_1 " unit="cm" x="-55.49" y ="103.96" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_4_23_0" unit="cm" x="-64.88" y ="109.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_4_23_1 " unit="cm" x="-55.49" y ="114.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_5_1_1 " unit="cm" x="-36.71" y ="-123.74" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_5_2_0" unit="cm" x="-46.10" y ="-118.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_5_2_1 " unit="cm" x="-36.71" y ="-112.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_5_3_0" unit="cm" x="-46.10" y ="-107.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_5_3_1 " unit="cm" x="-36.71" y ="-102.05" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_5_4_0" unit="cm" x="-46.10" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_5_4_1 " unit="cm" x="-36.71" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_5_5_0" unit="cm" x="-46.10" y ="-85.79" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_5_20_0" unit="cm" x="-46.10" y ="76.85" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_5_20_1 " unit="cm" x="-36.71" y ="82.27" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_5_21_0" unit="cm" x="-46.10" y ="87.70" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_5_21_1 " unit="cm" x="-36.71" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_5_22_0" unit="cm" x="-46.10" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_5_22_1 " unit="cm" x="-36.71" y ="103.96" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_5_23_0" unit="cm" x="-46.10" y ="109.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_5_23_1 " unit="cm" x="-36.71" y ="114.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_5_24_0" unit="cm" x="-46.10" y ="120.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_5_24_1 " unit="cm" x="-36.71" y ="125.64" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_1_0" unit="cm" x="-27.32" y ="-129.16" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_6_1_1 " unit="cm" x="-17.93" y ="-123.74" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_2_0" unit="cm" x="-27.32" y ="-118.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_6_2_1 " unit="cm" x="-17.93" y ="-112.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_3_0" unit="cm" x="-27.32" y ="-107.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_6_3_1 " unit="cm" x="-17.93" y ="-102.05" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_4_0" unit="cm" x="-27.32" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_6_4_1 " unit="cm" x="-17.93" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_5_0" unit="cm" x="-27.32" y ="-85.79" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_21_0" unit="cm" x="-27.32" y ="87.70" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_6_21_1 " unit="cm" x="-17.93" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_22_0" unit="cm" x="-27.32" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_6_22_1 " unit="cm" x="-17.93" y ="103.96" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_23_0" unit="cm" x="-27.32" y ="109.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_6_23_1 " unit="cm" x="-17.93" y ="114.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_24_0" unit="cm" x="-27.32" y ="120.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_6_24_1 " unit="cm" x="-17.93" y ="125.64" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_6_25_0" unit="cm" x="-27.32" y ="131.07" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_7_1_0" unit="cm" x="-8.54" y ="-129.16" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_7_1_1 " unit="cm" x="0.85" y ="-123.74" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_7_2_0" unit="cm" x="-8.54" y ="-118.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_7_2_1 " unit="cm" x="0.85" y ="-112.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_7_3_0" unit="cm" x="-8.54" y ="-107.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_7_3_1 " unit="cm" x="0.85" y ="-102.05" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_7_4_0" unit="cm" x="-8.54" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_7_4_1 " unit="cm" x="0.85" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_7_21_1 " unit="cm" x="0.85" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_7_22_0" unit="cm" x="-8.54" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_7_22_1 " unit="cm" x="0.85" y ="103.96" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_7_23_0" unit="cm" x="-8.54" y ="109.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_7_23_1 " unit="cm" x="0.85" y ="114.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_7_24_0" unit="cm" x="-8.54" y ="120.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_7_24_1 " unit="cm" x="0.85" y ="125.64" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_7_25_0" unit="cm" x="-8.54" y ="131.07" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_8_1_0" unit="cm" x="10.24" y ="-129.16" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_8_1_1 " unit="cm" x="19.63" y ="-123.74" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_8_2_0" unit="cm" x="10.24" y ="-118.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_8_2_1 " unit="cm" x="19.63" y ="-112.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_8_3_0" unit="cm" x="10.24" y ="-107.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_8_3_1 " unit="cm" x="19.63" y ="-102.05" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_8_4_0" unit="cm" x="10.24" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_8_4_1 " unit="cm" x="19.63" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_8_21_1 " unit="cm" x="19.63" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_8_22_0" unit="cm" x="10.24" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_8_22_1 " unit="cm" x="19.63" y ="103.96" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_8_23_0" unit="cm" x="10.24" y ="109.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_8_23_1 " unit="cm" x="19.63" y ="114.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_8_24_0" unit="cm" x="10.24" y ="120.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_8_24_1 " unit="cm" x="19.63" y ="125.64" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_8_25_0" unit="cm" x="10.24" y ="131.07" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_9_1_0" unit="cm" x="29.02" y ="-129.16" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_9_1_1 " unit="cm" x="38.41" y ="-123.74" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_9_2_0" unit="cm" x="29.02" y ="-118.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_9_2_1 " unit="cm" x="38.41" y ="-112.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_9_3_0" unit="cm" x="29.02" y ="-107.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_9_3_1 " unit="cm" x="38.41" y ="-102.05" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_9_4_0" unit="cm" x="29.02" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_9_4_1 " unit="cm" x="38.41" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_9_5_0" unit="cm" x="29.02" y ="-85.79" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_9_20_1 " unit="cm" x="38.41" y ="82.27" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_9_21_0" unit="cm" x="29.02" y ="87.70" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_9_21_1 " unit="cm" x="38.41" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_9_22_0" unit="cm" x="29.02" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_9_22_1 " unit="cm" x="38.41" y ="103.96" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_9_23_0" unit="cm" x="29.02" y ="109.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_9_23_1 " unit="cm" x="38.41" y ="114.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_9_24_0" unit="cm" x="29.02" y ="120.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_9_24_1 " unit="cm" x="38.41" y ="125.64" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_10_2_0" unit="cm" x="47.80" y ="-118.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_2_1 " unit="cm" x="57.19" y ="-112.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_10_3_0" unit="cm" x="47.80" y ="-107.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_3_1 " unit="cm" x="57.19" y ="-102.05" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_10_4_0" unit="cm" x="47.80" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_4_1 " unit="cm" x="57.19" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_10_5_0" unit="cm" x="47.80" y ="-85.79" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_5_1 " unit="cm" x="57.19" y ="-80.37" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_6_1 " unit="cm" x="57.19" y ="-69.52" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_19_1 " unit="cm" x="57.19" y ="71.43" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_10_20_0" unit="cm" x="47.80" y ="76.85" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_20_1 " unit="cm" x="57.19" y ="82.27" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_10_21_0" unit="cm" x="47.80" y ="87.70" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_21_1 " unit="cm" x="57.19" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_10_22_0" unit="cm" x="47.80" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_22_1 " unit="cm" x="57.19" y ="103.96" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_10_23_0" unit="cm" x="47.80" y ="109.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_10_23_1 " unit="cm" x="57.19" y ="114.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_10_24_0" unit="cm" x="47.80" y ="120.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_3_0" unit="cm" x="66.58" y ="-107.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_3_1 " unit="cm" x="75.97" y ="-102.05" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_4_0" unit="cm" x="66.58" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_4_1 " unit="cm" x="75.97" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_5_0" unit="cm" x="66.58" y ="-85.79" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_5_1 " unit="cm" x="75.97" y ="-80.37" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_6_0" unit="cm" x="66.58" y ="-74.94" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_6_1 " unit="cm" x="75.97" y ="-69.52" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_7_0" unit="cm" x="66.58" y ="-64.10" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_7_1 " unit="cm" x="75.97" y ="-58.68" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_8_1 " unit="cm" x="75.97" y ="-47.84" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_17_1 " unit="cm" x="75.97" y ="49.75" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_18_1 " unit="cm" x="75.97" y ="60.59" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_19_0" unit="cm" x="66.58" y ="66.01" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_19_1 " unit="cm" x="75.97" y ="71.43" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_20_0" unit="cm" x="66.58" y ="76.85" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_20_1 " unit="cm" x="75.97" y ="82.27" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_21_0" unit="cm" x="66.58" y ="87.70" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_21_1 " unit="cm" x="75.97" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_22_0" unit="cm" x="66.58" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_11_22_1 " unit="cm" x="75.97" y ="103.96" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_11_23_0" unit="cm" x="66.58" y ="109.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_4_0" unit="cm" x="85.36" y ="-96.63" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_4_1 " unit="cm" x="94.75" y ="-91.21" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_5_0" unit="cm" x="85.36" y ="-85.79" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_5_1 " unit="cm" x="94.75" y ="-80.37" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_6_0" unit="cm" x="85.36" y ="-74.94" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_6_1 " unit="cm" x="94.75" y ="-69.52" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_7_0" unit="cm" x="85.36" y ="-64.10" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_7_1 " unit="cm" x="94.75" y ="-58.68" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_8_0" unit="cm" x="85.36" y ="-53.26" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_8_1 " unit="cm" x="94.75" y ="-47.84" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_9_0" unit="cm" x="85.36" y ="-42.42" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_9_1 " unit="cm" x="94.75" y ="-36.99" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_10_0" unit="cm" x="85.36" y ="-31.57" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_10_1 " unit="cm" x="94.75" y ="-26.15" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_11_1 " unit="cm" x="94.75" y ="-15.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_12_1 " unit="cm" x="94.75" y ="-4.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_13_1 " unit="cm" x="94.75" y ="6.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_14_1 " unit="cm" x="94.75" y ="17.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_15_1 " unit="cm" x="94.75" y ="28.06" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_16_0" unit="cm" x="85.36" y ="33.48" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_16_1 " unit="cm" x="94.75" y ="38.90" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_17_0" unit="cm" x="85.36" y ="44.32" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_17_1 " unit="cm" x="94.75" y ="49.75" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_18_0" unit="cm" x="85.36" y ="55.17" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_18_1 " unit="cm" x="94.75" y ="60.59" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_19_0" unit="cm" x="85.36" y ="66.01" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_19_1 " unit="cm" x="94.75" y ="71.43" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_20_0" unit="cm" x="85.36" y ="76.85" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_20_1 " unit="cm" x="94.75" y ="82.27" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_21_0" unit="cm" x="85.36" y ="87.70" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_12_21_1 " unit="cm" x="94.75" y ="93.12" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_12_22_0" unit="cm" x="85.36" y ="98.54" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_6_0" unit="cm" x="104.14" y ="-74.94" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_6_1 " unit="cm" x="113.53" y ="-69.52" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_7_0" unit="cm" x="104.14" y ="-64.10" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_7_1 " unit="cm" x="113.53" y ="-58.68" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_8_0" unit="cm" x="104.14" y ="-53.26" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_8_1 " unit="cm" x="113.53" y ="-47.84" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_9_0" unit="cm" x="104.14" y ="-42.42" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_9_1 " unit="cm" x="113.53" y ="-36.99" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_10_0" unit="cm" x="104.14" y ="-31.57" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_10_1 " unit="cm" x="113.53" y ="-26.15" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_11_0" unit="cm" x="104.14" y ="-20.73" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_11_1 " unit="cm" x="113.53" y ="-15.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_12_0" unit="cm" x="104.14" y ="-9.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_12_1 " unit="cm" x="113.53" y ="-4.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_13_0" unit="cm" x="104.14" y ="0.95" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_13_1 " unit="cm" x="113.53" y ="6.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_14_0" unit="cm" x="104.14" y ="11.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_14_1 " unit="cm" x="113.53" y ="17.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_15_0" unit="cm" x="104.14" y ="22.64" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_15_1 " unit="cm" x="113.53" y ="28.06" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_16_0" unit="cm" x="104.14" y ="33.48" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_16_1 " unit="cm" x="113.53" y ="38.90" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_17_0" unit="cm" x="104.14" y ="44.32" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_17_1 " unit="cm" x="113.53" y ="49.75" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_18_0" unit="cm" x="104.14" y ="55.17" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_18_1 " unit="cm" x="113.53" y ="60.59" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_19_0" unit="cm" x="104.14" y ="66.01" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_13_19_1 " unit="cm" x="113.53" y ="71.43" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_13_20_0" unit="cm" x="104.14" y ="76.85" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_8_0" unit="cm" x="122.92" y ="-53.26" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_9_0" unit="cm" x="122.92" y ="-42.42" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_10_0" unit="cm" x="122.92" y ="-31.57" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_11_0" unit="cm" x="122.92" y ="-20.73" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_14_11_1 " unit="cm" x="132.31" y ="-15.31" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_12_0" unit="cm" x="122.92" y ="-9.89" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_14_12_1 " unit="cm" x="132.31" y ="-4.47" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_13_0" unit="cm" x="122.92" y ="0.95" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_14_13_1 " unit="cm" x="132.31" y ="6.38" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_14_0" unit="cm" x="122.92" y ="11.80" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position  name="sidis_la_ecalblockpos_14_14_1 " unit="cm" x="132.31" y ="17.22" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_15_0" unit="cm" x="122.92" y ="22.64" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_16_0" unit="cm" x="122.92" y ="33.48" z="0.66"/>
+	    </physvol>
+             <physvol>
+		  <volumeref ref="sidis_la_logicecalblock"/>
+		  <position name="sidis_la_ecalblockpos_14_17_0" unit="cm" x="122.92" y ="44.32" z="0.66"/>
+	    </physvol>
+      </volume>
+	</structure>
+
+	<setup name="Ecal" version="1.0">
+	     <world ref="sidis_la_logicEcalMother"/>
+	</setup>
+</gdml>
