@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdml xmlns:gdml="http://cern.ch/2001/Schemas/GDML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+    <!-- Target and beamline -->
+
+    <define>
+	<constant name="targetz" value="10.0"/>
+	<!-- <constant name="targetz" value="0.0"/> -->
+	<!--Proposal spec for the target lenght is 40 cm (20 cm half length) -->	
+	<constant name="targetHalfLength" value="20.0"/>
+	<constant name="entwinthick" value="0.0125"/>
+	<constant name="extwinthick" value="0.0125"/>
+
+	<position name="target_z0" x="0.0" y="0.0" z="targetz" unit="cm"/>
+	<position name="target_upstr" x="0.0" y="0.0" z="targetz+50" unit="cm"/>
+	<position name="target_v0" x="0.0" y="0.0" z="0.0" unit="cm"/>
+	<position name="target_v1" x="0.0" y="0.0" z="-24.975" unit="cm"/>
+	<position name="target_v2" x="0.0" y="0.0" z="24.975" unit="cm"/>
+
+	<position name="beampipe_z1" x="0.0" y="0.0" z="-675+330.0" unit="cm"/>
+	<position name="beampipe_z2" x="0.0" y="0.0" z="-675+330.0*2-entwinthick" unit="cm"/>
+
+	<position name="beampipe_z3" x="0.0" y="0.0" z="45+232.5" unit="cm"/>
+	<position name="beampipe_z4" x="0.0" y="0.0" z="45+232.5*2+extwinthick" unit="cm"/>
+	<position name="beampipe_z5" x="0.0" y="0.0" z="40" unit="cm"/>
+
+	<rotation name="identity"/>
+    </define>
+
+    <materials>
+      <isotope name="He3" Z="2" N="3">
+	<atom type="A" value="3.02"/>
+      </isotope>
+      <element Z="2" formula="He" name="Helium" >
+	<fraction ref="He3" n="1" />
+      </element>
+      <material Z="2" name="targetmat" state="liquid">
+	<D unit="g/cm3" value="0.001345"/>
+	<fraction n="1" ref="Helium"/>
+      </material>
+      
+      <material Z="1" name="Vacuum" state="gas">
+	    <T unit="K" value="2.73"/>
+	    <P unit="pascal" value="3e-18"/>
+	    <D unit="g/cm3" value="1e-25"/>
+	    <atom unit="g/mole" value="1.01"/>
+      </material>
+
+	<material Z="13" name="Aluminum" state="solid">
+	    <D unit="g/cm3" value="2.70"/>
+	    <atom unit="g/mole" value="26.98"/>
+	</material>
+	<material Z="82" name="Kryptonite" state="solid">
+	  <D unit="g/cm3" value="11.350"/>
+	  <atom unit="g/mole" value="207.2"/>
+	</material>
+
+    </materials>
+
+
+    <solids>
+	<!-- Target volumes -->
+	<tube aunit="deg" deltaphi="360" lunit="m" name="targetMother" rmax="1" rmin="0" startphi="0" z="20"/>
+
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetTube" rmax="1.918" rmin="0" startphi="0" z="targetHalfLength*2"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetCryo" rmax="1.9" rmin="0" startphi="0" z="(targetHalfLength-0.018)*2"/>
+
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetCham" rmax="5" rmin="0" startphi="0" z="25*2"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetHollow1" rmax="4.95" rmin="0" startphi="0" z="24.95*2"/>
+
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetWin1" rmax="1.22" rmin="0" startphi="0" z="0.035*2"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="targetWin2" rmax="1.50" rmin="0" startphi="0" z="0.035*2"/>
+
+	<subtraction name ="targetCham0">
+	    <first ref="targetCham"/>
+	    <second ref="targetHollow1"/>
+	    <positionref ref="target_v0"/>
+	</subtraction>
+	<subtraction name ="targetCham1">
+	    <first ref="targetCham0"/>
+	    <second ref="targetWin1"/>
+	    <positionref ref="target_v1"/>
+	</subtraction>
+	<subtraction name ="targetCham2">
+	    <first ref="targetCham1"/>
+	    <second ref="targetWin2"/>
+	    <positionref ref="target_v2"/>
+	</subtraction>
+
+	<subtraction name ="targetWall">
+	    <first ref="targetTube"/>
+	    <second ref="targetCryo"/>
+	    <positionref ref="target_v0"/>
+	</subtraction>
+
+	<!-- Beam pipe volumes -->
+
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="beampipe1" rmax="1.25" rmin="1.22" startphi="0" z="330.0*2"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="beampipe1win" rmax="1.22" rmin="0.0" startphi="0" z="entwinthick*2"/>
+
+	<!--  This one is a construct between the target chamber and the main exit pipe -->
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="beampipe3" rmax="1.5" rmin="1.4" startphi="0" z="10.0"/>
+
+	<cone aunit="deg" deltaphi="360" lunit="cm" name="beampipe2"   rmin1="1.4" rmax1="1.5" rmin2="28.9" rmax2="29.0" startphi="0" z="232.5*2"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="beampipe2win" rmax="29.0" rmin="0.0" startphi="0" z="entwinthick*2"/>
+
+	<!-- Encompassing logical volume -->
+
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="smallvol" rmax="0.01" rmin="0.0" startphi="0" z="50"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="lbeampipe1" rmax="1.25" rmin="0" startphi="0" z="330.0*2"/>
+	<tube aunit="deg" deltaphi="360" lunit="cm" name="lbeampipe3" rmax="1.5" rmin="0" startphi="0" z="20.0*2"/>
+	<cone aunit="deg" deltaphi="360" lunit="cm" name="lbeampipe2" rmin1="0" rmax1="1.5" rmin2="0" rmax2="29.0" startphi="0" z="232.5*2"/>
+
+	<union name ="tbunion0">
+	    <first ref="smallvol"/>  <!-- This is just a base to fix the union on  -->
+	    <second ref="targetTube"/>
+	    <positionref ref="target_z0"/>
+	</union>
+
+	<union name ="tbunion1">
+	    <first ref="tbunion0"/>
+	    <second ref="targetCham"/>
+	    <positionref ref="target_z0"/>
+	</union>
+
+	<union name ="tbunion2">
+	    <first ref="tbunion1"/>
+	    <second ref="beampipe1"/>
+	    <positionref ref="beampipe_z1"/>
+	</union>
+
+	<union name ="tbunion3">
+	    <first ref="tbunion2"/>
+	    <second ref="lbeampipe3"/>
+	    <positionref ref="beampipe_z5"/>
+	</union>
+
+	<union name ="tbunion4">
+	    <first ref="tbunion3"/>
+	    <second ref="lbeampipe2"/>
+	    <positionref ref="beampipe_z3"/>
+	</union>
+
+	<union name ="tbunion5">
+	    <first ref="tbunion4"/>
+	    <second ref="beampipe2win"/>
+	    <positionref ref="beampipe_z4"/>
+	</union>
+
+    </solids>
+
+    <structure>
+	<volume name="cryoTarg">
+	    <materialref ref="targetmat"/>
+	    <solidref ref="targetCryo"/>
+	    <auxiliary auxtype="SensDet" auxvalue="planeDet"/>
+	    <auxiliary auxtype="DetNo" auxvalue="666"/>
+	    <auxiliary auxtype="Color" auxvalue="red"/> 
+	    <auxiliary auxtype="Target" auxvalue="Material"/> 
+	</volume>
+
+	<volume name="logicTargWall">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="targetWall"/>
+	    <auxiliary auxtype="Color" auxvalue="red"/> 
+	</volume>
+
+	<volume name="logicTargChamber">
+	    <materialref ref="Aluminum"/>
+	    <solidref ref="targetCham2"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/> 
+	</volume>
+
+	<volume name="logicEntPipe">
+	    <materialref ref="Kryptonite"/>
+	    <solidref ref="beampipe1"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/> 
+	</volume>
+
+	<volume name="logicEntPipeWindow">
+	    <materialref ref="Kryptonite"/>
+	    <solidref ref="beampipe1win"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/> 
+	</volume>
+
+	<volume name="logicPreExtPipe">
+	    <materialref ref="Kryptonite"/>
+	    <solidref ref="beampipe3"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/> 
+	</volume>
+
+	<volume name="logicExtPipe">
+	    <materialref ref="Kryptonite"/>
+	    <solidref ref="beampipe2"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/> 
+	</volume>
+
+	<volume name="logicExtPipeWindow">
+	    <materialref ref="Kryptonite"/>
+	    <solidref ref="beampipe2win"/>
+	    <auxiliary auxtype="Color" auxvalue="gray"/> 
+	</volume>
+
+	<!---  Place volumes -->
+
+	<volume name="logicTarget">
+	    <materialref ref="Vacuum"/>
+	    <!--	    <solidref ref="targetMother"/> -->
+	    <solidref ref="tbunion5"/>
+	    <auxiliary auxtype="Target" auxvalue="Mother"/> 
+
+	    <physvol>
+		<volumeref ref="cryoTarg"/>
+		<positionref ref="target_z0"/>
+	    </physvol>
+
+<!--
+	    <physvol>
+		<volumeref ref="logicTargWall"/>
+		<positionref ref="target_z0"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicTargChamber"/>
+		<positionref ref="target_z0"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicEntPipe"/>
+		<positionref ref="beampipe_z1"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicEntPipeWindow"/>
+		<positionref ref="beampipe_z2"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicPreExtPipe"/>
+		<positionref ref="beampipe_z5"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicExtPipe"/>
+		<positionref ref="beampipe_z3"/>
+	    </physvol>
+
+	    <physvol>
+		<volumeref ref="logicExtPipeWindow"/>
+		<positionref ref="beampipe_z4"/>
+	    </physvol>
+-->
+	</volume>
+
+    </structure>
+
+    <setup name="Target" version="1.0">
+	<world ref="logicTarget"/>
+    </setup>
+
+</gdml>
+
+

@@ -4,6 +4,10 @@
 #include "G4VHit.hh"
 #include "G4THitsCollection.hh"
 #include "G4Allocator.hh"
+#include "G4ThreeVector.hh"
+#include "remolltypes.hh"
+
+#include <vector>
 
 class remollCalDetectorSum : public G4VHit {
     public:
@@ -26,6 +30,16 @@ class remollCalDetectorSum : public G4VHit {
         G4double fX, fY, ffT, flT;//ffT is time of the first hit on the cal block flT is time of the last hit in each event
         G4double fDet_X, fDet_Y, fDet_Z;
 	G4double fXsum, fYsum;
+  
+  std::vector<sumdata_t> fData;
+  
+  void AddEDep( int pid, G4ThreeVector x, double ene );
+  
+  double GetEdep( int pid );
+  G4ThreeVector GetPos( int pid );
+
+private:
+  int parttypes[N_PART_DIVISIONS];
   
 };
 

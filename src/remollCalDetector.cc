@@ -121,6 +121,9 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
 	thissum->fDet_Y   = tr_ypos;
 	thissum->fDet_Z   = tr_zpos;
 
+	//to save ecal hits with pid information
+	thissum->AddEDep( track->GetDefinition()->GetPDGEncoding(), prestep->GetPosition(), edep );
+
 	//set the global time of the first hit into this cal detector
 	if (globaltime_firsthit!=0){
 	  thissum->ffT = globaltime_firsthit;

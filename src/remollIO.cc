@@ -131,6 +131,7 @@ void remollIO::InitializeTree(){
     
     // CalDetectorSum
     fTree->Branch("cal.n",    &fNCalDetSum,     "cal.n/I");
+    fTree->Branch("cal.pid",  &fCalDetSum_pid,  "cal.pid[cal.n]/I");
     fTree->Branch("cal.det",  &fCalDetSum_det,  "cal.det[cal.n]/I");
     fTree->Branch("cal.vid",  &fCalDetSum_id,   "cal.vid[cal.n]/I");
     fTree->Branch("cal.edep", &fCalDetSum_edep, "cal.edep[cal.n]/D");
@@ -321,12 +322,46 @@ void remollIO::AddGenericDetectorSum(remollGenericDetectorSum *hit){
 // CalDetectorSum
 
 void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
+  // Particles that are payed attention to in our sums, 0 means all types
+  int particle_to_track[N_PART_DIVISIONS] = {0, -11, 11, 13, 22, 2112, 2212, -211, 211};
+
     int n = fNCalDetSum;
     if( n >= __IO_MAXHIT ){
 	G4cerr << "remollIO::WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << G4endl;
 	return;
     }
 
+    int j;
+
+    for( j = 0; j < N_PART_DIVISIONS; j++ ){
+	fCalDetSum_edep[n] = hit->GetEdep(particle_to_track[j])/__E_UNIT;
+	fCalDetSum_pid[n]  = particle_to_track[j];
+	fCalDetSum_photon[n] = hit->fPhoton;
+	G4ThreeVector pos  = hit->GetPos(particle_to_track[j]);
+
+	fCalDetSum_x[n]    = pos.x()/__L_UNIT;
+	fCalDetSum_y[n]    = pos.y()/__L_UNIT; 
+
+	fCalDetSum_det[n]  = hit->fDetID;
+	fCalDetSum_id[n]   = hit->fCopyID;
+
+	fCalDetSum_starttime[n] = hit->ffT/__T_UNIT;
+	fCalDetSum_endtime[n] = hit->flT/__T_UNIT;
+
+	fCalDetPos_X[n]     = hit->fDet_X/__L_UNIT;
+	fCalDetPos_Y[n]     = hit->fDet_Y/__L_UNIT;
+	fCalDetPos_Z[n]     = hit->fDet_Z/__L_UNIT;
+	n++;
+	fNCalDetSum++;
+
+	if( n >= __IO_MAXHIT ){
+	  G4cerr << "WARNING: " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":  Buffer size exceeded!" << ": detid "<< hit->fDetID <<": pid " << j << G4endl;
+	    return;
+	}
+    }
+
+    //to save ecal hits with no pid information
+    /*
     fCalDetSum_edep[n] = hit->fEdep/__E_UNIT;
     fCalDetSum_photon[n] = hit->fPhoton;
     fCalDetSum_det[n]  = hit->fDetID;
@@ -343,6 +378,7 @@ void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
     fCalDetPos_Z[n]     = hit->fDet_Z/__L_UNIT;
 
     fNCalDetSum++;
+    */
 }
 /*---------------------------------------------------------------------------------*/
 

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/gdml.xsd">
+
+    <define>
+	<position name="origin" x="0" y="0" z="0" unit="cm"/>
+
+	<position name="targetpos" x="0" y="0" z="-350" unit="cm"/>
+
+	<position name="ecalpos" x="0" y="0" z="440.0" unit="cm"/>
+
+	<position name="ecal_la_pos" x="0" y="0" z="-40.0" unit="cm"/>
+
+	<position name="cerpos" x="0" y="0" z="(301.0+194.0)/2" unit="cm"/>
+
+	<position name="gembafflepos" x="0" y="0" z="(40-4.5+185.5+1)/2" unit="cm"/>
+
+	<position name="backgempos" x="0" y="0" z="(306+315+1)/2" unit="cm"/>
+
+	<rotation name="identity"/>
+    </define>
+
+    <materials>
+	<material Z="1" name="Vacuum" state="gas">
+	    <T unit="K" value="2.73"/>
+	    <P unit="pascal" value="3e-18"/>
+	    <D unit="g/cm3" value="1e-25"/>
+	    <atom unit="g/mole" value="1.01"/>
+	</material>
+
+	<material name="Nitrogen" Z="7">
+	    <D    unit="g/L" value="1.165"/>
+	    <atom unit="g/mole" value="14.0067"/>
+	</material>
+	<material name="Oxygen" Z="8">
+	    <D    unit="g/L" value="1.332"/>
+	    <atom unit="g/mole" value="16"/>
+	</material>
+
+	<material name="Air" state="gas">
+	    <D value="0.00129" />
+	    <fraction n="0.7" ref="Nitrogen" />
+	    <fraction n="0.3" ref="Oxygen" />
+	</material>
+    </materials>
+
+
+    <solids>
+	<box lunit="mm" name="Worldbox" x="8000" y="8000" z="80000"/>
+    </solids>
+
+    <structure>
+	<volume name="logicWorld">
+	    <!-- <materialref ref="Air"/> -->
+	    <materialref ref="Vacuum"/>
+	    <solidref ref="Worldbox"/>
+
+<!--Beam pipes are Kryptonite -->
+<!--
+
+            <physvol>
+                <file name="geometry_pvdis/target_Ca.gdml"/>
+                <positionref ref="origin"/>
+                <rotationref ref="identity"/>
+            </physvol>
+
+-->
+
+	    <physvol>
+		<file name="geometry_pvdis/target_sidis_nomat.gdml"/>
+		<positionref ref="origin"/>
+		<positionref ref="targetpos"/>
+		<rotationref ref="identity"/>
+	    </physvol>
+
+
+
+	    <physvol>
+		<file name="geometry_pvdis/solenoid_krypto.gdml"/>
+		<positionref ref="origin"/>
+		<rotationref ref="identity"/>
+	    </physvol>
+
+
+
+<!--
+	    <physvol> 
+		<file name="geometry_pvdis/cerenkov.gdml"/> 
+		<positionref ref="cerpos"/>  
+		<rotationref ref="identity"/>
+	    </physvol>
+
+-->
+<!-- PVDIS ecal with no holes : ecal.gdml -->
+	      <!-- ecal_holes_all.gdml has all the holes in the lead volumes-->
+	    <physvol>
+		<file name="geometry_pvdis/ecal_sidis_la.gdml"/> 
+		<positionref ref="ecal_la_pos"/>
+		<rotationref ref="identity"/>
+	    </physvol>
+
+	    <physvol>
+		<file name="geometry_pvdis/ecal_sidis_fa.gdml"/> 
+		<positionref ref="ecalpos"/>
+		<rotationref ref="identity"/>
+	    </physvol>
+
+<!--
+             <physvol>
+		<file name="geometry_pvdis/gembaffles_babarmore1_nomat.gdml"/>
+		<positionref ref="gembafflepos"/>
+		<rotationref ref="identity"/>
+	    </physvol>
+-->
+
+<!-- backgems_plane.gdml -->
+	     <physvol>
+		<file name="geometry_pvdis/backgems_plane.gdml"/>
+		<positionref ref="backgempos"/>
+		<rotationref ref="identity"/>
+	    </physvol>
+
+	</volume>
+    </structure>
+
+    <setup name="Default" version="1.0">
+	<world ref="logicWorld"/>
+    </setup>
+
+</gdml>
+

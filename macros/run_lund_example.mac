@@ -1,0 +1,50 @@
+#  Example file
+
+# This must be called before initialize
+#/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
+
+#Adding physics list must be called before initialze command
+#supported standard physics lists : TFP_BERT FTFP_BERT_EMV FTFP_BERT_EMX FTF_BIC LHEP LHEP_EMV QBBC QGS_BIC QGSP QGSC_BERT QGSP_BERT QGSP_BERT_EMV QGSP_BIC_EMY QGSP_BERT_EMX QGSP_BERT_HP QGSP_BIC QGSP_BIC_HP
+/remoll/setphysicslist QGSP_BERT_HP
+#EM only physics list options (emstandard_opt0 emstandard_opt1 emstandard_opt2 emstandard_opt3)
+#/remoll/setphysicslist emstandard_opt1
+#Hadronic only physics list options currently only support QGSP_BERT 
+#/remoll/setphysicslist QGSP_BERT_HO
+
+#Enable optical photons and processes (true or false)
+/remoll/optical false
+
+# This must be explicitly called
+/run/initialize
+
+
+# add field map
+/remoll/addfield CLEO_rm.dat
+# change field map paramters
+#/remoll/scalefield map_directory/blockyHybrid_rm_3.0.txt -1.0
+/remoll/scalefield CLEO_rm.dat 1.0
+#/remoll/magcurrent map_directory/blockyHybrid_rm_3.0.txt 1000.0 A
+
+/remoll/gen lund
+/remoll/LUNDfilename /home/rakithab/Simulation_Analysis/Remoll/SoLID/scripts/test_hallD_pion_0_LD.lund
+
+/remoll/beamene 11.0 GeV
+
+
+# Make interactions with heavy materials
+# pure absorbers or not (on by default)
+# Materials explicity called Kryptonite 
+# are always kryptonite
+/remoll/likekryptonite false
+
+#Below the this energy, the tracks are killed
+#/remoll/minEnergyCut 1 MeV
+
+# Specify random number seed
+#/remoll/seed 123456
+
+
+
+#  output filename
+/remoll/filename remoll_lund_test_LD_pi0.root
+/run/beamOn 10000

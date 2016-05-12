@@ -147,6 +147,7 @@ class remollIO {
 	void AddCalDetectorSum(remollCalDetectorSum *);
     private:
 	Int_t fNCalDetSum;
+        Int_t fCalDetSum_pid[__IO_MAXHIT];
 	Int_t fCalDetSum_det[__IO_MAXHIT];
 	Int_t fCalDetSum_id[__IO_MAXHIT];
 	Double_t fCalDetSum_edep[__IO_MAXHIT];
