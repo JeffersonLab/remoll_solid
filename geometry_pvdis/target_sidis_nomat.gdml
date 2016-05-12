@@ -27,13 +27,24 @@
     </define>
 
     <materials>
-	<material Z="1" name="Vacuum" state="gas">
+      <isotope name="He3" Z="2" N="3">
+	<atom type="A" value="3.02"/>
+      </isotope>
+      <element Z="2" formula="He" name="Helium" >
+	<fraction ref="He3" n="1" />
+      </element>
+      <material Z="2" name="targetmat" state="liquid">
+	<D unit="g/cm3" value="0.001345"/>
+	<fraction n="1" ref="Helium"/>
+      </material>
+      
+      <material Z="1" name="Vacuum" state="gas">
 	    <T unit="K" value="2.73"/>
 	    <P unit="pascal" value="3e-18"/>
 	    <D unit="g/cm3" value="1e-25"/>
 	    <atom unit="g/mole" value="1.01"/>
-	</material>
-	<!--
+      </material>
+      <!--
 	<material Z="1" name="targetmat" state="liquid">
 	    <D unit="g/cm3" value="0.071"/>
 	    <atom unit="g/mole" value="1.01"/>
