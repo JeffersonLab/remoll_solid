@@ -21,4 +21,15 @@ struct filedata_t {
     TTimeStamp timestamp;
 };
 
+//{0, -11, 11, 13, 22, 2112, 2212, -211, 211}
+#define N_PART_DIVISIONS 9
+
+struct sumdata_t {
+  double edep;
+  double photons;
+  double x,y,z;  
+  int pid;
+};
+
+
 #endif//__REMOLL_TYPES_HH
