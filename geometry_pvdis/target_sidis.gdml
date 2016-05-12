@@ -33,7 +33,11 @@
       <element Z="2" formula="He" name="Helium" >
 	<fraction ref="He3" n="1" />
       </element>
-
+      <material Z="2" name="targetmat" state="liquid">
+	<D unit="g/cm3" value="0.001345"/>
+	<fraction n="1" ref="Helium"/>
+      </material>
+      
       <material Z="1" name="Vacuum" state="gas">
 	    <T unit="K" value="2.73"/>
 	    <P unit="pascal" value="3e-18"/>
@@ -41,16 +45,6 @@
 	    <atom unit="g/mole" value="1.01"/>
       </material>
 
-<!--
-      <material Z="2" name="targetmat" state="liquid">
-	<D unit="g/cm3" value="0.001345"/>
-	<fraction n="1" ref="Helium"/>
-      </material>
--->
-	<material Z="1" name="targetmat" state="gas">
-	    <D unit="g/cm3" value="1e-25"/>
-	    <atom unit="g/mole" value="1.01"/>
-	</material>
 	<material Z="13" name="Aluminum" state="solid">
 	    <D unit="g/cm3" value="2.70"/>
 	    <atom unit="g/mole" value="26.98"/>
