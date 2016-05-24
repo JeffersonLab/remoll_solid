@@ -274,7 +274,14 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
 		if (det_type == "Cal"){
 		  G4cout << "  Sensitive detector " << det_type
 			 << " for volume " << myvol->GetName() << " det id " << det_no
-			 <<  G4endl << G4endl;		  
+			 <<  G4endl << G4endl;
+		  G4Material* Sci = myvol->GetMaterial();
+		  G4cout << " G4Material  " << Sci->GetName()<< G4endl;
+		  if (Sci->GetName() == "Scint")
+		    Sci->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
+		  if (Sci->GetName() == "Lead")
+		    Sci->GetIonisation()->SetBirksConstant(0.01*mm/MeV);
+		  
 		}
 
 		if( det_no <= 0 ){
@@ -350,8 +357,8 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
     // Output geometry tree
     //==========================
 
-    /*
-     * FIXME:  Add to verbosity selection
+    
+    //* FIXME:  Add to verbosity selection
      
     G4cout << G4endl << "Element table: " << G4endl << G4endl;
     G4cout << *(G4Element::GetElementTable()) << G4endl;
@@ -360,7 +367,7 @@ G4VPhysicalVolume* remollDetectorConstruction::Construct() {
     G4cout << *(G4Material::GetMaterialTable()) << G4endl;
 
     G4cout << G4endl << "Geometry tree: " << G4endl << G4endl;
-    */
+    
 
     /*
     const G4MaterialTable *mytable = G4Material::GetMaterialTable();
