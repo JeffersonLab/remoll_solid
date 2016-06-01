@@ -35,6 +35,14 @@
     </define>
 
     <materials>
+      <isotope name="Ca48" Z="20" N="48">
+        <atom type="A" value="47.95"/>
+      </isotope>
+      
+      <element Z="20" formula="Pure_Ca48" name="Pure_Ca48" >
+        <fraction ref="Ca48" n="1.0" />
+      </element>
+
 	<material Z="1" name="Vacuum" state="gas">
 	    <T unit="K" value="2.73"/>
 	    <P unit="pascal" value="3e-18"/>
@@ -43,8 +51,8 @@
 	</material>
 
 	<material Z="20" name="targetmat" state="solid">
-	    <D unit="g/cm3" value="1.84"/>
-	    <atom unit="g/mole" value="47.95"/>
+	    <D unit="g/cm3" value="1.840"/>
+	    <fraction n="1" ref="Pure_Ca48"/>
 	</material>
 
 	<material Z="13" name="Aluminum" state="solid">
