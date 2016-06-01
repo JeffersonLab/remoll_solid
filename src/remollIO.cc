@@ -131,7 +131,8 @@ void remollIO::InitializeTree(){
     
     // CalDetectorSum
     fTree->Branch("cal.n",    &fNCalDetSum,     "cal.n/I");
-    fTree->Branch("cal.pid",  &fCalDetSum_pid,  "cal.pid[cal.n]/I");
+    //PID based edep
+    //fTree->Branch("cal.pid",  &fCalDetSum_pid,  "cal.pid[cal.n]/I");
     fTree->Branch("cal.det",  &fCalDetSum_det,  "cal.det[cal.n]/I");
     fTree->Branch("cal.vid",  &fCalDetSum_id,   "cal.vid[cal.n]/I");
     fTree->Branch("cal.edep", &fCalDetSum_edep, "cal.edep[cal.n]/D");
@@ -331,6 +332,8 @@ void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
 	return;
     }
 
+    /*
+    //PID based edep
     int j;
 
     for( j = 0; j < N_PART_DIVISIONS; j++ ){
@@ -359,9 +362,9 @@ void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
 	    return;
 	}
     }
-
+    */
     //to save ecal hits with no pid information
-    /*
+    
     fCalDetSum_edep[n] = hit->fEdep/__E_UNIT;
     fCalDetSum_photon[n] = hit->fPhoton;
     fCalDetSum_det[n]  = hit->fDetID;
@@ -378,7 +381,7 @@ void remollIO::AddCalDetectorSum(remollCalDetectorSum *hit){
     fCalDetPos_Z[n]     = hit->fDet_Z/__L_UNIT;
 
     fNCalDetSum++;
-    */
+    
 }
 /*---------------------------------------------------------------------------------*/
 

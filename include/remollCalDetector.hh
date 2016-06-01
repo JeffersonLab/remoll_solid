@@ -3,6 +3,9 @@
 
 #include "G4VSensitiveDetector.hh"
 #include "remollCalDetectorSum.hh"
+#include "G4EmSaturation.hh"
+#include "G4Track.hh"
+#include "G4LossTableManager.hh"
 
 #include <map>
 

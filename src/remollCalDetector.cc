@@ -44,6 +44,17 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
     //for some discussion : http://hypernews.slac.stanford.edu/HyperNews/geant4/get/eventtrackmanage/1043/1/1.html 
     //G4double edep = step->GetTotalEnergyDeposit() - step->GetNonIonizingEnergyDeposit();
     G4double edep = step->GetTotalEnergyDeposit();
+    G4double light_yield=0;
+    //get light yield 
+    
+    G4EmSaturation* emSaturation = G4LossTableManager::Instance()->EmSaturation();
+    if (emSaturation){
+      //light_yield  = emSaturation->VisibleEnergyDepositionAtAStep(step)/GeV;//this is in geant4 v9.10 p01
+      light_yield  = emSaturation->VisibleEnergyDeposition(step)/GeV;
+    } else 
+      G4cout << "PHG4SteppingAction::GetScintLightYield - ERROR - can NOT initialize G4EmSaturation!" << G4endl;
+    
+    
     G4double globaltime_firsthit = 0;//step->GetPreStepPoint()->GetGlobalTime();
     G4double globaltime = step->GetPreStepPoint()->GetGlobalTime();
     
@@ -112,7 +123,7 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
     if( !badedep ){
 	// This is all we need to do for the sum
 	thissum->fEdep   += edep;
-	thissum->fPhoton += Edep2Photon(edep, prestep->GetPosition());
+	thissum->fPhoton += light_yield;//Edep2Photon(edep, prestep->GetPosition());//this routine in not correct
 	thissum->fXsum   += edep*xpos;
 	thissum->fYsum   += edep*ypos;
     	thissum->fX       = thissum->fXsum/thissum->fEdep;
@@ -122,7 +133,7 @@ G4bool remollCalDetector::ProcessHits( G4Step *step, G4TouchableHistory *){
 	thissum->fDet_Z   = tr_zpos;
 
 	//to save ecal hits with pid information
-	thissum->AddEDep( track->GetDefinition()->GetPDGEncoding(), prestep->GetPosition(), edep );
+	//thissum->AddEDep( track->GetDefinition()->GetPDGEncoding(), prestep->GetPosition(), edep );
 
 	//set the global time of the first hit into this cal detector
 	if (globaltime_firsthit!=0){
