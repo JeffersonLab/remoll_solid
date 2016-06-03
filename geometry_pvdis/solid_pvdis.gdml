@@ -73,8 +73,8 @@
 
 
 	    <physvol>
-		<!-- <file name="geometry_pvdis/ecal.gdml"/> -->
-		<file name="geometry_pvdis/ecal_blocker.gdml"/>
+	      <!--ecal.gdml -->
+		<file name="geometry_pvdis/ecal_blocker.gdml"/> 
 		<positionref ref="ecalpos"/>
 		<rotationref ref="identity"/>
 	    </physvol>

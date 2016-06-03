@@ -130,8 +130,9 @@ void remollGenUniformPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
   double testval = 0.0;
 
    do { 
-     th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
-     //th = acos(CLHEP::RandFlat::shoot(-1.0,1.0));//since total cross section is computed for 4.pi range (ph range is 2.pi and th range is 2 rad)
+     //th = acos(CLHEP::RandFlat::shoot(cos(fTh_max), cos(fTh_min)));
+     //Due to rate mis-match with GEMC I'm using default full angle range - Rakitha Tue Mar 24 17:24:17 EDT 2015
+     th = acos(CLHEP::RandFlat::shoot(-1.0,1.0));//since total cross section is computed for 4.pi range (ph range is 2.pi and th range is 2 rad)
      ph = CLHEP::RandFlat::shoot(fPh_min, fPh_max);
      pf = CLHEP::RandFlat::shoot(0., beamE);
 

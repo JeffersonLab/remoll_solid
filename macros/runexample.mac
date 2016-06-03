@@ -1,9 +1,11 @@
 #  Example file
-
 # This must be called before initialize
 #/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
 /remoll/setgeofile geometry_pvdis/solid_pvdis_tgt_only.gdml
 #/remoll/setgeofile geometry_pvdis/solid_pvdis_test.gdml 
+#/remoll/setgeofile geometry_pvdis/solid_pvdis_mycopy.gdml
+#/remoll/setgeofile geometry_pvdis/solid_pvdis_krypto.gdml
+#/remoll/setgeofile geometry_pvdis/solid_pvdis_tgt_only.gdml
 
 #Adding physics list must be called before initialze command
 #supported standard physics lists : TFP_BERT FTFP_BERT_EMV FTFP_BERT_EMX FTF_BIC LHEP LHEP_EMV QBBC QGS_BIC QGSP QGSC_BERT QGSP_BERT QGSP_BERT_EMV QGSP_BIC_EMY QGSP_BERT_EMX QGSP_BERT_HP QGSP_BIC QGSP_BIC_HP
@@ -60,8 +62,8 @@
 /remoll/LUNDfilename /home/rakithab/Simulation_Analysis/Remoll/SoLID/scripts/test_hallD_pion_0_LD.lund
 
 #/remoll/gen flat  # flat generator
+#/remoll/thmin 0.0 deg
 /remoll/thmin 10.0 deg
-#/remoll/thmin 10.0 deg
 /remoll/thmax 50.0 deg
 #/remoll/thmax 180.0 deg
 /remoll/phmin -180.0 deg
