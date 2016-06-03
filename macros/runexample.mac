@@ -1,7 +1,9 @@
 #  Example file
 
 # This must be called before initialize
-/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
+#/remoll/setgeofile geometry_pvdis/solid_pvdis.gdml
+/remoll/setgeofile geometry_pvdis/solid_pvdis_tgt_only.gdml
+#/remoll/setgeofile geometry_pvdis/solid_pvdis_test.gdml 
 
 #Adding physics list must be called before initialze command
 #supported standard physics lists : TFP_BERT FTFP_BERT_EMV FTFP_BERT_EMX FTF_BIC LHEP LHEP_EMV QBBC QGS_BIC QGSP QGSC_BERT QGSP_BERT QGSP_BERT_EMV QGSP_BIC_EMY QGSP_BERT_EMX QGSP_BERT_HP QGSP_BIC QGSP_BIC_HP
@@ -22,7 +24,7 @@
 /remoll/addfield CLEO_rm.dat
 # change field map paramters
 #/remoll/scalefield map_directory/blockyHybrid_rm_3.0.txt -1.0
-/remoll/scalefield CLEO_rm.dat -1.0
+/remoll/scalefield CLEO_rm.dat 1.0
 #/remoll/magcurrent map_directory/blockyHybrid_rm_3.0.txt 1000.0 A
 
 # Raster and initial angle stuff
@@ -49,10 +51,13 @@
 #/remoll/emin 80.0 MeV
 #/remoll/gen inelastic # Christy/Bosted
 #/remoll/gen pion  
-/remoll/gen uniformpion  
-/remoll/piontype pi-
+#/remoll/gen uniformpion  
+#/remoll/piontype pi-
 #/remoll/piontype pi0 
 #/remoll/gen dis
+
+/remoll/gen lund
+/remoll/LUNDfilename /home/rakithab/Simulation_Analysis/Remoll/SoLID/scripts/test_hallD_pion_0_LD.lund
 
 #/remoll/gen flat  # flat generator
 /remoll/thmin 10.0 deg
@@ -88,8 +93,8 @@
 
 
 #  output filename
-#/remoll/filename remollout.root
+/remoll/filename remoll_lund_test_LD_pi0.root
 #/remoll/filename remoll_dis_out_test3.root
 #/remoll/filename remoll_test_pion.root
-/remoll/filename remoll_test_uniformpion.root
+#/remoll/filename remoll_test_ecal.root
 /run/beamOn 100000
