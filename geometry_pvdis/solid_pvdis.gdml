@@ -104,7 +104,7 @@
 -->
 
              <physvol>
-		<file name="geometry_pvdis/gembaffles_babarmore1.gdml"/>
+		<file name="geometry_pvdis/gembaffles_babarmore1_nodet.gdml"/>
 		<positionref ref="gembafflepos"/>
 		<rotationref ref="identity"/>
 	    </physvol>
