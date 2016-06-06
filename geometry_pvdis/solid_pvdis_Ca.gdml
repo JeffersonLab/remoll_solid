@@ -53,7 +53,7 @@
 	
 	
 	<physvol>
-	  <!-- <file name="geometry_pvdis/target_48Ca.gdml"/>
+	  <!-- <file name="geometry_pvdis/target_40Ca.gdml"/>
 	       <file name="geometry_pvdis/target_CaMix.gdml"/> -->
 	  <file name="geometry_pvdis/target_Ca.gdml"/>
 	  <positionref ref="origin"/>
@@ -68,8 +68,8 @@
 	
 
 	    <physvol>
-<!--		<file name="geometry_pvdis/solenoid.gdml"/> -->
-		<file name="geometry_pvdis/solenoid_krypto.gdml"/>
+<!--		<file name="geometry_pvdis/solenoid_krypto.gdml"/> -->
+		<file name="geometry_pvdis/solenoid.gdml"/>
 		<positionref ref="origin"/>
 		<rotationref ref="identity"/>
 	    </physvol>
