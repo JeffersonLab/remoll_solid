@@ -16,6 +16,7 @@
 
 	<position name="target_z0" x="0.0" y="0.0" z="targetz" unit="cm"/>
 	<position name="target_z1" x="0.0" y="0.0" z="targetz + 24" unit="cm"/>
+	<position name="target_z2" x="0.0" y="+152.0" z="targetz" unit="cm"/>
 	<position name="target_upstr" x="0.0" y="0.0" z="targetz+50" unit="cm"/>
 	<position name="target_v0" x="0.0" y="0.0" z="0.0" unit="cm"/>
 	<position name="target_v1" x="0.0" y="0.0" z="-24.975" unit="cm"/>
@@ -188,7 +189,7 @@
 	<union name ="tbunion6">
 	    <first ref="tbunion5"/>
 	    <second ref="cDet_solid_1"/>
-	    <positionref ref="target_z0"/>
+	    <positionref ref="target_z2"/>
 	    <rotationref ref="scRot_1"/>
 	</union>
 
@@ -313,7 +314,7 @@
 
 	     <physvol>
 		<volumeref ref="cDet_1"/>
-		<positionref ref="target_z0"/>
+		<positionref ref="target_z2"/>
 		<rotationref ref="scRot_1"/>
 	    </physvol>
 	     <physvol>
