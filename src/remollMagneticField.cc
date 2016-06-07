@@ -405,11 +405,13 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
 	
 
     // Get xtant number and fraction into xtant
+    
     dphi = 
 	phi - fPhiLow >= 0.0 ? modf( (phi - fPhiLow)/fxtantSize, &dxtant ) : 
 	modf( ( (2.0*pi + phi) - fPhiLow)/fxtantSize, &dxtant ); // Wrap around
 
-    xtant = (G4int) dxtant;
+    //xtant = (G4int) dxtant;
+    xtant = 0; //since we have magnetic field map to cover 2pi there is one xtant for SoLID. Therefore set xtant=0 always
 
     // Local phi (in file coordinates)
     lphi = dphi*fxtantSize + fPhiLow - fPhiMapOffset;
@@ -421,7 +423,8 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
 	G4cerr << "Error:  " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":" << G4endl << "  xtant calculation failed. xtant " <<  xtant << " ( " << dxtant << " )  found where " << fNxtant << " is specified.  phi = " << phi/deg << " deg" << G4endl;
 	G4cerr << " phi "<<phi<<" fPhiLow "<< fPhiLow << "fxtantSize " << fxtantSize << "dxtant " << dxtant << " fNxtant " << fNxtant << G4endl;
 	G4cerr << "End of Error:  " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":" << G4endl;
-	exit(1);
+	if (phi - fPhiLow != 0.0)
+	  exit(1);
     }
 
     // Check that the point is within the defined region
