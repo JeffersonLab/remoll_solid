@@ -417,7 +417,10 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
     if( lphi >  pi ){ lphi -= 2.0*pi; }
 
     if( !( xtant >= 0 && xtant < fNxtant ) ){
+      
 	G4cerr << "Error:  " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":" << G4endl << "  xtant calculation failed. xtant " <<  xtant << " ( " << dxtant << " )  found where " << fNxtant << " is specified.  phi = " << phi/deg << " deg" << G4endl;
+	G4cerr << " phi "<<phi<<" fPhiLow "<< fPhiLow << "fxtantSize " << fxtantSize << "dxtant " << dxtant << " fNxtant " << fNxtant << G4endl;
+	G4cerr << "End of Error:  " << __PRETTY_FUNCTION__ << " line " << __LINE__ << ":" << G4endl;
 	exit(1);
     }
 
