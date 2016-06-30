@@ -132,10 +132,10 @@ print """        <materials>
 	       <atom unit="g/mole" value="207.2"/>
 	   </material>
 
-	   <material name="Scint" state="gas">
-	       <D unit="g/cm3" value="1.032"/>
-	       <composite n="10" ref="Hydrogen"/>
-	       <composite n="9" ref="Carbon"/>
+	   <material name="Scint" state="solid">
+	       <D unit="g/cm3" value="1.060"/>
+	       <composite n="8" ref="Hydrogen"/>
+	       <composite n="8" ref="Carbon"/>
 	   </material>
 
 	   <material name="Air" state="gas">
@@ -254,9 +254,9 @@ print """	         <volume name="sidis_la_logicecalblockscint">
 
 # Now build blocks		
 # Preshower scint + mainshower layers
-# ecalmat = "Lead"
+ecalmat = "Lead"
 #change ecal material to Tungsten
-ecalmat = "Tungsten"
+#ecalmat = "Tungsten"
 print """	         <volume name="sidis_la_logicecalblock">
 		      <materialref ref ="%s"/> 
 		      <solidref ref ="sidis_la_ecalblock"/>
