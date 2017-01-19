@@ -26,6 +26,9 @@
 #include "G4GDMLParser.hh"
 #include "G4VPhysicalVolume.hh"
 
+#include "G4SystemOfUnits.hh"
+#include "G4PhysicalConstants.hh"
+
 #include <iostream>
 
 remollMessenger::remollMessenger(){
