@@ -87,7 +87,6 @@ for more information contact rakitha beminiwattha, rakithab@jlab.org
 #include <TObjArray.h>
 #include <TVector2.h>
 #include <TVirtualFitter.h>
-#include "wiser_pion.h"
 
 
 using namespace std;
