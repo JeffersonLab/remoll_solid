@@ -93,7 +93,7 @@ for more information contact rakitha beminiwattha, rakithab@jlab.org
 using namespace std;
 
 #define __IO_MAXHIT 10000
-#define __TARGETS 6
+#define __TARGETS 7
 #define __MOMENTUM_BINS 6
 #define __MOMENTUM_BINS1 10
 
@@ -136,20 +136,20 @@ Bool_t kSaveCanvas = kFALSE;
 TFile * rootfile;
 
 //parameters 
-TString stgt[__TARGETS]={"H1","D","He","H2","H3","H4"};//PVDIS H and D, SIDIS He, J/psi, SIDIS Proton, MOLLER proton
-TString stgt_lundfile_stem[__TARGETS]={"LH","LD","3He","JPsi","SIDIS_LH","MOLLER"};//PVDIS H and D, SIDIS He, J/psi, SIDIS Proton, MOLLER proton
-Double_t targth[__TARGETS]={40.0,40.0,40.0,15.0,3.0,150.0};
-Double_t targ_A[__TARGETS]={1.0,2.0,3.0,1.0,1.0,1.0};
-Double_t targ_Z[__TARGETS]={1.0,1.0,2.0,1.0,1.0,1.0};
-Double_t ecurr[__TARGETS]={50.0,50.0,15.0,3.0,0.1,85.0}; 
-Double_t targ_density[__TARGETS]={0.071,0.169,1.345e-3,0.071,0.917,0.071};
+TString stgt[__TARGETS]={"H1","D","He","H2","H3","H4","TW"};//PVDIS H and D, SIDIS He, J/psi, SIDIS Proton, MOLLER proton, tgt window for sidis
+TString stgt_lundfile_stem[__TARGETS]={"LH","LD","3He","JPsi","SIDIS_LH","MOLLER","UPT_Wind"};//PVDIS H and D, SIDIS He, J/psi, SIDIS Proton, MOLLER proton, tgt window for sidis
+Double_t targth[__TARGETS]={40.0,40.0,40.0,15.0,3.0,150.0,0.012};//in cm
+Double_t targ_A[__TARGETS]={1.0,2.0,3.0,1.0,1.0,1.0,35.0};
+Double_t targ_Z[__TARGETS]={1.0,1.0,2.0,1.0,1.0,1.0,17.0};
+Double_t ecurr[__TARGETS]={50.0,50.0,15.0,3.0,0.1,85.0,15.0}; 
+Double_t targ_density[__TARGETS]={0.071,0.169,1.345e-3,0.071,0.917,0.071,2.76};
 Double_t xlum[__TARGETS]; 
-Double_t rate_LD_correction[__TARGETS];//={1.0,(0.169/2) / 0.071,(1.345e-3/3) / 0.071,1.0,0.0}; 
-Double_t hd_total_rate[__TARGETS]={26261326.0,26261326.0,7878398.00,590879.81,0.0,167415952.00}; //in kHz for half target length for bremss rad length rate from 1M events 26261326.00 for J/Psi and MOLLER total rates are different since target lengths are different. The total interaction rate is computed in the hall D code given the target lenght and density
-Int_t hd_tot_events[__TARGETS]={1e6,1e6,1e6,1e6,1e6,1e6}; //not in use, event size is accessed from the no. of entries in the ntuple
+Double_t rate_LD_correction[__TARGETS];//={1.0,(0.169/2) / 0.071,(1.345e-3/3) / 0.071,1.0,0.0,2.76/35}; 
+Double_t hd_total_rate[__TARGETS]={26261326.0,26261326.0,7878398.00,590879.81,0.0,167415952.00,1360.46}; //in kHz for half target length for bremss rad length rate from 1M events 26261326.00 for J/Psi and MOLLER total rates are different since target lengths are different. The total interaction rate is computed in the hall D code given the target lenght and density
+Int_t hd_tot_events[__TARGETS]={1e6,1e6,1e6,1e6,1e6,1e6,1e6}; //not in use, event size is accessed from the no. of entries in the ntuple
 Double_t weight_rate[__TARGETS];//no. of pid is 5
 Double_t weight_xs[__TARGETS];//no. of pid is 5
-Double_t targ_offset[__TARGETS]={0.1,0.1, -3.50,-3.15,0.,0.};//in m
+Double_t targ_offset[__TARGETS]={0.1,0.1, -3.50,-3.15,0.,0.,-3.70};//in m for upstream -3.70 m and downstream -3.30 m
 Double_t weight;
 Int_t targ_index=0;
 //pid status 
