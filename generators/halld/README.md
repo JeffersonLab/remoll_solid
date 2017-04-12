@@ -2,8 +2,8 @@ bggen is the Hall D photoproduction code that Rakitha Beminiwattha <rakithab@jla
 SoLID background simulations. The modifications are made to allow electroproduction event generation 
 with this code. For now Hall D code can only produce events for proton target only.
 
-## Running with the Hall D environment (by Rakitha Beminiwattha, rakithab@jlab.org)
-For now full Hall D simulation environment needs to be setup to run this code. I have not put any 
+## Setting up with the Hall D environment (by Rakitha Beminiwattha, rakithab@jlab.org)
+full Hall D simulation environment needs to be setup to run this code. I have not put any 
 instruction to do this step here.
 
 In particular you can use the Cernlib installation at /site/cernlib/x86_64_rhel6 and CERN_LEVEL 2005
@@ -13,12 +13,14 @@ https://halldweb1.jlab.org/wiki/index.php/Getting_started_with_GlueX_Software
 
 I installed openmotif as it was suggested under cernlib section in the above link.
 
-## Running without the Hall D environment (by Wouter Deconinck, wdconinc@jlab.org)
+## Setting up without the Hall D environment (by Wouter Deconinck, wdconinc@jlab.org)
 You can also compile the code with just cmake and the 32-bit cernlib libraries installed. Even if you
 have a 64-bit workstation, you will need to install the 32-bit libraries and compile the code as a
 32-bit binary since the cernlib packlib library does not support writing HBOOK files on 64-bit machines.
 
-On RHEL 6.8 (JLab CUE level 2 machines) you should install the following 32-bit packages:
+### Setting up on JLab level 2 system
+
+On RHEL 6.x (JLab CUE level 2 machines) you should install the following 32-bit packages:
 
     yum install cernlib.i686 cernlib-devel.i686 cernlib-static.i686 cernlib-utils.i686
 
@@ -29,33 +31,45 @@ Similarly you will need to install 32-bit system libraries:
 
     yum install lapack.i686 blas.i686 glibc.i686 glibc-devel.i686
 
-Once you have installed these packages you can navigate to bggen/ and run the following commands
+### Setting up on JLab ifarm1101
 
-    mkdir build && cd build
-    cmake ../code
-    make
+This only works on ifarm1101.jlab.org  with CentOS6.5 as of 2017/04/12, NOT on ifarm.jlab.org which are CentOS7.2
 
-This will create the executable bggen in the directory build.
+Setup the cernlib environment for the 32-bit libraries:
+(this needs to be done every time before compiling and running)
 
-## Compiling on the JLab ifarm (by Wouter Deconinck, wdconinc@jlab.org)
-
-Setup the cernlib environment for the 32-bit libraries (possibly add this to your .login file):
-
-    export CERN=/site/cernlib/i386_rhel6
-    export CERN_LEVEL=2005
-
-or for you tcsh users:
+for tcsh shell users:
 
     setenv CERN /site/cernlib/i386_rhel6
     setenv CERN_LEVEL 2005
+    
+for bash shell user
+    export CERN=/site/cernlib/i386_rhel6
+    export CERN_LEVEL=2005  
 
 The command `cernlib` will allow you to check whether these settings have taken effect correctly.
 
 Proceed as per my insturctions above. The cmake command will call the cernlib command and all will
 be good.
 
+## Compiling the code
+
+Once setting up, run the following commands to compile
+
+    cd bggen
+    mkdir build && cd build
+    cmake ../code
+    make
+
+This will create the executable bggen in the directory build.
+
 ## Running the code
-Once the code is running there modify beam current and target length for the proton target by 
+
+To run it
+   cd bggen/run
+   ../build/bggen
+   
+Once the code is running there modify beam current "ecurr" in unit A and target length "targth" in unit cm for the proton target by 
 modifying the FORTRAN file,
 
     bggen/code/bremsbeam_ini.F
@@ -68,6 +82,7 @@ Once the bggen.nt file is generated ntuple can be converted to a root TTree usin
 provided by the root software package. Once converted use the script scripts/HallD_LH_xs.cc to 
 generate LUND files and kinematics plots
 
+currently the bggen generator is only for proton target, the rate is cooked by a root script to calculate hadron rate for neutron by using isospin symmetry: pi+ rate from proton target is equal to pi- rate from neutron target. Isospin rotation, rate calculation and lund output is done by the root script in scripts/HallD_gen_lund.cc
 
 ## List of files modfied in bggen to enable electro-production
 
