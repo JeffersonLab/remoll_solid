@@ -79,7 +79,7 @@ void remollGenPion::SamplePhysics(remollVertex *vert, remollEvent *evt){
 	    break;
 	case kPi0:
 	    piontypestr = G4String("pi0");
-	    thisxs = vert->GetMaterial()->GetZ()*(sigpip+sigpim)/2.0 + (vert->GetMaterial()->GetA()*mole/g-vert->GetMaterial()->GetZ())*(sigpip+sigpim)/2.0;
+	    thisxs = vert->GetMaterial()->GetZ()*(sigpip+sigpim)*2.0 + (vert->GetMaterial()->GetA()*mole/g-vert->GetMaterial()->GetZ())*(sigpip+sigpim)*2.0;
 	    break;
 
 	default:
